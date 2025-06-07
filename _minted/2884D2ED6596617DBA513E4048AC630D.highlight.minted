@@ -1,0 +1,20 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{public}\PYG{+w}{ }\PYG{k}{static}\PYG{+w}{ }\PYG{k}{void}\PYG{+w}{ }\PYG{n+nf}{AddAccount}\PYG{p}{(}\PYG{n}{Account}\PYG{+w}{ }\PYG{n}{NewAccount}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+\PYG{+w}{	}\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{GetAccount}\PYG{p}{(}\PYG{n}{NewAccount}\PYG{p}{.}\PYG{n}{Username}\PYG{p}{,}\PYG{+w}{ }\PYG{k}{out}\PYG{+w}{ }\PYG{k+kt}{var}\PYG{+w}{ }\PYG{n}{\PYGZus{}}\PYG{p}{)}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{return}\PYG{p}{;}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{Query}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}INSERT INTO Account (Username, Password, EmailAddress, CreationDate, LastLogin, Banned) VALUES (@Username, @Password, @EmailAddress, @CreationDate, @LastLogin, @Banned)\PYGZdq{}}\PYG{p}{;}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{n}{MySqlConnection}\PYG{+w}{ }\PYG{n}{Connection}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{p}{(}\PYG{n}{ConnectionString}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{	}\PYG{n}{Connection}\PYG{p}{.}\PYG{n}{Open}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{	}\PYG{n}{MySqlCommand}\PYG{+w}{ }\PYG{n}{Command}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{p}{(}\PYG{n}{Query}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Connection}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{n}{Command}\PYG{p}{.}\PYG{n}{Parameters}\PYG{p}{.}\PYG{n}{AddWithValue}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}@Username\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{NewAccount}\PYG{p}{.}\PYG{n}{Username}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{	}\PYG{n}{Command}\PYG{p}{.}\PYG{n}{Parameters}\PYG{p}{.}\PYG{n}{AddWithValue}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}@Password\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{NewAccount}\PYG{p}{.}\PYG{n}{Password}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{	}\PYG{n}{Command}\PYG{p}{.}\PYG{n}{Parameters}\PYG{p}{.}\PYG{n}{AddWithValue}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}@EmailAddress\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{NewAccount}\PYG{p}{.}\PYG{n}{EmailAddress}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{	}\PYG{n}{Command}\PYG{p}{.}\PYG{n}{Parameters}\PYG{p}{.}\PYG{n}{AddWithValue}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}@CreationDate\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{NewAccount}\PYG{p}{.}\PYG{n}{CreationDate}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{	}\PYG{n}{Command}\PYG{p}{.}\PYG{n}{Parameters}\PYG{p}{.}\PYG{n}{AddWithValue}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}@LastLogin\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kt}{object?}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{NewAccount}\PYG{p}{.}\PYG{n}{LastLogin}\PYG{+w}{ }\PYG{o}{??}\PYG{+w}{ }\PYG{n}{DBNull}\PYG{p}{.}\PYG{n}{Value}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{	}\PYG{n}{Command}\PYG{p}{.}\PYG{n}{Parameters}\PYG{p}{.}\PYG{n}{AddWithValue}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}@Banned\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{NewAccount}\PYG{p}{.}\PYG{n}{Banned}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{	}\PYG{n}{Command}\PYG{p}{.}\PYG{n}{ExecuteNonQuery}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{MintedVerbatim}

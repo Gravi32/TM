@@ -1,0 +1,6 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{n}{Dictionary}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{string}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{string}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{Content}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{	}\PYG{l+s}{\PYGZdq{}Username\PYGZdq{}}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}prénom.nom\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{	}\PYG{l+s}{\PYGZdq{}Password\PYGZdq{}}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}\PYGZdl{}2a\PYGZdl{}12\PYGZdl{}A/4hYn5TE74CXQm5By0g7Ohx...\PYGZdq{}}
+\PYG{p}{\PYGZcb{}}
+\end{MintedVerbatim}

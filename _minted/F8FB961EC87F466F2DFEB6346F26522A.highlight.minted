@@ -1,0 +1,32 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{using}\PYG{+w}{ }\PYG{n+nn}{MySql.Data.MySqlClient}\PYG{p}{;}
+\PYG{k}{using}\PYG{+w}{ }\PYG{n+nn}{MessagyreServer.Classes}\PYG{p}{;}
+\PYG{k}{using}\PYG{+w}{ }\PYG{n+nn}{Newtonsoft.Json}\PYG{p}{;}
+\PYG{k}{using}\PYG{+w}{ }\PYG{n+nn}{System.Data}\PYG{p}{;}
+
+\PYG{k}{namespace}\PYG{+w}{ }\PYG{n+nn}{MessagyreServer}
+\PYG{p}{\PYGZob{}}
+\PYG{+w}{	}\PYG{k}{public}\PYG{+w}{ }\PYG{k}{static}\PYG{+w}{ }\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{AccountsManager}
+\PYG{+w}{	}\PYG{p}{\PYGZob{}}
+\PYG{+w}{		}\PYG{k}{private}\PYG{+w}{ }\PYG{k}{static}\PYG{+w}{ }\PYG{k}{readonly}\PYG{+w}{ }\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{ConnectionString}\PYG{+w}{ }\PYG{o}{=}\PYG{l+s}{\PYGZdq{}Server=metro.proxy.rlwy.net;Port=17551;Database=railway;User=root;Password=uGZBAjgfYSXFTcfJDWySgEVBxjScuDwB;\PYGZbs{}r\PYGZbs{}n\PYGZdq{}}\PYG{p}{;}
+\PYG{+w}{		}
+\PYG{+w}{		}\PYG{k}{public}\PYG{+w}{ }\PYG{k}{static}\PYG{+w}{ }\PYG{k+kt}{bool}\PYG{+w}{ }\PYG{n+nf}{GetAccount}\PYG{p}{(}\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{Username}\PYG{p}{,}\PYG{+w}{ }\PYG{k}{out}\PYG{+w}{ }\PYG{n}{Account}\PYG{o}{?}\PYG{+w}{ }\PYG{n}{Result}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{p}{.}\PYG{p}{.}\PYG{p}{.}\PYG{p}{\PYGZcb{}}
+\PYG{+w}{		}
+\PYG{+w}{		}\PYG{k}{public}\PYG{+w}{ }\PYG{k}{static}\PYG{+w}{ }\PYG{k}{void}\PYG{+w}{ }\PYG{n+nf}{AddAccount}\PYG{p}{(}\PYG{n}{Account}\PYG{+w}{ }\PYG{n}{NewAccount}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{p}{.}\PYG{p}{.}\PYG{p}{.}\PYG{p}{\PYGZcb{}}
+\PYG{+w}{		}
+\PYG{+w}{		}\PYG{k}{public}\PYG{+w}{ }\PYG{k}{static}\PYG{+w}{ }\PYG{k}{void}\PYG{+w}{ }\PYG{n+nf}{DeleteAccount}\PYG{p}{(}\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{Username}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{p}{.}\PYG{p}{.}\PYG{p}{.}\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{		}\PYG{k}{public}\PYG{+w}{ }\PYG{k}{static}\PYG{+w}{ }\PYG{n}{List}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{string}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{SearchAccount}\PYG{p}{(}\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{Query}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{p}{.}\PYG{p}{.}\PYG{p}{.}\PYG{p}{\PYGZcb{}}
+\PYG{+w}{		}
+\PYG{+w}{		}\PYG{k}{public}\PYG{+w}{ }\PYG{k}{static}\PYG{+w}{ }\PYG{k}{void}\PYG{+w}{ }\PYG{n+nf}{OnSearchSignal}\PYG{p}{(}\PYG{n}{Signal}\PYG{+w}{ }\PYG{n}{SearchSignal}\PYG{p}{)}
+\PYG{+w}{		}\PYG{p}{\PYGZob{}}
+\PYG{+w}{			}\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{SearchSignal}\PYG{p}{.}\PYG{n}{Sender}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{k}{null}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{return}\PYG{p}{;}
+\PYG{+w}{			}\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{o}{!}\PYG{n}{SearchSignal}\PYG{p}{.}\PYG{n}{Data}\PYG{p}{.}\PYG{n}{TryGetValue}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Query\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{k}{out}\PYG{+w}{ }\PYG{k+kt}{string?}\PYG{+w}{ }\PYG{n}{Query}\PYG{p}{)}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{return}\PYG{p}{;}
+\PYG{+w}{			}
+\PYG{+w}{			}\PYG{n}{Signal}\PYG{+w}{ }\PYG{n}{ResponseSignal}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{p}{(}\PYG{n}{SignalType}\PYG{p}{.}\PYG{n}{Search}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{			}\PYG{n}{ResponseSignal}\PYG{p}{.}\PYG{n}{Data}\PYG{p}{.}\PYG{n}{Add}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Result\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{JsonConvert}\PYG{p}{.}\PYG{n}{SerializeObject}\PYG{p}{(}\PYG{n}{SearchAccount}\PYG{p}{(}\PYG{n}{Query}\PYG{p}{)}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{			}\PYG{n}{SearchSignal}\PYG{p}{.}\PYG{n}{Sender}\PYG{o}{?.}\PYG{n}{Receive}\PYG{p}{(}\PYG{n}{ResponseSignal}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{		}\PYG{p}{\PYGZcb{}}
+\PYG{+w}{	}\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{MintedVerbatim}

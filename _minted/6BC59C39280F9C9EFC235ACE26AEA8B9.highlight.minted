@@ -1,0 +1,15 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{using}\PYG{+w}{ }\PYG{n+nn}{MailKit.Security}\PYG{p}{;}
+\PYG{k}{using}\PYG{+w}{ }\PYG{n+nn}{MessagyreServer.Classes}\PYG{p}{;}
+\PYG{k}{using}\PYG{+w}{ }\PYG{n+nn}{MimeKit}\PYG{p}{;}
+\PYG{k}{using}\PYG{+w}{ }\PYG{n+nn}{MailKit.Net.Smtp}\PYG{p}{;}
+
+\PYG{k}{namespace}\PYG{+w}{ }\PYG{n+nn}{MessagyreServer}
+\PYG{p}{\PYGZob{}}
+\PYG{+w}{	}\PYG{k}{public}\PYG{+w}{ }\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{Authenticator}
+\PYG{+w}{	}\PYG{p}{\PYGZob{}}
+\PYG{+w}{		}\PYG{k}{public}\PYG{+w}{ }\PYG{k}{static}\PYG{+w}{ }\PYG{k}{void}\PYG{+w}{ }\PYG{n+nf}{OnLoginSignal}\PYG{p}{(}\PYG{p}{)}
+\PYG{+w}{		}\PYG{k}{public}\PYG{+w}{ }\PYG{k}{static}\PYG{+w}{ }\PYG{k}{void}\PYG{+w}{ }\PYG{n+nf}{OnRegistrationSignal}\PYG{p}{(}\PYG{p}{)}
+\PYG{+w}{	}\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{MintedVerbatim}

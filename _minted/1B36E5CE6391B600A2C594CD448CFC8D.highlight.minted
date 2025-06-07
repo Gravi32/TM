@@ -1,0 +1,10 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{using}\PYG{+w}{ }\PYG{n+nn}{MessagyreServer.Classes}\PYG{p}{;}
+
+\PYG{k}{public}\PYG{+w}{ }\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{Messages}
+\PYG{p}{\PYGZob{}}
+\PYG{+w}{	}\PYG{k}{public}\PYG{+w}{ }\PYG{k}{static}\PYG{+w}{ }\PYG{k}{void}\PYG{+w}{ }\PYG{n+nf}{OnMessageSignal}\PYG{p}{(}\PYG{n}{Signal}\PYG{+w}{ }\PYG{n}{MessageSignal}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{p}{.}\PYG{p}{.}\PYG{p}{.}\PYG{p}{\PYGZcb{}}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{k}{public}\PYG{+w}{ }\PYG{k}{static}\PYG{+w}{ }\PYG{k}{void}\PYG{+w}{ }\PYG{n+nf}{SendMessage}\PYG{p}{(}\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{SenderUsername}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{RecipientUsername}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{Content}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{p}{.}\PYG{p}{.}\PYG{p}{.}\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{MintedVerbatim}

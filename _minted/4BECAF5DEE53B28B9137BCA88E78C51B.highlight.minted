@@ -1,0 +1,20 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{public}\PYG{+w}{ }\PYG{k}{static}\PYG{+w}{ }\PYG{n}{List}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{string}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{SearchAccount}\PYG{p}{(}\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{Query}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+\PYG{+w}{	}\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{SqlQuery}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}SELECT Username FROM Account WHERE Username LIKE @Query\PYGZdq{}}\PYG{p}{;}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{n}{List}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{string}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{Results}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{n}{MySqlConnection}\PYG{+w}{ }\PYG{n}{Connection}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{p}{(}\PYG{n}{ConnectionString}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{	}\PYG{n}{Connection}\PYG{p}{.}\PYG{n}{Open}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{n}{MySqlCommand}\PYG{+w}{ }\PYG{n}{Cmd}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{p}{(}\PYG{n}{SqlQuery}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Connection}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{	}\PYG{n}{Cmd}\PYG{p}{.}\PYG{n}{Parameters}\PYG{p}{.}\PYG{n}{AddWithValue}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}@Query\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{Query}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}\PYGZpc{}\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{k+kt}{var}\PYG{+w}{ }\PYG{n}{Reader}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Cmd}\PYG{p}{.}\PYG{n}{ExecuteReader}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{k}{while}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{Reader}\PYG{p}{.}\PYG{n}{Read}\PYG{p}{(}\PYG{p}{)}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{Results}\PYG{p}{.}\PYG{n}{Add}\PYG{p}{(}\PYG{n}{Reader}\PYG{p}{.}\PYG{n}{GetString}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Username\PYGZdq{}}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{k}{return}\PYG{+w}{ }\PYG{n}{Results}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{MintedVerbatim}

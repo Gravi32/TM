@@ -1,0 +1,30 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{public}\PYG{+w}{ }\PYG{k}{static}\PYG{+w}{ }\PYG{k}{void}\PYG{+w}{ }\PYG{n+nf}{SendMessage}\PYG{p}{(}\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{SenderUsername}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{RecipientUsername}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{Content}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+\PYG{+w}{	}\PYG{c+c1}{// Getting the recipient account}
+\PYG{+w}{	}\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{o}{!}\PYG{n}{AccountsManager}\PYG{p}{.}\PYG{n}{GetAccount}\PYG{p}{(}\PYG{n}{RecipientUsername}\PYG{p}{,}\PYG{+w}{ }\PYG{k}{out}\PYG{+w}{ }\PYG{n}{Account}\PYG{o}{?}\PYG{+w}{ }\PYG{n}{RecipientAccount}\PYG{p}{)}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{return}\PYG{p}{;}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{c+c1}{// Checking if the recipient is online}
+\PYG{+w}{	}\PYG{n}{User}\PYG{o}{?}\PYG{+w}{ }\PYG{n}{Recipient}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{null}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k}{foreach}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{User}\PYG{+w}{ }\PYG{n}{ConnectedUser}\PYG{+w}{ }\PYG{k}{in}\PYG{+w}{ }\PYG{n}{Server}\PYG{p}{.}\PYG{n}{ConnectedUsers}\PYG{p}{)}
+\PYG{+w}{	}\PYG{p}{\PYGZob{}}
+\PYG{+w}{		}\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{ConnectedUser}\PYG{p}{.}\PYG{n}{Account}\PYG{o}{?.}\PYG{n}{Username}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{n}{RecipientUsername}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{Recipient}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{ConnectedUser}\PYG{p}{;}
+\PYG{+w}{	}\PYG{p}{\PYGZcb{}}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{c+c1}{// Creating the message signal}
+\PYG{+w}{	}\PYG{n}{Signal}\PYG{+w}{ }\PYG{n}{NewMessageSignal}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{p}{(}\PYG{n}{SignalType}\PYG{p}{.}\PYG{n}{Message}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{	}\PYG{n}{NewMessageSignal}\PYG{p}{.}\PYG{n}{Data}\PYG{p}{.}\PYG{n}{Add}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}SenderUsername\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{SenderUsername}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{	}\PYG{n}{NewMessageSignal}\PYG{p}{.}\PYG{n}{Data}\PYG{p}{.}\PYG{n}{Add}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Content\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Content}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{	}\PYG{n}{NewMessageSignal}\PYG{p}{.}\PYG{n}{Data}\PYG{p}{.}\PYG{n}{Add}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}SentAt\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{DateTime}\PYG{p}{.}\PYG{n}{UtcNow}\PYG{p}{.}\PYG{n}{ToString}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}o\PYGZdq{}}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{c+c1}{// Sending to the online user or to their inbox}
+\PYG{+w}{	}\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{Recipient}\PYG{+w}{ }\PYG{o}{!=}\PYG{+w}{ }\PYG{k}{null}\PYG{p}{)}
+\PYG{+w}{	}\PYG{p}{\PYGZob{}}
+\PYG{+w}{		}\PYG{n}{Recipient}\PYG{p}{.}\PYG{n}{Receive}\PYG{p}{(}\PYG{n}{NewMessageSignal}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{	}\PYG{p}{\PYGZcb{}}
+\PYG{+w}{	}\PYG{k}{else}
+\PYG{+w}{	}\PYG{p}{\PYGZob{}}
+\PYG{+w}{		}\PYG{n}{RecipientAccount}\PYG{o}{!}\PYG{p}{.}\PYG{n}{Inbox}\PYG{p}{.}\PYG{n}{Add}\PYG{p}{(}\PYG{n}{NewMessageSignal}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{	}\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{MintedVerbatim}

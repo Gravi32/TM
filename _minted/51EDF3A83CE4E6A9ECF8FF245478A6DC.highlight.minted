@@ -1,0 +1,12 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{using}\PYG{+w}{ }\PYG{n+nn}{System.Net.WebSockets}\PYG{p}{;}
+
+\PYG{n}{WebApplicationBuilder}\PYG{+w}{ }\PYG{n}{Builder}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{WebApplication}\PYG{p}{.}\PYG{n}{CreateBuilder}\PYG{p}{(}\PYG{n}{args}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{WebApplication}\PYG{+w}{ }\PYG{n}{App}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Builder}\PYG{p}{.}\PYG{n}{Build}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
+
+\PYG{n+na}{[…]}
+
+\PYG{n}{App}\PYG{p}{.}\PYG{n}{UseWebSockets}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{App}\PYG{p}{.}\PYG{n}{Use}\PYG{p}{(}\PYG{n}{RequestsHandling}\PYG{p}{)}\PYG{p}{;}
+\PYG{n}{App}\PYG{p}{.}\PYG{n}{Run}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
+\end{MintedVerbatim}

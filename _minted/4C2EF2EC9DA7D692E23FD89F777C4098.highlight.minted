@@ -1,0 +1,46 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{public}\PYG{+w}{ }\PYG{k}{static}\PYG{+w}{ }\PYG{k}{void}\PYG{+w}{ }\PYG{n+nf}{OnLoginSignal}\PYG{p}{(}\PYG{n}{Signal}\PYG{+w}{ }\PYG{n}{LoginSignal}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{void}\PYG{+w}{ }\PYG{n+nf}{RespondWith}\PYG{p}{(}\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{Message}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{Field}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}\PYGZdq{}}\PYG{p}{)}
+\PYG{+w}{    }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{Signal}\PYG{+w}{ }\PYG{n}{ResponseSignal}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{p}{(}\PYG{n}{SignalType}\PYG{p}{.}\PYG{n}{Login}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n}{ResponseSignal}\PYG{p}{.}\PYG{n}{Data}\PYG{p}{.}\PYG{n}{Add}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Response\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Message}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n}{ResponseSignal}\PYG{p}{.}\PYG{n}{Data}\PYG{p}{.}\PYG{n}{Add}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Field\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Field}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n}{LoginSignal}\PYG{p}{.}\PYG{n}{Sender}\PYG{o}{?.}\PYG{n}{Receive}\PYG{p}{(}\PYG{n}{ResponseSignal}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{    }\PYG{c+c1}{// Check if all data is there}
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{LoginSignal}\PYG{p}{.}\PYG{n}{Sender}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{k}{null}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{return}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{o}{!}\PYG{n}{LoginSignal}\PYG{p}{.}\PYG{n}{Data}\PYG{p}{.}\PYG{n}{TryGetValue}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Username\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{k}{out}\PYG{+w}{ }\PYG{k+kt}{string?}\PYG{+w}{ }\PYG{n}{Username}\PYG{p}{)}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{return}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{o}{!}\PYG{n}{LoginSignal}\PYG{p}{.}\PYG{n}{Data}\PYG{p}{.}\PYG{n}{TryGetValue}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Password\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{k}{out}\PYG{+w}{ }\PYG{k+kt}{string?}\PYG{+w}{ }\PYG{n}{Password}\PYG{p}{)}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{return}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{c+c1}{// Check if the account exists}
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{o}{!}\PYG{n}{AccountsManager}\PYG{p}{.}\PYG{n}{GetAccount}\PYG{p}{(}\PYG{n}{Username}\PYG{p}{,}\PYG{+w}{ }\PYG{k}{out}\PYG{+w}{ }\PYG{n}{Account}\PYG{o}{?}\PYG{+w}{ }\PYG{n}{Account}\PYG{p}{)}\PYG{p}{)}
+\PYG{+w}{    }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{RespondWith}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}account\PYGZus{}not\PYGZus{}found\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}username\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k}{return}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{Account}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{k}{null}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{return}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{c+c1}{// Check the password}
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{o}{!}\PYG{n}{Account}\PYG{p}{.}\PYG{n}{TryPassword}\PYG{p}{(}\PYG{n}{Password}\PYG{p}{)}\PYG{p}{)}
+\PYG{+w}{    }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{RespondWith}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}wrong\PYGZus{}password\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}password\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k}{return}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{    }\PYG{c+c1}{// Check if banned}
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{Account}\PYG{p}{.}\PYG{n}{Banned}\PYG{p}{)}
+\PYG{+w}{    }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{RespondWith}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}banned\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}username\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k}{return}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{    }\PYG{c+c1}{// Complete the login}
+\PYG{+w}{    }\PYG{n}{LoginSignal}\PYG{p}{.}\PYG{n}{Sender}\PYG{p}{.}\PYG{n}{Authenticate}\PYG{p}{(}\PYG{n}{Account}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{RespondWith}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}success\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{c+c1}{// Sending the inbox content}
+\PYG{+w}{    }\PYG{k}{foreach}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{Signal}\PYG{+w}{ }\PYG{n}{InboxMessage}\PYG{+w}{ }\PYG{k}{in}\PYG{+w}{ }\PYG{n}{Account}\PYG{p}{.}\PYG{n}{Inbox}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{LoginSignal}\PYG{p}{.}\PYG{n}{Sender}\PYG{p}{.}\PYG{n}{Receive}\PYG{p}{(}\PYG{n}{InboxMessage}\PYG{p}{)}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{MintedVerbatim}

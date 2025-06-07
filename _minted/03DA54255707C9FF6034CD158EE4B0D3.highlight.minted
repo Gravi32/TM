@@ -1,0 +1,120 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{public}\PYG{+w}{ }\PYG{k}{static}\PYG{+w}{ }\PYG{k}{void}\PYG{+w}{ }\PYG{n+nf}{OnRegistrationSignal}\PYG{p}{(}\PYG{n}{Signal}\PYG{+w}{ }\PYG{n}{RegistrationSignal}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kt}{var}\PYG{+w}{ }\PYG{n}{Sender}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{RegistrationSignal}\PYG{p}{.}\PYG{n}{Sender}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kt}{var}\PYG{+w}{ }\PYG{n}{Data}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{RegistrationSignal}\PYG{p}{.}\PYG{n}{Data}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{Sender}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{k}{null}\PYG{+w}{ }\PYG{o}{||}\PYG{+w}{ }\PYG{n}{Data}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{k}{null}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{return}\PYG{p}{;}
+
+
+\PYG{+w}{    }\PYG{k}{void}\PYG{+w}{ }\PYG{n+nf}{RespondWith}\PYG{p}{(}\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{Message}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{Field}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}\PYGZdq{}}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{p}{.}\PYG{p}{.}\PYG{p}{.}\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{    }\PYG{k}{void}\PYG{+w}{ }\PYG{n+nf}{SendVerificationEmail}\PYG{p}{(}\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{TargetAddress}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{Code}\PYG{p}{)}
+\PYG{+w}{    }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{c+c1}{// Configurations}
+\PYG{+w}{        }\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{SmtpServer}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}smtp.gmail.com\PYGZdq{}}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{SmtpPort}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{587}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{SenderEmail}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}messagyre@gmail.com\PYGZdq{}}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{SenderPassword}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}ywgm otfr qgam pbmz\PYGZdq{}}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{EmailContentPath}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Path}\PYG{p}{.}\PYG{n}{Combine}\PYG{p}{(}\PYG{n}{AppContext}\PYG{p}{.}\PYG{n}{BaseDirectory}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}Assets\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}VerificationCodeEmail.html\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
+
+\PYG{+w}{        }\PYG{c+c1}{// Creating the email}
+\PYG{+w}{        }\PYG{k+kt}{var}\PYG{+w}{ }\PYG{n}{Email}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{+w}{ }\PYG{n}{MimeMessage}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n}{Email}\PYG{p}{.}\PYG{n}{From}\PYG{p}{.}\PYG{n}{Add}\PYG{p}{(}\PYG{k}{new}\PYG{+w}{ }\PYG{n}{MailboxAddress}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Messagyre\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{SenderEmail}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n}{Email}\PYG{p}{.}\PYG{n}{To}\PYG{p}{.}\PYG{n}{Add}\PYG{p}{(}\PYG{k}{new}\PYG{+w}{ }\PYG{n}{MailboxAddress}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{TargetAddress}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n}{Email}\PYG{p}{.}\PYG{n}{Subject}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}Verification Code\PYGZdq{}}\PYG{p}{;}
+
+\PYG{+w}{        }\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{EmailContent}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kt}{string}\PYG{p}{.}\PYG{n}{Empty}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{File}\PYG{p}{.}\PYG{n}{Exists}\PYG{p}{(}\PYG{n}{EmailContentPath}\PYG{p}{)}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{EmailContent}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{File}\PYG{p}{.}\PYG{n}{ReadAllText}\PYG{p}{(}\PYG{n}{EmailContentPath}\PYG{p}{)}\PYG{p}{.}\PYG{n}{Replace}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZob{}\PYGZob{}CODE\PYGZcb{}\PYGZcb{}\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Code}\PYG{p}{.}\PYG{n}{ToString}\PYG{p}{(}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
+
+\PYG{+w}{        }\PYG{n}{Email}\PYG{p}{.}\PYG{n}{Body}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{+w}{ }\PYG{n}{TextPart}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}html\PYGZdq{}}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n}{Text}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{EmailContent}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+
+
+\PYG{+w}{        }\PYG{c+c1}{// Connecting to the SMTP server and sending the email}
+\PYG{+w}{        }\PYG{k}{using}\PYG{+w}{ }\PYG{n+nn}{var}\PYG{+w}{ }\PYG{n}{TempClient}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{+w}{ }\PYG{n}{SmtpClient}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
+
+\PYG{+w}{        }\PYG{n}{TempClient}\PYG{p}{.}\PYG{n}{Connect}\PYG{p}{(}\PYG{n}{SmtpServer}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{SmtpPort}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{SecureSocketOptions}\PYG{p}{.}\PYG{n}{StartTls}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n}{TempClient}\PYG{p}{.}\PYG{n}{Authenticate}\PYG{p}{(}\PYG{n}{SenderEmail}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{SenderPassword}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n}{TempClient}\PYG{p}{.}\PYG{n}{Send}\PYG{p}{(}\PYG{n}{Email}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n}{TempClient}\PYG{p}{.}\PYG{n}{Disconnect}\PYG{p}{(}\PYG{k}{true}\PYG{p}{)}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+
+
+
+\PYG{+w}{    }\PYG{c+cm}{/* User sent e\PYGZhy{}mail address */}
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{Data}\PYG{p}{.}\PYG{n}{TryGetValue}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}email\PYGZus{}address\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{k}{out}\PYG{+w}{ }\PYG{k+kt}{string?}\PYG{+w}{ }\PYG{n}{Address}\PYG{p}{)}\PYG{p}{)}
+\PYG{+w}{    }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{c+c1}{// Checking if the given address is valid}
+\PYG{+w}{        }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{o}{!}\PYG{n}{Address}\PYG{p}{.}\PYG{n}{Contains}\PYG{p}{(}\PYG{l+s+sc}{\PYGZsq{}@\PYGZsq{}}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{||}\PYG{+w}{ }\PYG{o}{!}\PYG{n}{Address}\PYG{p}{.}\PYG{n}{Contains}\PYG{p}{(}\PYG{l+s+sc}{\PYGZsq{}.\PYGZsq{}}\PYG{p}{)}\PYG{p}{)}
+\PYG{+w}{        }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n}{RespondWith}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}wrong\PYGZus{}format\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}email\PYGZus{}address\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{            }\PYG{k}{return}\PYG{p}{;}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{        }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{o}{!}\PYG{n}{Address}\PYG{p}{.}\PYG{n}{EndsWith}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}@eduvaud.ch\PYGZdq{}}\PYG{p}{)}\PYG{p}{)}
+\PYG{+w}{        }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n}{RespondWith}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}wrong\PYGZus{}domain\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}email\PYGZus{}address\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{            }\PYG{k}{return}\PYG{p}{;}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{        }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{AccountsManager}\PYG{p}{.}\PYG{n}{GetAccount}\PYG{p}{(}\PYG{n}{Account}\PYG{p}{.}\PYG{n}{GetUsernameFromEmail}\PYG{p}{(}\PYG{n}{Address}\PYG{p}{)}\PYG{p}{,}\PYG{+w}{ }\PYG{k}{out}\PYG{+w}{ }\PYG{k+kt}{var}\PYG{+w}{ }\PYG{n}{\PYGZus{}}\PYG{p}{)}\PYG{p}{)}
+\PYG{+w}{        }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n}{RespondWith}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}already\PYGZus{}exists\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}email\PYGZus{}address\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{        }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{p}{(}\PYG{n}{DateTime}\PYG{p}{.}\PYG{n}{UtcNow}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{Sender}\PYG{p}{.}\PYG{n}{RegistrationCodeSentAt}\PYG{p}{)}\PYG{p}{.}\PYG{n}{TotalMinutes}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{p}{)}
+\PYG{+w}{        }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n}{RespondWith}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}wait\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}email\PYGZus{}address\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{        }\PYG{c+c1}{// Creating the verification code and storing it for the next step}
+\PYG{+w}{        }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{VerificationCode}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{+w}{ }\PYG{n}{Random}\PYG{p}{(}\PYG{p}{)}\PYG{p}{.}\PYG{n}{Next}\PYG{p}{(}\PYG{l+m+mi}{100000}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{1000000}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n}{Sender}\PYG{p}{.}\PYG{n}{RegistrationVerificationCode}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{VerificationCode}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n}{Sender}\PYG{p}{.}\PYG{n}{RegistrationTempEmailAddress}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Address}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n}{Sender}\PYG{p}{.}\PYG{n}{RegistrationCodeSentAt}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{DateTime}\PYG{p}{.}\PYG{n}{UtcNow}\PYG{p}{;}
+
+\PYG{+w}{        }\PYG{c+c1}{// Proceeding}
+\PYG{+w}{        }\PYG{n}{RespondWith}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}success\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}email\PYGZus{}address\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n}{SendVerificationEmail}\PYG{p}{(}\PYG{n}{Address}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{VerificationCode}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n}{Log}\PYG{p}{(}\PYG{l+s}{\PYGZdl{}\PYGZdq{}VerificationCode sent to \PYGZob{}Address\PYGZcb{}: \PYGZob{}VerificationCode\PYGZcb{}\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{    }\PYG{c+cm}{/* User sent verification code */}
+\PYG{+w}{    }\PYG{k}{else}\PYG{+w}{ }\PYG{n+nf}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{Data}\PYG{p}{.}\PYG{n}{TryGetValue}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}verification\PYGZus{}code\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{k}{out}\PYG{+w}{ }\PYG{k+kt}{string?}\PYG{+w}{ }\PYG{n}{Code}\PYG{p}{)}\PYG{p}{)}
+\PYG{+w}{    }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{Code}\PYG{p}{.}\PYG{n}{Length}\PYG{+w}{ }\PYG{o}{!=}\PYG{+w}{ }\PYG{l+m+mi}{6}\PYG{p}{)}
+\PYG{+w}{        }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n}{RespondWith}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}wrong\PYGZus{}length\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}verification\PYGZus{}code\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{            }\PYG{k}{return}\PYG{p}{;}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{        }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{Code}\PYG{+w}{ }\PYG{o}{!=}\PYG{+w}{ }\PYG{n}{Sender}\PYG{p}{.}\PYG{n}{RegistrationVerificationCode}\PYG{p}{.}\PYG{n}{ToString}\PYG{p}{(}\PYG{p}{)}\PYG{p}{)}
+\PYG{+w}{        }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n}{RespondWith}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}wrong\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}verification\PYGZus{}code\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{            }\PYG{k}{return}\PYG{p}{;}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{        }\PYG{n}{Sender}\PYG{p}{.}\PYG{n}{RegistrationEmailAddress}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Sender}\PYG{p}{.}\PYG{n}{RegistrationTempEmailAddress}\PYG{p}{;}
+
+\PYG{+w}{        }\PYG{n}{RespondWith}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}success\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}verification\PYGZus{}code\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{    }\PYG{c+cm}{/* User sent password */}
+\PYG{+w}{    }\PYG{k}{else}\PYG{+w}{ }\PYG{n+nf}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{Data}\PYG{p}{.}\PYG{n}{TryGetValue}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}password\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{k}{out}\PYG{+w}{ }\PYG{k+kt}{string?}\PYG{+w}{ }\PYG{n}{Password}\PYG{p}{)}\PYG{p}{)}
+\PYG{+w}{    }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{Password}\PYG{p}{.}\PYG{n}{Length}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+m+mi}{8}\PYG{p}{)}
+\PYG{+w}{        }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n}{RespondWith}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}too\PYGZus{}short\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}password\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{            }\PYG{k}{return}\PYG{p}{;}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{        }\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{EmailAddress}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Sender}\PYG{p}{.}\PYG{n}{RegistrationEmailAddress}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{Username}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Account}\PYG{p}{.}\PYG{n}{GetUsernameFromEmail}\PYG{p}{(}\PYG{n}{EmailAddress}\PYG{p}{)}\PYG{p}{;}
+
+\PYG{+w}{        }\PYG{n}{Account}\PYG{+w}{ }\PYG{n}{NewAccount}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{p}{(}\PYG{n}{Username}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Password}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{EmailAddress}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n}{AccountsManager}\PYG{p}{.}\PYG{n}{AddAccount}\PYG{p}{(}\PYG{n}{NewAccount}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n}{Sender}\PYG{p}{.}\PYG{n}{Authenticate}\PYG{p}{(}\PYG{n}{NewAccount}\PYG{p}{)}\PYG{p}{;}
+
+\PYG{+w}{        }\PYG{n}{RespondWith}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}success\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}password\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
+
+\PYG{+w}{        }\PYG{n}{Log}\PYG{p}{(}\PYG{l+s}{\PYGZdl{}\PYGZdq{}\PYGZob{}Username\PYGZcb{} connected\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{k}{true}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{MintedVerbatim}

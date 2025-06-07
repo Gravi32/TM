@@ -1,0 +1,24 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{namespace}\PYG{+w}{ }\PYG{n+nn}{MessagyreServer}
+\PYG{p}{\PYGZob{}}
+\PYG{+w}{	}\PYG{k}{public}\PYG{+w}{ }\PYG{k}{static}\PYG{+w}{ }\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{Server}
+\PYG{+w}{	}\PYG{p}{\PYGZob{}}
+\PYG{+w}{		}\PYG{k}{public}\PYG{+w}{ }\PYG{k}{static}\PYG{+w}{ }\PYG{n}{List}\PYG{o}{\PYGZlt{}}\PYG{n}{User}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{ConnectedUsers}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
+
+\PYG{+w}{		}\PYG{k}{public}\PYG{+w}{ }\PYG{k}{static}\PYG{+w}{ }\PYG{n}{User}\PYG{+w}{ }\PYG{n+nf}{OnConnection}\PYG{p}{(}\PYG{n}{WebSocket}\PYG{+w}{ }\PYG{n}{Socket}\PYG{p}{)}
+\PYG{+w}{		}\PYG{p}{\PYGZob{}}
+\PYG{+w}{			}\PYG{n}{User}\PYG{+w}{ }\PYG{n}{NewUser}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{p}{(}\PYG{n}{Socket}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{			}\PYG{n}{ConnectedUsers}\PYG{p}{.}\PYG{n}{Add}\PYG{p}{(}\PYG{n}{NewUser}\PYG{p}{)}\PYG{p}{;}
+
+\PYG{+w}{			}\PYG{k}{return}\PYG{+w}{ }\PYG{n}{NewUser}\PYG{p}{;}
+\PYG{+w}{		}\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{		}\PYG{k}{public}\PYG{+w}{ }\PYG{k}{static}\PYG{+w}{ }\PYG{k}{void}\PYG{+w}{ }\PYG{n+nf}{OnSignal}\PYG{p}{(}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{p}{.}\PYG{p}{.}\PYG{p}{.}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{		}\PYG{k}{public}\PYG{+w}{ }\PYG{k}{static}\PYG{+w}{ }\PYG{k}{void}\PYG{+w}{ }\PYG{n+nf}{OnDisconnection}\PYG{p}{(}\PYG{n}{User}\PYG{+w}{ }\PYG{n}{DisconnectedUser}\PYG{p}{)}
+\PYG{+w}{		}\PYG{p}{\PYGZob{}}
+\PYG{+w}{			}\PYG{n}{ConnectedUsers}\PYG{p}{.}\PYG{n}{Remove}\PYG{p}{(}\PYG{n}{DisconnectedUser}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{		}\PYG{p}{\PYGZcb{}}
+\PYG{+w}{	}\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{MintedVerbatim}

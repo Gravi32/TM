@@ -1,0 +1,37 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{public}\PYG{+w}{ }\PYG{k}{static}\PYG{+w}{ }\PYG{k+kt}{bool}\PYG{+w}{ }\PYG{n+nf}{GetAccount}\PYG{p}{(}\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{Username}\PYG{p}{,}\PYG{+w}{ }\PYG{k}{out}\PYG{+w}{ }\PYG{n}{Account}\PYG{o}{?}\PYG{+w}{ }\PYG{n}{Result}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+\PYG{+w}{	}\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{Query}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}SELECT}
+\PYG{+w}{		}\PYG{n}{Username}\PYG{p}{,}
+\PYG{+w}{		}\PYG{n}{Password}\PYG{p}{,}
+\PYG{+w}{		}\PYG{n}{EmailAddress}\PYG{p}{,}
+\PYG{+w}{		}\PYG{n}{CreationDate}\PYG{p}{,}
+\PYG{+w}{		}\PYG{n}{LastLogin}\PYG{p}{,}
+\PYG{+w}{		}\PYG{n}{Banned}
+\PYG{+w}{		}\PYG{n}{FROM}\PYG{+w}{ }\PYG{n}{Account}\PYG{+w}{ }\PYG{n}{WHERE}\PYG{+w}{ }\PYG{n}{Username}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{@Username}\PYG{l+s}{\PYGZdq{};}
+\PYG{+w}{	}\PYG{n}{Result}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{null}\PYG{p}{;}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{c+c1}{// Connecting to the SQL server}
+\PYG{+w}{	}\PYG{n}{MySqlConnection}\PYG{+w}{ }\PYG{n}{Connection}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{p}{(}\PYG{n}{ConnectionString}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{	}\PYG{n}{Connection}\PYG{p}{.}\PYG{n}{Open}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{c+c1}{// Creating the command}
+\PYG{+w}{	}\PYG{n}{MySqlCommand}\PYG{+w}{ }\PYG{n}{Command}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{p}{(}\PYG{n}{Query}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Connection}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{	}\PYG{n}{Command}\PYG{p}{.}\PYG{n}{Parameters}\PYG{p}{.}\PYG{n}{AddWithValue}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}@Username\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Username}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{c+c1}{// Sending the command and reading the response}
+\PYG{+w}{	}\PYG{k+kt}{var}\PYG{+w}{ }\PYG{n}{Reader}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Command}\PYG{p}{.}\PYG{n}{ExecuteReader}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{o}{!}\PYG{n}{Reader}\PYG{p}{.}\PYG{n}{Read}\PYG{p}{(}\PYG{p}{)}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{return}\PYG{+w}{ }\PYG{k}{false}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// No result}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{n}{Result}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{+w}{ }\PYG{n}{Account}\PYG{p}{(}
+\PYG{+w}{	}\PYG{n}{Reader}\PYG{p}{.}\PYG{n}{GetString}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Username\PYGZdq{}}\PYG{p}{)}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{Reader}\PYG{p}{.}\PYG{n}{GetString}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Password\PYGZdq{}}\PYG{p}{)}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{Reader}\PYG{p}{.}\PYG{n}{GetString}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}EmailAddress\PYGZdq{}}\PYG{p}{)}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{Reader}\PYG{p}{.}\PYG{n}{GetDateTime}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}CreationDate\PYGZdq{}}\PYG{p}{)}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{Reader}\PYG{p}{.}\PYG{n}{IsDBNull}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}LastLogin\PYGZdq{}}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{?}\PYG{+w}{ }\PYG{k}{null}\PYG{+w}{ }\PYG{p}{:}\PYG{+w}{ }\PYG{n}{Reader}\PYG{p}{.}\PYG{n}{GetDateTime}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}LastLogin\PYGZdq{}}\PYG{p}{)}\PYG{p}{,}
+\PYG{+w}{	}\PYG{n}{Reader}\PYG{p}{.}\PYG{n}{GetBoolean}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Banned\PYGZdq{}}\PYG{p}{)}
+\PYG{+w}{	}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{k}{return}\PYG{+w}{ }\PYG{k}{true}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{MintedVerbatim}

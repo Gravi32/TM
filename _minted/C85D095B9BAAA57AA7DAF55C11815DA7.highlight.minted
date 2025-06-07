@@ -1,0 +1,13 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{public}\PYG{+w}{ }\PYG{k}{static}\PYG{+w}{ }\PYG{k}{void}\PYG{+w}{ }\PYG{n+nf}{DeleteAccount}\PYG{p}{(}\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{Username}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+\PYG{+w}{	}\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{Query}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}DELETE FROM Account WHERE Username = @Username\PYGZdq{}}\PYG{p}{;}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{n}{MySqlConnection}\PYG{+w}{ }\PYG{n}{Connection}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{p}{(}\PYG{n}{ConnectionString}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{	}\PYG{n}{Connection}\PYG{p}{.}\PYG{n}{Open}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{	}\PYG{n}{MySqlCommand}\PYG{+w}{ }\PYG{n}{Command}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{p}{(}\PYG{n}{Query}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Connection}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{n}{Command}\PYG{p}{.}\PYG{n}{Parameters}\PYG{p}{.}\PYG{n}{AddWithValue}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}@Username\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Username}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{	}\PYG{n}{Command}\PYG{p}{.}\PYG{n}{ExecuteNonQuery}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{MintedVerbatim}

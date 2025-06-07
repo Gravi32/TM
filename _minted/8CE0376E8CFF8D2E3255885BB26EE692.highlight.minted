@@ -1,0 +1,32 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{public}\PYG{+w}{ }\PYG{k}{static}\PYG{+w}{ }\PYG{k}{void}\PYG{+w}{ }\PYG{n+nf}{OnSignal}\PYG{p}{(}\PYG{n}{User}\PYG{+w}{ }\PYG{n}{Sender}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{JsonSignal}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+\PYG{+w}{	}\PYG{n}{Signal}\PYG{o}{?}\PYG{+w}{ }\PYG{n}{ReceivedSignal}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Signal}\PYG{p}{.}\PYG{n}{Unpack}\PYG{p}{(}\PYG{n}{JsonSignal}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Sender}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{ReceivedSignal}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{k}{null}\PYG{+w}{ }\PYG{o}{||}\PYG{+w}{ }\PYG{n}{ReceivedSignal}\PYG{p}{.}\PYG{n}{Sender}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{k}{null}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{return}\PYG{p}{;}
+
+\PYG{+w}{	}\PYG{c+c1}{// Routing}
+\PYG{+w}{	}\PYG{k}{switch}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{ReceivedSignal}\PYG{p}{.}\PYG{n}{Type}\PYG{p}{)}
+\PYG{+w}{	}\PYG{p}{\PYGZob{}}
+\PYG{+w}{		}\PYG{k}{case}\PYG{+w}{ }\PYG{n}{SignalType}\PYG{p}{.}\PYG{n}{Login}\PYG{p}{:}
+\PYG{+w}{			}\PYG{n}{Authenticator}\PYG{p}{.}\PYG{n}{OnLoginSignal}\PYG{p}{(}\PYG{n}{ReceivedSignal}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{			}\PYG{k}{break}\PYG{p}{;}
+
+\PYG{+w}{		}\PYG{k}{case}\PYG{+w}{ }\PYG{n}{SignalType}\PYG{p}{.}\PYG{n}{Registration}\PYG{p}{:}
+\PYG{+w}{			}\PYG{n}{Authenticator}\PYG{p}{.}\PYG{n}{OnRegistrationSignal}\PYG{p}{(}\PYG{n}{ReceivedSignal}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{			}\PYG{k}{break}\PYG{p}{;}
+
+\PYG{+w}{		}\PYG{k}{case}\PYG{+w}{ }\PYG{n}{SignalType}\PYG{p}{.}\PYG{n}{Logout}\PYG{p}{:}
+\PYG{+w}{			}\PYG{n}{Authenticator}\PYG{p}{.}\PYG{n}{OnLogoutSignal}\PYG{p}{(}\PYG{n}{ReceivedSignal}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{			}\PYG{k}{break}\PYG{p}{;}
+
+\PYG{+w}{		}\PYG{k}{case}\PYG{+w}{ }\PYG{n}{SignalType}\PYG{p}{.}\PYG{n}{Message}\PYG{p}{:}
+\PYG{+w}{			}\PYG{n}{Messages}\PYG{p}{.}\PYG{n}{OnMessageSignal}\PYG{p}{(}\PYG{n}{ReceivedSignal}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{			}\PYG{k}{break}\PYG{p}{;}
+
+\PYG{+w}{		}\PYG{k}{case}\PYG{+w}{ }\PYG{n}{SignalType}\PYG{p}{.}\PYG{n}{Search}\PYG{p}{:}
+\PYG{+w}{			}\PYG{n}{AccountsManager}\PYG{p}{.}\PYG{n}{OnSearchSignal}\PYG{p}{(}\PYG{n}{ReceivedSignal}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{			}\PYG{k}{break}\PYG{p}{;}
+
+\PYG{+w}{	}\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{MintedVerbatim}

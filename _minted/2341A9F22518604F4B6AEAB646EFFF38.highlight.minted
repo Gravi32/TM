@@ -1,0 +1,15 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{public}\PYG{+w}{ }\PYG{k}{static}\PYG{+w}{ }\PYG{k}{void}\PYG{+w}{ }\PYG{n+nf}{OnMessageSignal}\PYG{p}{(}\PYG{n}{Signal}\PYG{+w}{ }\PYG{n}{MessageSignal}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+\PYG{+w}{	}\PYG{c+c1}{// Checking if the sender is logged in}
+\PYG{+w}{	}\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{o}{!}\PYG{n}{MessageSignal}\PYG{p}{.}\PYG{n}{Sender}\PYG{o}{!}\PYG{p}{.}\PYG{n}{IsAuthorized}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{return}\PYG{p}{;}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{c+c1}{// Getting the data}
+\PYG{+w}{	}\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{o}{!}\PYG{n}{MessageSignal}\PYG{p}{.}\PYG{n}{Data}\PYG{p}{.}\PYG{n}{TryGetValue}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}RecipientUsername\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{k}{out}\PYG{+w}{ }\PYG{k+kt}{string?}\PYG{+w}{ }\PYG{n}{RecipientUsername}\PYG{p}{)}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{return}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{o}{!}\PYG{n}{MessageSignal}\PYG{p}{.}\PYG{n}{Data}\PYG{p}{.}\PYG{n}{TryGetValue}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Content\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{k}{out}\PYG{+w}{ }\PYG{k+kt}{string?}\PYG{+w}{ }\PYG{n}{Content}\PYG{p}{)}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{return}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{SenderUsername}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{MessageSignal}\PYG{p}{.}\PYG{n}{Sender}\PYG{p}{.}\PYG{n}{Account}\PYG{o}{!}\PYG{p}{.}\PYG{n}{Username}\PYG{p}{;}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{c+c1}{// Sending}
+\PYG{+w}{	}\PYG{n}{SendMessage}\PYG{p}{(}\PYG{n}{SenderUsername}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{RecipientUsername}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Content}\PYG{p}{)}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{MintedVerbatim}
