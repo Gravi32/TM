@@ -1,0 +1,40 @@
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Pourquoi ce sujet}{2}{subsection.1.1}%
+\contentsline {section}{\numberline {2}Contexte et analyse préliminaire}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Panorama des applications de messagerie}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Analyse de la concurrence}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Technologies principales impliquées}{4}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Choix technologiques}{4}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Texte de ce qui a été fait dans un ordre chronologique. Bien -> on doit comprendre pourquoi vous avez obtenu ce produit final}{6}{subsection.2.5}%
+\contentsline {section}{\numberline {3}Structure du serveur}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}User.cs}{7}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Extrait du code}{7}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Variables principales}{8}{subsubsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.3}Methodes}{8}{subsubsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.2}Signal.cs}{8}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Extrait du code}{8}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Variables principales}{9}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Methodes}{10}{subsubsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.3}Account.cs}{10}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Extrait du code}{10}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Variables}{11}{subsubsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3}Methodes}{12}{subsubsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.4}Program.cs (Entry point)}{12}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}Démarrage du serveur}{12}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}Gestion des requêtes}{13}{subsubsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {3.4.3}Gestion des connexions}{13}{subsubsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.5}Server.cs}{14}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Authenticator.cs}{16}{subsection.3.6}%
+\contentsline {subsubsection}{\numberline {3.6.1}Login: Accès à un compte existant}{16}{subsubsection.3.6.1}%
+\contentsline {subsubsection}{\numberline {3.6.2}Registration: Creation d'un nouveau compte}{18}{subsubsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.7}AccountsManager.cs}{21}{subsection.3.7}%
+\contentsline {subsubsection}{\numberline {3.7.1}Extrait du code}{21}{subsubsection.3.7.1}%
+\contentsline {subsubsection}{\numberline {3.7.2}Variables}{22}{subsubsection.3.7.2}%
+\contentsline {subsubsection}{\numberline {3.7.3}Obtention d'un compte}{22}{subsubsection.3.7.3}%
+\contentsline {subsubsection}{\numberline {3.7.4}Creation d'un compte}{24}{subsubsection.3.7.4}%
+\contentsline {subsubsection}{\numberline {3.7.5}Suppression d'un compte}{25}{subsubsection.3.7.5}%
+\contentsline {subsubsection}{\numberline {3.7.6}Recherche d'un compte}{25}{subsubsection.3.7.6}%
+\contentsline {subsection}{\numberline {3.8}Messages.cs}{26}{subsection.3.8}%
+\contentsline {subsubsection}{\numberline {3.8.1}Extrait du code}{26}{subsubsection.3.8.1}%
+\contentsline {subsubsection}{\numberline {3.8.2}Reception d'un message}{26}{subsubsection.3.8.2}%
+\contentsline {subsubsection}{\numberline {3.8.3}Envoi d'un message}{27}{subsubsection.3.8.3}%

@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[12pt]{report}
 \usepackage[a4paper, left=2cm, right=2cm, top=2.5cm, bottom=2.5cm]{geometry} % Margins
 \usepackage{graphicx} % Images
 \usepackage{fontspec} % System fonts
@@ -7,18 +7,23 @@
 \usepackage{tcolorbox} % Code background
 \usepackage{setspace} % Interline spacing
 \usepackage{titlesec}
+\usepackage{float} % Images H
+\usepackage{times}
 
 \definecolor{Titles}{RGB}{100, 25, 104} % Dark blue
 
-\titleformat{\section}
+\geometry{a4paper, margin=2.5cm}
+
+
+\titleformat{\chapter}
   {\color{Titles}\normalfont\Huge\bfseries}
   {\thesection}{1em}{}
 
-\titleformat{\subsection}
+\titleformat{\section}
   {\color{Titles}\normalfont\LARGE\bfseries}
   {\thesubsection}{1em}{}
 
-  \titleformat{\subsubsection}
+  \titleformat{\subsection}
   {\color{Titles}\normalfont\Large\bfseries}
   {\thesubsubsection}{1em}{}
   
@@ -45,7 +50,7 @@
 \newtcbox{\code}{
     on line,
     box align=base,
-    colback=gray!3,
+    colback=gray!9,
     colframe=gray!1,
     boxrule=0.4pt,
     arc=4pt,
@@ -74,9 +79,9 @@
 \maketitle
 %\tableofcontents
 
-\section{Introduction}
+\chapter{Introduction}
 
-\subsection{Pourquoi ce sujet}
+\section{Pourquoi ce sujet}
 
 J’ai choisi de réaliser ce projet car après plus d’un an au Gymnase de Renens, j’ai remarqué l’absence d’un moyen de communication plus informel, malgré la disponibilité de toute la suite Microsoft 365 et d’autres outils. Les e-mails sont trop formels et peu pratiques, tandis que le chat d’Outlook est peu connu et peu intuitif, tout comme celui de Teams.
 
@@ -84,49 +89,429 @@ Pour résoudre ce problème, j’ai conçu une application de messagerie dédié
 
 Je considère ce projet particulièrement intéressant et ambitieux. Bien qu’une application de chat puisse sembler simple à développer au premier abord, il s’agit en réalité d’un projet complexe nécessitant des compétences avancées, tant en programmation qu’en design.
 
-\textit{Bilan de vos connaissances, codebases avec lesquelles vous étiez familier. }
-
-Avant de commencer ce projet, je possédais déjà des connaissances avancées en programmation. Je programme depuis l’âge de huit ou neuf ans, ayant appris en autodidacte plusieurs langages, notamment Python, Lua, Java, JavaScript et C\#.
+Avant de commencer ce projet, je possédais déjà des connaissances avancées en programmation. Je programme depuis l’âge de huit ou neuf ans, ayant appris en autodidacte plusieurs langages, notamment C\#, Python, Lua, Java, JavaScript et Dart.
 
 Mes premières expériences en communication client-serveur consistaient en de simples échanges de données entre des pages HTML avec des scripts en JavaScript et un serveur basé sur Node.js. Cependant, afin de tester la faisabilité de ce projet et de proposer l’idée officiellement à la direction, j’ai développé un premier prototype en utilisant Unity comme client et un serveur en Node.js (JavaScript). Bien que le système fonctionnait, la principale difficulté était d’optimiser la communication entre ces deux langages, très différents dans leur approche.
 
 Après quelques recherches, j’ai découvert qu’il était possible de développer le serveur directement en C\#, en utilisant l’API ASP.NET de Microsoft. J’ai donc entièrement réécrit l’application sur Unity ainsi que le serveur, améliorant donc la stabilité et l’intégration du système. Pour le développement, j’ai utilisé Visual Studio 2022, l’environnement de développement de Microsoft, pour le client ainsi que pour le serveur.
 
-Grâce à cette expérience, j’ai pu consolider et approfondir mes compétences en programmation réseau, en gestion de serveurs et d’architecture logicielle, des aspects essentiels pour la réalisation d’une application de messagerie comme Messagyre.
+Néanmoins, après avoir avancé avec Unity, j’ai constaté que cette plateforme n’était pas idéale pour développer une application mobile de messagerie, principalement à cause des contraintes liées à la gestion de l’interface utilisateur et à la lourdeur de l’environnement pour ce type d’application. J’ai alors décidé de migrer le client vers Flutter, un framework moderne spécialisé dans le développement d’interfaces mobiles performantes et adaptatives. Cette décision m’a permis d’améliorer considérablement l’expérience utilisateur tout en conservant ASP.NET Core pour la partie serveur.
 
-\subsection{Texte de ce qui a été fait dans un ordre chronologique. Bien -> on doit comprendre pourquoi vous avez obtenu ce produit final}Server:
+Grâce à ce parcours, j’ai pu non seulement approfondir mes compétences techniques en programmation réseau, architecture logicielle et développement multiplateforme, mais aussi apprendre à prendre des décisions stratégiques sur les technologies à adopter, en fonction des contraintes et des besoins du projet. Ce travail m’a également permis de mieux comprendre la complexité et les enjeux liés au développement d’applications communicantes modernes, me préparant ainsi à mes futures ambitions dans le domaine de l’informatique.
 
-\begin{enumerate}
-    \item Creazione del progetto del server dal modello “ASP.NET Core Web App” di Visual Studio 2022, rinominato come “MessagyreServer”. Tutti gli asset necessari sono stati creati dallo stesso programma, col quale ho scritto tutto il codice di questo progetto. 
-    \item Creazione della prima e più importante parte del codice del server: la gestione delle richieste. Le richieste al server vengono trasmesse tramite protocollo WebSocket, poi decifrate grazie alla libreria .NET C\# System.Net.WebSockets di Microsoft. Gli script che si occupano di questo sono Program.cs (l’entry point del programma), Server.cs.
-    \item Creazione dello script Authenticator.cs, contenente la classe Authenticator, che gestisce come suggerisce il nome l’autenticazione delle connessioni.
 
-\end{enumerate}
+\chapter{Contexte et analyse préliminaire}
 
-Client:
+\section{Panorama des applications de messagerie}
 
-\begin{enumerate}
-    \item Creazione del progetto del front end su Unity (2021.3.17f1), rinominato come “MessagyreClient”. 
-    \item Creazione di una classe MonoBehaviour “Router”, che gestisce la comunicazione col server: la connessione, la disconnessione, gli errori, l’invio di richieste e la ricezione di messaggi.
-    \item Creazione di una classe 
-\end{enumerate}
+Les applications de messagerie instantanée occupent aujourd’hui une place centrale dans la communication quotidienne, tant au niveau personnel que professionnel. Des services comme WhatsApp, Telegram ou Signal permettent des échanges rapides, souvent gratuits, et proposent diverses fonctionnalités telles que les appels vocaux, le partage de fichiers, et la création de groupes.
+
+Ces applications visent à faciliter la communication en temps réel, en garantissant à la fois la simplicité d’utilisation et la sécurité des échanges. Cependant, elles présentent parfois des limites dans le cadre de communications institutionnelles ou spécifiques, comme celles d’un établissement scolaire, où la gestion des utilisateurs et la confidentialité doivent être adaptées.
+
+\section{Analyse de la concurrence}
+
+Les principales applications concurrentes sur le marché sont :
 
 \begin{itemize}
-    \item \textit{\textit{Tutoriel / Procédure d'installation}}
-    \item \textit{\textit{Comment fonction la communication entre client et serveur ?}}
-    \item \textit{\textit{Structure de la codebase}}
+	\item \textbf{WhatsApp} : très populaire, utilise le numéro de téléphone comme identifiant principal, ce qui peut poser des problèmes de confidentialité.
+	\item \textbf{Telegram} : offre plus de fonctionnalités avancées, comme des canaux publics et une meilleure gestion de la vie privée, mais nécessite un certain niveau de familiarité technique.
+	\item \textbf{Signal} : axé sur la sécurité et la confidentialité, avec un chiffrement de bout en bout par défaut.
 \end{itemize}
 
-\section{Structure du serveur}
+Aucune de ces solutions ne répond parfaitement aux besoins spécifiques d’un environnement scolaire comme le Gymnase de Renens, notamment en termes de facilité d’accès basée uniquement sur le prénom et le nom, sans nécessiter de numéro de téléphone.
+
+\section{Technologies principales impliquées}
+
+Pour le développement de Messagyre, plusieurs technologies clés ont été utilisées au cours de l’évolution du projet :
+
+\begin{itemize}
+	\item \textbf{Unity} : utilisé pour développer la première version du client, permettant de prototyper rapidement l’application, notamment pour la gestion graphique et les interactions utilisateur.
+	\item \textbf{Node.js} : utilisé initialement comme serveur backend, pour sa simplicité et sa popularité dans les applications temps réel, notamment avec JavaScript.
+	\item \textbf{ASP.NET Core} : framework Microsoft adopté par la suite pour le serveur, offrant robustesse, performance et intégration native avec le langage C\#.
+	\item \textbf{Flutter} : framework open source de Google, utilisé pour le développement du client mobile multiplateforme dans la version finale, permettant une interface utilisateur performante et adaptée.
+	\item \textbf{HTTP et WebSocket} : protocoles de communication utilisés respectivement pour les requêtes classiques (authentification, récupération des données) et pour la messagerie instantanée en temps réel.
+	\item \textbf{MySQL} : système de gestion de base de données relationnelle, utilisé pour stocker les informations des utilisateurs et des messages.
+	\item \textbf{Railway} : plateforme cloud utilisée pour l’hébergement du serveur, facilitant le déploiement et la gestion de l’infrastructure backend.
+\end{itemize}
+
+\section{Choix technologiques}
+
+Le choix des technologies a été guidé par plusieurs facteurs :
+
+\begin{itemize}
+	\item \textbf{Performance et scalabilité} : ASP.NET Core offre une meilleure performance serveur comparée à Node.js, tout en étant compatible avec mon expertise en C\#.
+	\item \textbf{Expérience utilisateur} : Flutter permet de concevoir une interface moderne et fluide, adaptée aux plateformes mobiles.
+	\item \textbf{Communication en temps réel} : l’utilisation combinée de HTTP pour les requêtes classiques et de WebSocket pour la messagerie instantanée garantit une communication efficace et réactive.
+	\item \textbf{Simplicité de gestion} : l’utilisation de MySQL via Railway simplifie le déploiement, l’hébergement et la gestion des données.
+	\item \textbf{Prototype rapide} : Unity et Node.js ont permis une première version rapide et fonctionnelle pour tester la faisabilité du projet.
+\end{itemize}
+
+Ces choix technologiques ont permis de construire une application à la fois performante, facile à maintenir, et adaptée aux besoins spécifiques du projet Messagyre.
+
+\chapter{Développement du projet}
+
+\section{Analyse des besoins et spécifications}
+
+L'application Messagyre doit répondre à plusieurs exigences fondamentales afin de faciliter la communication interne au Gymnase de Renens. Parmi les principales exigences fonctionnelles, on retrouve :
+
+\begin{itemize}
+	\item Permettre une authentification sécurisée des utilisateurs.
+	\item Autoriser l'envoi et la réception de messages texte en temps réel.
+	\item Gérer les profils utilisateur avec la possibilité d'ajouter une photo de profil et d'autres informations de contact (numéro de téléphone, adresse e-mail...).
+	\item Utiliser l'application comme un véritable agenda scolaire, avec ajout de devoirs et de notes.
+	\item Offrir une interface intuitive et accessible, même pour les utilisateurs peu expérimentés.
+	\item Garantir la confidentialité et la sécurité des communications.
+\end{itemize}
+
+Le public cible est principalement composé d'élèves, d'enseignants et du personnel du gymnase, avec une attention particulière portée à la simplicité d'accès, sans nécessiter de numéro de téléphone.
+
+Des maquettes initiales ont été créées pour définir la disposition des écrans principaux, tels que la page de connexion et d'inscription, la liste des conversations, la fenêtre de chat et le profil utilisateur. Ces croquis ont guidé le développement de l'interface.
+
+\section{Développement du client (Flutter)}
+
+La structure de l'application mobile repose sur le framework Flutter, choisi pour sa capacité à créer des interfaces réactives et multiplateformes à partir d'une base de code unique.
+
+\begin{itemize}
+	\item \textbf{Architecture} : L'application suit un modèle de gestion d'état centralisé (par exemple Provider ou Bloc) pour garantir une gestion efficace des données et de l'interface.
+	\item \textbf{Interface utilisateur} : L'interface a été conçue pour être simple et claire, avec des écrans dédiés à la connexion, à la création de compte, à la liste des conversations et à la messagerie.
+	\item \textbf{Fonctionnalités implémentées} :
+	\begin{itemize}
+		\item Authentification par nom d'utilisateur et mot de passe.
+		\item Création d'un compte personnel via l'adresse e-mail scolaire, avec vérification automatique par e-mail.
+		\item Envoi et réception de messages texte en temps réel.
+		\item Envoi d'images et gestion des photos de profil.
+		\item Gestion de son propre compte et visualisation du profil public des autres utilisateurs.
+		\item Mise à jour en temps réel de la liste de contacts et des conversations.
+	\end{itemize}
+\end{itemize}
+
+\section{Développement du serveur (ASP.NET Core)}
+
+Le serveur backend a été développé en ASP.NET Core, garantissant robustesse, performance et une plus grande facilité de développement grâce à mon expérience avec le langage C\#.
+
+\begin{itemize}
+	\item \textbf{Architecture} : Le serveur est structuré en couches, séparant la gestion des requêtes, la gestion des comptes et la messagerie.
+	\item \textbf{Communication} : Utilisation de WebSocket pour la messagerie en temps réel et d'API REST HTTP pour les opérations classiques (authentification, récupération de données, modifications de compte).
+	\item \textbf{Authentification} : Mise en place d'un système sécurisé basé sur JSON Web Tokens (JWT) et RefreshTokens pour valider les sessions des utilisateurs et éviter une reconnexion à chaque ouverture de l'application.
+	\item \textbf{Base de données} : MySQL est utilisé pour stocker les informations des utilisateurs, les messages et les métadonnées. Le serveur est hébergé sur la plateforme Railway, ce qui facilite le déploiement et la gestion.
+\end{itemize}
+
+\section{Fonctionnalités avancées}
+
+Des fonctionnalités supplémentaires ont été intégrées pour améliorer l'expérience utilisateur et la qualité de l'application :
+
+\begin{itemize}
+	\item Téléchargement et affichage des photos de profil avec détection automatique des changements.
+	\item (À faire) Notifications push pour informer les utilisateurs des nouveaux messages.
+	\item Optimisations des performances, notamment une gestion efficace des connexions WebSocket et la réduction des appels réseau.
+	\item Renforcement de la sécurité, y compris la validation des données, le chiffrement des communications et la protection contre les attaques courantes.
+\end{itemize}
+
+\section{Tests et débogage}
+
+Le projet a suivi plusieurs phases de test pour garantir sa fiabilité :
+
+\begin{itemize}
+	\item Tests manuels pendant le développement pour vérifier le bon fonctionnement de chaque fonctionnalité.
+	\item Détection et correction des erreurs liées à la synchronisation des messages et à la gestion des sessions.
+	\item Passage à différentes versions du framework .NET pour garantir de bonnes performances tout en respectant les limites de Railway.
+	\item Protection contre les erreurs causées par des requêtes HTTP et WebSocket malformées ou corrompues.
+	\item Gestion des erreurs dans la communication avec le serveur MySQL.
+\end{itemize}
+
+Les principales difficultés rencontrées concernaient la gestion en temps réel des messages, la synchronisation des horaires d'envoi et de réception, la stabilité des connexions et l'authentification par token (une nouveauté pour moi), résolues grâce à une meilleure gestion de l'état côté client et côté serveur.
+
+\chapter{Résultats obtenus}
+
+\section{État actuel de l'application}
+
+À ce jour, l'application Messagyre fonctionne pleinement dans ses fonctionnalités principales. Les utilisateurs peuvent créer un compte via leur adresse e-mail scolaire, se connecter de manière sécurisée, envoyer et recevoir des messages en temps réel, modifier leur profil et consulter ceux des autres utilisateurs. Le système de messagerie repose sur WebSocket, garantissant une communication fluide et instantanée.
+
+Certaines fonctionnalités secondaires sont encore en cours de développement ou prévues pour les prochaines versions, notamment :
+
+\begin{itemize}
+	\item Implémentation des notifications push.
+	\item Gestion complète des devoirs et des notes dans les pages « Devoirs » et « Notes » respectivement.
+	\item Améliorations graphiques de l’interface utilisateur.
+	\item Animations pour rendre l’utilisation de l’application plus agréable.
+	\item Possibilité de créer et de rejoindre des groupes de discussion.
+	\item Une page dédiée aux annonces et communications officielles (ou non) du gymnase.
+\end{itemize}
+
+\section{Comparaison avec les objectifs initiaux}
+
+Le projet a atteint la majorité des objectifs fixés au départ :
+
+\begin{itemize}
+	\item Développer un système de messagerie interne, sécurisé et facile à utiliser.
+	\item Permettre une communication simple sans utiliser le numéro de téléphone.
+	\item Intégrer des comptes scolaires avec vérification par e-mail.
+	\item Implémenter une page pour la gestion des devoirs.
+\end{itemize}
+
+Dans l’ensemble, les résultats obtenus sont très satisfaisants, compte tenu de la complexité technique du projet, du temps disponible et du fait qu’il s’agit d’un développement réalisé entièrement de manière autonome.
+
+\section{Captures d’écran de l’application}
+
+Voici quelques captures d’écran de Messagyre dans son état actuel, accompagnées d’une brève description :
+
+\begin{itemize}
+	
+	\item \textbf{Page de connexion} : avec les champs de saisie et le bouton de connexion.
+	
+	\begin{figure}[H]
+		\centering
+		\begin{minipage}[t]{0.5\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{img/login.png}
+			\caption{Page de connexion}
+		\end{minipage}
+	\end{figure}
+	
+	\item \textbf{Page d'inscription} : formulaire avec vérification de l’adresse e-mail.
+	
+	\begin{figure}[H]
+		\centering
+		\begin{minipage}[t]{0.5\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{img/registration_email.png}
+			\caption{Page d'inscription}
+		\end{minipage}
+	\end{figure}
+	
+	\item \textbf{Liste des conversations} : affichage des contacts et des derniers messages reçus.
+	
+	\begin{figure}[H]
+		\centering
+		\begin{minipage}[t]{0.5\textwidth}
+			\centering
+		%	\includegraphics[width=\textwidth]{img/conversations.png}
+			\caption{Liste des conversations}
+		\end{minipage}
+	\end{figure}
+	
+	\item \textbf{Fenêtre de discussion} : interface avec les messages envoyés et reçus.
+	
+	\begin{figure}[H]
+		\centering
+		\begin{minipage}[t]{0.5\textwidth}
+			\centering
+		%	\includegraphics[width=\textwidth]{img/chat.png}
+			\caption{Fenêtre de discussion}
+		\end{minipage}
+	\end{figure}
+	
+	\item \textbf{Profil utilisateur} : aperçu d’un compte avec photo et informations visibles.
+	
+	\begin{figure}[H]
+		\centering
+		\begin{minipage}[t]{0.5\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{img/profile.png}
+			\caption{Profil utilisateur}
+		\end{minipage}
+	\end{figure}
+	
+	\item \textbf{Page des devoirs} : liste des prochains devoirs, ajout d’un nouveau et visualisation des détails.
+	
+	\begin{figure}[H]
+		\centering
+		\begin{minipage}[t]{0.32\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{img/homework.png}
+			\caption*{Liste des devoirs}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[t]{0.32\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{img/new_homework.png}
+			\caption*{Ajout d’un devoir}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[t]{0.32\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{img/view_homework.png}
+			\caption*{Détail d’un devoir}
+		\end{minipage}
+		\caption{Interface de la page « Devoirs »}
+	\end{figure}
+	
+\end{itemize}
+
+
+
+\chapter{Difficultés rencontrées}
+
+\section{Difficultés techniques}
+
+Pendant le développement de Messagyre, j’ai dû faire face à de nombreuses difficultés techniques qui ont mis à l’épreuve mes connaissances et ma capacité d’adaptation.
+
+L’une des premières étapes du projet a été l’utilisation d’Unity comme client. Ce choix initial s’est vite révélé peu adapté au développement d’une application mobile. L’interface utilisateur était plus complexe à construire et les intégrations avec HTTP et WebSocket étaient laborieuses. Chaque élément devait être programmé manuellement : animations, dimensions, positionnement des composants, logique dynamique et visuelle. Tout devait être écrit depuis zéro, sans composants natifs adaptés aux appareils mobiles. Cette gestion artisanale prenait environ 90\% du temps de développement, ralentissant considérablement l’avancement du projet et rendant chaque modification fastidieuse. Le manque d’outils natifs pour les appareils mobiles a nui à l’expérience utilisateur, ce qui m’a poussé à migrer vers Flutter, bien plus adapté à une application moderne et fluide.
+
+Flutter a également posé des difficultés, notamment au début. N’ayant jamais utilisé ce framework auparavant, j’ai eu du mal à comprendre le cycle de vie des widgets et la gestion de l’état. L’intégration de paquets externes pour le chargement d’images, les animations et les notifications m’a demandé de nombreuses tentatives et beaucoup de débogage.
+
+L’un des défis les plus complexes a été la gestion de la communication en temps réel via WebSocket. En plus de devoir comprendre les différences avec HTTP, j’ai appris à gérer des connexions persistantes, des déconnexions inattendues et la synchronisation des messages entre le client et le serveur, tout en garantissant une bonne expérience utilisateur.
+
+La mise en place d’un système d’authentification sécurisé basé sur JWT et RefreshToken a également été une nouveauté pour moi. J’ai étudié des aspects liés à la cryptographie et à la sécurité des données pour assurer la fiabilité des sessions utilisateur. Le volet base de données n’a pas été plus simple : j’ai dû apprendre à configurer et utiliser MySQL, concevoir des tables avec des clés étrangères, optimiser les requêtes et gérer les erreurs de connexion, ce qui a demandé beaucoup de rigueur et de patience.
+
+Le déploiement sur Railway m’a aussi posé des problèmes de compatibilité entre différentes versions de .NET. Adapter le projet à une version stable supportée, sans perdre en performance, a été un défi supplémentaire.
+
+\section{Difficultés organisationnelles}
+
+Outre les aspects techniques, j’ai rencontré des difficultés organisationnelles. Réussir à concilier le développement du projet avec les cours, les devoirs et la vie personnelle n’a pas été simple. J’ai dû apprendre à mieux gérer mon temps, établir des plannings réalistes et éviter la procrastination.
+
+Parfois, la motivation diminuait, surtout dans les moments où les résultats tardaient ou lorsque les problèmes semblaient insurmontables. Mais voir l’application fonctionner concrètement sur le téléphone de mes amis m’a redonné de l’énergie pour continuer.
+
+\section{Comment j’ai surmonté les difficultés}
+
+Pour surmonter ces obstacles techniques et organisationnels, je me suis appuyé principalement sur l’apprentissage autodidacte, avec l’aide précieuse des intelligences artificielles. J’ai consulté la documentation officielle, suivi des tutoriels, lu des discussions sur des forums comme Stack Overflow et GitHub, et expérimenté différentes approches jusqu’à trouver les bonnes solutions.
+
+Les intelligences artificielles se sont révélées être des outils extrêmement efficaces : elles m’ont souvent proposé des solutions optimisées, ce qui m’a fait gagner un temps précieux. Elles m’ont aussi permis d’écrire du code plus propre et de découvrir des bibliothèques ou des paquets que je n’aurais probablement jamais trouvés seul, accélérant ainsi significativement le développement.
+
+J’ai appris à diviser mon travail en objectifs concrets et atteignables, ce qui m’a permis de progresser étape par étape sans me décourager. Parler du projet avec des amis ou des enseignants m’a également aidé à clarifier mes idées et à trouver de nouvelles pistes.
+
+Toutes ces expériences, bien que parfois éprouvantes, m’ont permis de grandir, aussi bien techniquement que dans la gestion de projet et l’autonomie.
+
+
+\chapter{Bilan personnel}
+
+Ce projet m’a permis de vivre une expérience de développement complète, avec toutes les phases que cela implique : conception, recherche, programmation, tests, déploiement et documentation. Sur le plan technique, j’ai énormément appris. J’ai approfondi mes compétences en C\#, découvert ASP.NET Core, compris en profondeur le fonctionnement des WebSocket et de l’authentification via JWT. J’ai également acquis une grande maîtrise de Flutter et du développement mobile multiplateforme, ainsi que des bases de données MySQL.
+
+Sur le plan personnel, ce travail m’a appris la persévérance, la rigueur et l’autonomie. J’ai dû me former seul sur de nombreuses technologies complexes, souvent sans aide extérieure directe. J’ai aussi pris conscience de l’importance de bien planifier son temps et de savoir demander de l’aide au bon moment. Ce projet m’a donné confiance en ma capacité à mener une idée de bout en bout, même face à des obstacles importants.
+
+Si je devais refaire ce projet, je choisirais dès le départ des outils plus adaptés aux besoins d’une application mobile. J’éviterais Unity, dont la flexibilité est un atout dans le domaine du jeu vidéo, mais un inconvénient majeur dans ce type d’application. J’organiserais aussi mieux mon temps dès le début, avec une feuille de route plus précise et un système de gestion des tâches plus rigoureux.
+
+Quant à l’avenir de Messagyre, je n’exclus pas de continuer à le développer et à l’améliorer. Plusieurs idées restent à concrétiser, comme l’ajout de notifications push, une version web de l’application, l’intégration de messages vocaux ou vidéos, ou encore une meilleure gestion des groupes et des discussions collectives. Le projet pourrait même, un jour, être proposé à d’autres écoles, au-delà du Gymnase de Renens, si son usage s’y prête.
+
+En somme, cette expérience a été à la fois un défi technique et une aventure personnelle très enrichissante, qui m’a beaucoup apporté et dont je suis fier.
+
+
+\chapter{Conclusion}
+
+Le développement de Messagyre a représenté pour moi un parcours long, exigeant et formateur. De l’idée initiale à la réalisation de l’application, j’ai traversé de nombreuses étapes : changements de technologies, obstacles techniques, réécritures complètes et améliorations successives. Chaque choix, même ceux qui semblaient initialement erronés, a contribué à construire un projet solide et concret.
+
+D’un point de vue technique, j’ai pu expérimenter de manière pratique de nombreuses compétences acquises au fil des années, en consolider de nouvelles et approfondir des technologies complexes comme Flutter, ASP.NET Core, JWT et WebSocket. Mais au-delà des aspects techniques, j’ai acquis une méthode de travail plus organisée et plus consciente, en affrontant des problèmes réels et en apprenant à chercher des solutions efficaces.
+
+Messagyre n’est pas seulement une application de messagerie : c’est le résultat de centaines d’heures de travail, d’essais, d’erreurs et de corrections. C’est aussi la preuve qu’un projet ambitieux peut devenir réalité, même s’il est développé par une seule personne, avec passion et détermination.
+
+Personnellement, je considère ce projet comme l’un des travaux les plus complets et significatifs que j’aie jamais réalisés. Il a une grande valeur, tant du point de vue professionnel — car il démontre mes compétences de développeur — que du point de vue personnel — car il m’a appris à croire en mes idées et à les porter jusqu’au bout avec détermination.
+
+J’espère que Messagyre pourra continuer à évoluer au-delà de ce travail de maturité. Qu’il puisse être utile aux élèves et aux enseignants, et peut-être devenir un véritable outil de communication scolaire, simple, sécurisé et accessible à tous.
+
+
+\chapter{Sources et bibliographie}
+
+Pour mener à bien le développement de Messagyre, je me suis appuyé sur diverses ressources fiables, disponibles en ligne. Voici les principales :
+
+\section{Documentation officielle}
+
+\begin{itemize}
+	\item \textit{Flutter} — \url{https://docs.flutter.dev}
+	\item \textit{Flutter API} — \url{https://api.flutter.dev}
+	\item \textit{Dart} — \url{https://dart.dev/guides}
+	\item \textit{ASP.NET Core} — \url{https://learn.microsoft.com/fr-fr/aspnet/core}
+	\item \textit{C\#} (syntaxe et curiosités) — \url{https://learn.microsoft.com/en-us/dotnet/csharp/}
+	\item \textit{MySQL} — \url{https://dev.mysql.com/doc/}
+	\item \textit{JWT (JSON Web Tokens)} — \url{https://jwt.io/introduction}
+	\item \textit{Railway} — \url{https://docs.railway.app}
+	\item \textit{pub.dev} — \url{https://pub.dev} : plateforme utilisée pour trouver et installer des paquets et extensions Flutter.
+\end{itemize}
+
+\section{Tutoriels, articles et forums}
+
+\begin{itemize}
+	\item Stack Overflow — \url{https://stackoverflow.com}
+	\item GitHub Discussions — \url{https://github.com}
+	\item Flutter Community — \url{https://fluttercommunity.dev}
+	\item Railway Community Forum — \url{https://community.railway.app}
+	\item TeX Stack Exchange — \url{https://tex.stackexchange.com}
+	\item Reddit (r/FlutterDev, r/dotnet, r/webdev) — \url{https://www.reddit.com}
+	\item Wikipédia — pages sur \textit{Base64} et \textit{JSON Web Token} pour la compréhension des concepts fondamentaux.
+	\item Vidéo YouTube sur CachedNetworkImage (Flutter) — \url{https://www.youtube.com/watch?v=fnHr_rsQwDA&ab_channel=Flutter}
+	\item Guide sur CupertinoNavigationBar — \url{https://tillitsdone.com/blogs/cupertino-navigation-bar-guide/}
+	\item Installation des drivers Android et utilisation d’ADB — \url{https://androidmtk.com}
+	\item Vidéo YouTube sur LargeTitle Cupertino — \url{https://www.youtube.com/watch?v=Uu7s2vigU3A}
+	\item Vidéo YouTube sur CupertinoNavigationBar (HeyFlutter) — \url{https://www.youtube.com/watch?v=2M7LidCj_q0&ab_channel=HeyFlutter%E2%80%A4com}
+\end{itemize}
+
+\section{Outils d’assistance}
+
+\begin{itemize}
+	\item \textbf{ChatGPT (OpenAI)} — pour générer du code, trouver des solutions optimisées et explorer des alternatives techniques.
+	\item \textbf{Google Gemini} — pour la recherche de documentation complémentaire et l’exploration d’approches différentes.
+	\item \textbf{Claude (Anthropic)} — pour obtenir des résumés techniques et des explications de concepts complexes.
+	\item \textbf{Bing AI / Copilot} — pour compléter la recherche de paquets et d’outils adaptés.
+\end{itemize}
+
+\section{Outils de développement}
+
+\begin{itemize}
+	\item \textbf{Visual Studio 2022} — environnement de développement principal pour ASP.NET Core et le serveur.
+	\item \textbf{Visual Studio Code} — utilisé pour éditer des fichiers Dart, JSON, SQL et pour les tests rapides côté client.
+	\item \textbf{Android Studio} — utilisé pour installer les SDK Android et tester l’application Flutter via son émulateur intégré.
+\end{itemize}
+
+\section{Autres inspirations et connaissances utiles}
+
+\begin{itemize}
+	\item Cours de mathématiques sur la cryptographie (Gymnase de Renens) — a contribué à mieux comprendre les principes de sécurité appliqués à l’application (notamment l’utilisation des tokens, des mots de passe hachés et de la confidentialité des échanges).
+	\item \textbf{Patternico} — utilisé pour générer les motifs de fond dans les fenêtres de discussion.
+	\item \textbf{Pixlr E} — éditeur d’images utilisé pour ajuster et retoucher les visuels de l’application.
+	\item \textbf{Google Maps} — utilisé pour dessiner l’icône de l’application à partir de la vue aérienne du bâtiment du gymnase.
+	\item \textbf{Remove.bg} — utilisé pour supprimer automatiquement l’arrière-plan de certaines images utilisées dans l’application.
+\end{itemize}
+
+
+\chapter{Annexes}
+
+\section{Code source}
+
+Le code complet du projet est disponible sur GitHub aux adresses suivantes :
+
+\begin{itemize}
+	\item \textbf{Client Flutter} : \url{https://github.com/Gravi32/MessagyreClient}
+	\item \textbf{Serveur ASP.NET Core} : \url{https://github.com/Gravi32/MessagyreServer}
+\end{itemize}
+
+Pour faciliter l’accès, il est possible d’inclure un QR code menant aux dépôts.
+
+\section{Diagrammes}
+
+Pour illustrer la structure et l’architecture du projet, des diagrammes UML ont été réalisés. Le diagramme principal est disponible au lien suivant :
+
+\begin{itemize}
+	\item \textbf{Diagramme UML} : \url{https://lucid.app/lucidchart/b8dadd52-61fd-468b-8bd6-a81aa133eb02/edit?viewport_loc=-3637\%2C-1769\%2C9681\%2C4831\%2C0_0&invitationId=inv_fa22bca5-082d-4666-b827-15f4adaa3a38}
+\end{itemize}
+
+\section{Icônes de l’application}
+
+Voici les icônes principales utilisées dans Messagyre :
+
+\begin{figure}[H]
+	\centering
+	\begin{minipage}[t]{0.45\textwidth}
+		\centering
+		\includegraphics[width=0.7\textwidth]{img/logo_purple.png}
+		\caption{Icône violette (version simplifiée)}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[t]{0.45\textwidth}
+		\centering
+		\includegraphics[width=0.7\textwidth]{img/logo_full.png}
+		\caption{Icône complète de l’application}
+	\end{minipage}
+\end{figure}
+
+\chapter{Structure du serveur}
 
 Chaque composant du serveur est expliqué dans les sous-sections à venir, qui présenteront un \textit{"Extrait du code"}, c’est-à-dire une illustration schématique du code du composant. Il est possible de visiter le \href{https://github.com/Gravi32/MessagyreServer.git}{dépôt GitHub} du projet du serveur pour accéder au code complet.
 Pour comprendre plus facilement le fonctionnement des différents composants du serveur, un \href{https://lucid.app/lucidchart/b8dadd52-61fd-468b-8bd6-a81aa133eb02/edit?viewport_loc=-3637\%2C-1769\%2C9681\%2C4831\%2C0_0&invitationId=inv_fa22bca5-082d-4666-b827-15f4adaa3a38}{Diagramme UML} est également disponible.
 
-\subsection{User.cs}
+\section{User.cs}
 
 Lorsqu’un serveur reçoit une requête, il est souvent nécessaire de pouvoir reconnaître, distinguer et cataloguer l’expéditeur : cela est représenté par la classe \code{User}, une classe non statique (donc instanciable) contenant toutes les informations utiles concernant l’utilisateur connecté.
 
-\subsubsection{Extrait du code}
+\subsection{Extrait du code}
 \begin{minted}{csharp}
 using System.Net.WebSockets;
 
@@ -161,10 +546,10 @@ namespace MessagyreServer.Classes
 }
 \end{minted}
 
-\subsubsection{Variables principales}
+\subsection{Variables principales}
 Une instance de la classe \code{User} contient trois informations principales : le compte (\code{Account}) lié à l'utilisateur (si authentifié), le \code{Socket} du client connecté (nécessaire pour pouvoir lui envoyer des messages), et un booléen \code{IsAuthorized} qui indique si l'utilisateur s'est connecté à son compte ou non.
 
-\subsubsection{Methodes}
+\subsection{Methodes}
 Le premier "méthode" de ce script est un \code{Constructor}, il est appelé lorsque la classe est instanciée et stocke le \code{Socket} en mémoire.
 
 Le second est uniquement pour la lisibilité, lorsqu'il est appelé, il envoie le message \code{Signal} au client.
@@ -172,11 +557,11 @@ Le second est uniquement pour la lisibilité, lorsqu'il est appelé, il envoie l
 Le dernier (\code{Authenticate()}), est appelé par la classe \code{Authenticator} lorsque l'utilisateur se connecte à son compte.
 \\\\
 
-\subsection{Signal.cs}
+\section{Signal.cs}
 
 Une autre classe non statique qui contient toutes les informations d'une requête/message. Elle est instanciée lorsque le serveur reçoit une requête ou lorsqu'il doit envoyer un message à un client spécifique.
 
-\subsubsection{Extrait du code}
+\subsection{Extrait du code}
 
 \begin{minted}{csharp}
 using Newtonsoft.Json;
@@ -226,7 +611,7 @@ namespace MessagyreServer.Classes
 }
 \end{minted}
 
-\subsubsection{Variables principales}
+\subsection{Variables principales}
 Les informations contenues dans cette classe sont réparties en trois variables :
 
 1.\code{Sender} Indique l'utilisateur à partir duquel le serveur a reçu le message. 
@@ -236,15 +621,15 @@ Les informations contenues dans cette classe sont réparties en trois variables 
 
 3.\code{Data} Contient un “dictionnaire” (une liste où chaque élément a un nom) avec toutes les données du \code{Signal}, par exemple \code{Username} et \code{Password} dans le cas d'un \code{Signal} de \code{Type} \code{SignalType.Login}.
 
-\subsubsection{Methodes}
+\subsection{Methodes}
 La méthode \code{Pack} “emballe” le \code{Signal}, c'est-à-dire qu'elle convertit les trois variables en un objet \textit{Json} via la méthode \code{SerializeObject} de \code{JsonConvert}, provenant de la bibliothèque \code{Newtonsoft.Json}. Cela est nécessaire pour pouvoir l'envoyer au client, car il n'est pas possible d'envoyer des instances de classes via \textit{WebSocket}, mais uniquement des chaînes de caractères.
 
 \code{Unpack} fait exactement l'inverse, en prenant une chaîne contenant l'objet \textit{Json}, elle la “convertit” en une nouvelle instance de \code{Signal}. Cette action est entourée d'un \code{try catch} car si un client devait envoyer une requête avec des données corrompues, mal formatées ou s'il y avait un problème lors de la transmission, le \textit{Json} ne serait pas valide et le serveur planterait.
 \\\\
-\subsection{Account.cs}
+\section{Account.cs}
 Dernière classe non statique qui représente le compte d'un utilisateur.
 
-\subsubsection{Extrait du code}
+\subsection{Extrait du code}
 \begin{minted}{csharp}
     using Newtonsoft.Json;
 
@@ -298,7 +683,7 @@ namespace MessagyreServer.Classes
 }
 \end{minted}
 
-\subsubsection{Variables}
+\subsection{Variables}
 Cette classe contient toutes les informations d'un compte :
 
 1.\code{Username}: Nom d'utilisateur déduit de l'adresse email de l'utilisateur. (\textit{"prénom.nom"} de l'adresse \textit{"prénom.nom@eduvaud.ch"}) \\
@@ -308,17 +693,17 @@ Cette classe contient toutes les informations d'un compte :
 5.\code{LastLogin}: Date de la dernière connexion à la plateforme.\\
 6.\code{Banned}: Valeur booléenne indiquant si l'utilisateur peut accéder à l'application. Si \textit{`true`}, la connexion est refusée. \\
 
-\subsubsection{Methodes}
+\subsection{Methodes}
 Le premier constructeur est appelé par l’\code{Authenticator} lorsque le compte est créé, tandis que le second est appelé par l’\code{AccountsManager} lorsqu'il est chargé en mémoire depuis la base de données. 
 
 La méthode \code{Hash()} est uniquement pour la lisibilité, elle retourne le mot de passe fourni après l'avoir chiffré. \code{TryPassword()} retourne si le mot de passe fourni comme paramètre \code{Attempt} est correct. La méthode \code{GetUsernameFromEmail()} extrait le nom d'utilisateur de l'adresse e-mail.
 \\\\
 
-\subsection{Program.cs (Entry point)}
+\section{Program.cs (Entry point)}
 
 Point d'entrée du programme, démarrage de l'écoute, gestion et routage des requêtes vers les autres classes.
 
-\subsubsection{Démarrage du serveur}
+\subsection{Démarrage du serveur}
 \begin{minted}{csharp}
 using System.Net.WebSockets;
 
@@ -334,7 +719,7 @@ App.Run();
 
 Dans le code ci-dessus, l'écoute des requêtes est lancée. Lorsqu'une requête est reçue, la méthode \code{RequestHandling} est appelée et les données de la requête sont transmises en tant qu'arguments de la fonction, comme le \code{Context} et \code{Next}.
 
-\subsubsection{Gestion des requêtes}
+\subsection{Gestion des requêtes}
 \begin{minted}{csharp}
 async Task RequestsHandling(HttpContext Context, Func<Task> Next)
 {
@@ -345,7 +730,7 @@ async Task RequestsHandling(HttpContext Context, Func<Task> Next)
 
 \code{Context} est une instance de la classe \code{HttpContext} contenant toutes les informations du message \textit{Http} reçu, y compris la propriété \code{IsWebSocketRequest}, qui détermine (intuitivement) si la requête reçue est une requête \textit{WebSocket}. S'il s'agit d'un autre type de requête, alors celle-ci est ignorée et la requête suivante (\code{Next}) est exécutée.
 
-\subsubsection{Gestion des connexions}
+\subsection{Gestion des connexions}
 
 Une fois la requête reçue et déterminé qu’il s’agit d’une requête \textit{WebSocket}, la fonction \code{OnConnection()} suivante est appelée :
 
@@ -394,7 +779,7 @@ Ensuite, une boucle est ouverte et se répète tant que la connexion n'est pas f
 
 Pour éviter que d'éventuelles erreurs n'interrompent l'exécution du serveur, l'écoute est entourée d'un \code{try catch}. À la fin de la boucle, c'est-à-dire lorsque la connexion est fermée, la fonction \code{OnDisconnect()} de la classe \code{Server} est appelée pour gérer la déconnexion du client.
 \\\\
-\subsection{Server.cs}
+\section{Server.cs}
 
 Gestion des utilisateurs connectés, du routage des messages vers les autres classes du serveur et des déconnexions.
 
@@ -466,7 +851,7 @@ Cette méthode reçoit comme arguments une valeur \code{Sender}, c'est-à-dire l
 
 Grâce à ces deux valeurs, une instance de la classe \code{Signal} est créée, puis elle est dirigée vers la classe appropriée, comme la classe \code{Authenticator} pour les demandes de connexion ou la classe \code{Messages} pour les demandes de messagerie.
 \\\\
-\subsection{Authenticator.cs}
+\section{Authenticator.cs}
 
 Il s’occupe de la gestion des accès à la plateforme et de la création des comptes.
 
@@ -490,7 +875,7 @@ Les types de \code{Signal} gérés ici sont au nombre de deux :
 
 Ceux de \textit{login} et ceux de \textit{inscription}. Il s'agit de fonctions très longues et une partie du code a été omise ; un lien vers le dépôt \textit{GitHub} est disponible au début du chapitre \textit{“Structure du serveur”}.
 
-\subsubsection{Login: Accès à un compte existant}
+\subsection{Login: Accès à un compte existant}
 
 Voici la méthode qui s'occupe de la gestion des \code{SignalType.Login} :
 
@@ -557,7 +942,7 @@ Ensuite, on vérifie s’il existe effectivement un compte correspondant au nom 
 
 Si ces contrôles sont concluants, la procédure de connexion à la plateforme est finalisée, donnant accès au client, et tous les éventuels messages envoyés à l’utilisateur pendant son absence sont transmis.
 
-\subsubsection{Registration: Creation d'un nouveau compte}
+\subsection{Registration: Creation d'un nouveau compte}
 
 En ce qui concerne les signaux de \textit{inscription}, la gestion de ces requêtes est nettement plus complexe : lorsque le client envoie son adresse e-mail au serveur pour créer un nouveau compte, il est nécessaire de vérifier qu’il s’agit bien du véritable propriétaire de l’adresse, afin d’éviter la création de comptes au nom d’une autre personne. Ce contrôle supplémentaire rend le processus d’authentification beaucoup plus long et complexe.
 
@@ -717,10 +1102,10 @@ Si le code correspond, alors l’adresse est vérifiée et l’on peut passer à
 Si le mot de passe respecte cette condition, le compte est créé avec succès, et l’utilisateur accède à l’application.
 \\\\
 
-\subsection{AccountsManager.cs}
+\section{AccountsManager.cs}
 Elle s’occupe de la gestion des comptes, de leur sauvegarde en mémoire, mais aussi de fournir les résultats lorsqu’un utilisateur recherche un autre compte.
 
-\subsubsection{Extrait du code}
+\subsection{Extrait du code}
 \begin{minted}{csharp}
 using MySql.Data.MySqlClient;
 using MessagyreServer.Classes;
@@ -754,16 +1139,16 @@ namespace MessagyreServer
 }
 \end{minted}
 
-\subsubsection{Variables}
+\subsection{Variables}
 In questo codice l'unica variabile globale presente è \code{ConnectionString}. Si tratta di una stringa di testo contenente tutte le informazioni necessarie per la connessione al server SQL. In questo caso la \code{ConnectionString} permette al programma di connettersi al database \textit{MySQL} in esecuzione sempre sulla piattaforma \textit{Railway.app}. Le informazioni contenute nella stringa sono\\ 
 1.\code{Server}: indica l'indirizzo del database SQL. Può essere un \textit{IP}, un nome o \textit{"localhost"} se è in esecuzione in locale. Per evitare spese inutili, per testare le funzionalità del server durante lo sviluppo, ho usato quest'ultima opzione.\\
 2.\code{Port}: indica la porta sulla quale il server ascolta le richieste SQL.\\ 
 3.\code{Database}: è il nome del database al quale il server si deve collegare.\\
 4.\code{User} e \code{Password}: le credenziali necessarie per accedere al database e eventualmente modificarne proprietà e contenuti.
 
-\subsubsection{Obtention d'un compte}
+\subsection{Obtention d'un compte}
 
-Questo metodo qui sotto viene chiamato principalmente dall \code{Authenticator} per ottenere un account oppure per verificarne l'esistenza. Perché funzioni, è necessario fornire un parametro \code{Username}, cioè il nome utente dell'account in questione; \code{Result} non è un parametro, come dimostrato dalla \textit{keyword} \code{out}, bensi un modificatore di parametro, l'ho utilizzato in questo caso per poter restituire due valori da un singolo metodo, cosa non possibile cambiandone solo il tipo. Infatti questo metodo restituisce un valore booleano indicante l'esistenza dell'account ricercato, mentre \code{Result} ottiene come valore il "risultato" dell'operazione, ovvero l'account trovato.
+Questo metodo qui sotto viene chiamato principalmente dall \code{Authenticator} per ottenere un account oppure per verificarne l'esistenza. Perché funzioni, è necessario fornire un parametro \code{Username}, cioè il nome utente dell'account in questione; \code{Result} non è un parametro, come dimostrato dalla \textit{keyword} \code{out}, bensi un modificatore di parametro, l'ho utilizzato in questo caso per poter restituire due valori da un singolo metodo, cosa non possibile cambiandone solo il tipo. Infatti questo metodo restituisce un valore booleano indicante l'esistenza dell'account ricercato, mentre \code{Result} ottiene come valore il "risultato" dell'operazione, ovvero l'account trovato.kla
 
 \begin{minted}{csharp}
 public static bool GetAccount(string Username, out Account? Result)
@@ -814,7 +1199,7 @@ Le azioni eseguite in questo metodo sono tipiche di una richiesta SQL con risult
 \end{itemize}
 Il comportamento del codice qui sopra è anche spiegato in inglese nei commenti (\textit{"Connessione al server SQL"}, \textit{"Creazione del comando"}, \textit{"Invio del comando e attesa della risposta"}).
 
-\subsubsection{Creation d'un compte}
+\subsection{Creation d'un compte}
 Questo metodo invece viene chiamato quando è necessario creare un nuovo account. L'\code{Authenticator} ne fa uso quando un utente completa l'ultima tappa della \textit{registration}. Per l'esecuzione di questo metodo è richiesto un solo parametro, un'istanza della classe \code{Account} contenente tutte le informazioni dell'account da aggiungere al database.
 
 \begin{minted}{csharp}
@@ -840,7 +1225,7 @@ public static void AddAccount(Account NewAccount)
 
 La prima cosa controllata all'esecuzione del metodo, è l'esistenza di un altro account con lo stesso nome utente nel database. Questo controllo viene effettuato col fine di evitare conflitti con altri account omonimi. Il resto delle azioni sono simili al metodo precedente, con la differenza che questo non invia una richiesta con risultato, bensi un semplice comando. Invece di attendere una risposta dal server, come visto precedentemente con \code{Command.ExecuteReader()}, il metodo chiamato è \code{Command.ExecuteNonQuery()}, che invia unicamente il comando.
 
-\subsubsection{Suppression d'un compte}
+\subsection{Suppression d'un compte}
 
 Metodo chiamato per eliminare un account. Anche in questo caso è richiesto un solo parametro, una stringa \code{Username} rappresentante il nome utente assegnato all'account da eliminare. 
 
@@ -860,7 +1245,7 @@ public static void DeleteAccount(string Username)
 
 La struttura è la medesima del metodo precedente, trattandosi di un comando senza risposta.
 
-\subsubsection{Recherche d'un compte}
+\subsection{Recherche d'un compte}
 
 Metodo chiamato quando un utente, dalla barra di ricerca nella pagina \textit{"Conversations"} dell'applicazione Messagyre, inserisce almeno due caratteri per cercare un altro utente.
 Questo metodo richiede come parametro la stringa immessa dall'utente nella sua barra di ricerca, da notare che questa stringa potrebbe non essere il nome utente completo, bensi una parte di almeno due caratteri di lunghezza.
@@ -888,11 +1273,11 @@ public static List<string> SearchAccount(string Query)
 
 La struttura è quella di una richiesta con risposta, con la differenza che in questo caso ci possono essere molteplici risultati. Verrà infatti restituita una lista \code{Results} con tutti i valori inviati dal database e letti da \code{Reader.Read()}, che legge la risposta riga per riga.
 
-\subsection{Messages.cs}
+\section{Messages.cs}
 
 Quando un utente invia un messaggio a un altro utente, questo messaggio viene inviato al server, che lo gestisce e lo reindirizza all'utente destinatario.
 
-\subsubsection{Extrait du code}
+\subsection{Extrait du code}
 
 \begin{minted}{csharp}
 using MessagyreServer.Classes;
@@ -905,7 +1290,7 @@ public class Messages
 }
 \end{minted}
 
-\subsubsection{Reception d'un message}
+\subsection{Reception d'un message}
 
 Quando il server riceve un segnale con il valore della variabile \code{Type} pari a \code{SignalType.Message}, la classe \code{Server} chiama il metodo \code{OnMessageSignal()}, fornendo come parametro il segnale ricevuto.
 
@@ -929,7 +1314,7 @@ Quando viene chiamato il metodo, viene innanzitutto controllato se l'utente dal 
 In seguito vengono ottenuti i dati dal segnale: l'\code{Username} del destinatario e il contenuto (\code{Content}) del messaggio. 
 Infine viene inviato il messaggio, chiamando il metodo \code{SendMessage}, trattato nella seguente sezione.
 
-\subsubsection{Envoi d'un message}
+\subsection{Envoi d'un message}
 
 Come visto precedentemente, per l'invio di un messaggio a partire dal server, viene chiamato il metodo \code{SendMessage}, che si occupa di recapitare il messaggio all'utente, che questo sia attualmente connesso alla piattaforma oppure no. I parametri richiesti sono il nome utente del mittente (\code{SenderUsername}), quello del destinatario (\code{RecipientUsername}) e il contenuto del messaggio (\code{Content}).
 
