@@ -11,21 +11,23 @@
 \usepackage{times}
 
 \definecolor{Titles}{RGB}{100, 25, 104} % Dark blue
+\setcounter{secnumdepth}{2} % No ".0" in the titles
 
 \geometry{a4paper, margin=2.5cm}
 
 
 \titleformat{\chapter}
-  {\color{Titles}\normalfont\Huge\bfseries}
-  {\thesection}{1em}{}
+	{\color{Titles}\normalfont\Huge\bfseries}
+	{\thechapter}{1em}{}
 
 \titleformat{\section}
-  {\color{Titles}\normalfont\LARGE\bfseries}
-  {\thesubsection}{1em}{}
+	{\color{Titles}\normalfont\LARGE\bfseries}
+	{\thesection}{1em}{}
 
-  \titleformat{\subsection}
-  {\color{Titles}\normalfont\Large\bfseries}
-  {\thesubsubsection}{1em}{}
+\titleformat{\subsection}
+	{\color{Titles}\normalfont\Large\bfseries}
+	{\thesubsection}{1em}{}
+
   
 \tcbuselibrary{listings, skins, breakable}
 
@@ -263,7 +265,7 @@ Voici quelques captures d’écran de Messagyre dans son état actuel, accompagn
 		\centering
 		\begin{minipage}[t]{0.5\textwidth}
 			\centering
-			\includegraphics[width=\textwidth]{img/login.png}
+			\fbox{\includegraphics[width=\textwidth]{img/login.png}}
 			\caption{Page de connexion}
 		\end{minipage}
 	\end{figure}
@@ -274,7 +276,7 @@ Voici quelques captures d’écran de Messagyre dans son état actuel, accompagn
 		\centering
 		\begin{minipage}[t]{0.5\textwidth}
 			\centering
-			\includegraphics[width=\textwidth]{img/registration_email.png}
+			\fbox{\includegraphics[width=\textwidth]{img/registration_email.png}}
 			\caption{Page d'inscription}
 		\end{minipage}
 	\end{figure}
@@ -285,7 +287,7 @@ Voici quelques captures d’écran de Messagyre dans son état actuel, accompagn
 		\centering
 		\begin{minipage}[t]{0.5\textwidth}
 			\centering
-		%	\includegraphics[width=\textwidth]{img/conversations.png}
+		%	\fbox{\includegraphics[width=\textwidth]{img/chats.png}}
 			\caption{Liste des conversations}
 		\end{minipage}
 	\end{figure}
@@ -296,7 +298,7 @@ Voici quelques captures d’écran de Messagyre dans son état actuel, accompagn
 		\centering
 		\begin{minipage}[t]{0.5\textwidth}
 			\centering
-		%	\includegraphics[width=\textwidth]{img/chat.png}
+		%	\fbox{\includegraphics[width=\textwidth]{img/chat.png}}
 			\caption{Fenêtre de discussion}
 		\end{minipage}
 	\end{figure}
@@ -307,7 +309,7 @@ Voici quelques captures d’écran de Messagyre dans son état actuel, accompagn
 		\centering
 		\begin{minipage}[t]{0.5\textwidth}
 			\centering
-			\includegraphics[width=\textwidth]{img/profile.png}
+			\fbox{\includegraphics[width=\textwidth]{img/profile.png}}
 			\caption{Profil utilisateur}
 		\end{minipage}
 	\end{figure}
@@ -318,19 +320,19 @@ Voici quelques captures d’écran de Messagyre dans son état actuel, accompagn
 		\centering
 		\begin{minipage}[t]{0.32\textwidth}
 			\centering
-			\includegraphics[width=\textwidth]{img/homework.png}
+			\fbox{\includegraphics[width=\textwidth]{img/homework.png}}
 			\caption*{Liste des devoirs}
 		\end{minipage}
 		\hfill
 		\begin{minipage}[t]{0.32\textwidth}
 			\centering
-			\includegraphics[width=\textwidth]{img/new_homework.png}
+			\fbox{\includegraphics[width=\textwidth]{img/new_homework.png}}
 			\caption*{Ajout d’un devoir}
 		\end{minipage}
 		\hfill
 		\begin{minipage}[t]{0.32\textwidth}
 			\centering
-			\includegraphics[width=\textwidth]{img/view_homework.png}
+			\fbox{\includegraphics[width=\textwidth]{img/view_homework.png}}
 			\caption*{Détail d’un devoir}
 		\end{minipage}
 		\caption{Interface de la page « Devoirs »}
@@ -355,6 +357,16 @@ L’un des défis les plus complexes a été la gestion de la communication en t
 La mise en place d’un système d’authentification sécurisé basé sur JWT et RefreshToken a également été une nouveauté pour moi. J’ai étudié des aspects liés à la cryptographie et à la sécurité des données pour assurer la fiabilité des sessions utilisateur. Le volet base de données n’a pas été plus simple : j’ai dû apprendre à configurer et utiliser MySQL, concevoir des tables avec des clés étrangères, optimiser les requêtes et gérer les erreurs de connexion, ce qui a demandé beaucoup de rigueur et de patience.
 
 Le déploiement sur Railway m’a aussi posé des problèmes de compatibilité entre différentes versions de .NET. Adapter le projet à une version stable supportée, sans perdre en performance, a été un défi supplémentaire.
+
+\section{Hébergement et budget}
+
+Une difficulté importante a été le choix d’une plateforme pour héberger le serveur ASP.NET Core. Je cherchais une solution compatible avec la technologie .NET tout en étant aussi économique que possible. Après plusieurs essais, j’ai opté pour \textbf{Railway}, une plateforme moderne et facile à configurer.
+
+Cependant, le coût initial était trop élevé pour moi — environ 3 euros par jour selon les estimations, ce qui représentait une dépense difficilement soutenable à long terme. J’ai envisagé de demander un financement à l’école, mais dans le contexte actuel, il est déjà difficile d’obtenir des fonds pour du matériel scolaire classique, alors un hébergement web non réutilisable paraissait encore moins justifiable.
+
+J’ai donc pris le temps de calculer les dépenses annuelles et cherché des alternatives. La solution retenue a été de passer à un \textbf{modèle serverless}, qui permet un hébergement gratuit pendant le développement, puis un forfait à environ 5 euros par mois au moment de la publication. Ce compromis me permet actuellement de continuer le projet sans frais.
+
+Toutefois, si l’application devait être effectivement publiée et utilisée par un grand nombre de personnes, un financement serait nécessaire. Pour l’instant, je ne sais pas encore comment cela pourra être mis en place, mais je suis conscient que ce sera une étape incontournable.
 
 \section{Difficultés organisationnelles}
 
