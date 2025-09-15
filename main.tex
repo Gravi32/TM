@@ -9,12 +9,13 @@
 \usepackage{titlesec}
 \usepackage{float} % Images H
 \usepackage{times}
+\usepackage[backend=biber,style=numeric,sorting=none]{biblatex} % Bibliography
+\addbibresource{bibliography.bib}
 
 \definecolor{Titles}{RGB}{100, 25, 104} % Dark blue
 \setcounter{secnumdepth}{2} % No ".0" in the titles
 
 \geometry{a4paper, margin=2.5cm}
-
 
 \titleformat{\chapter}
 	{\color{Titles}\normalfont\Huge\bfseries}
@@ -74,7 +75,7 @@
 \onehalfspacing
 
 \title{Messagyre}
-\author{TM de Pietro Gravina}
+\author{Travail de Maturité de Pietro Gravina}
 
 \begin{document}
 
@@ -85,130 +86,98 @@
 
 \section{Pourquoi ce sujet}
 
-J’ai choisi de réaliser ce projet car après plus d’un an au Gymnase de Renens, j’ai remarqué l’absence d’un moyen de communication plus informel, malgré la disponibilité de toute la suite Microsoft 365 et d’autres outils. Les e-mails sont trop formels et peu pratiques, tandis que le chat d’Outlook est peu connu et peu intuitif, tout comme celui de Teams.
+Le projet "Messagyre" est né de l’observation d’une série de difficultés rencontrées durant mon expérience au Gymnase de Renens. D’une part, il manquait un système informatique ou une application permettant aux élèves de gérer de manière complète leur année scolaire (devoirs, notes, communications avec les camarades et les professeurs), sans devoir recourir exclusivement à l’agenda papier, déjà dépassé dans de nombreux pays (comme l’Italie, dont je suis originaire). D’autre part, j’ai remarqué l’absence d’un outil de communication plus informel: bien que la suite Microsoft 365 et d’autres instruments soient disponibles, les e-mails sont trop formels et peu pratiques, tandis que les chats d’Outlook et de Teams\supercite{teams} sont peu intuitifs et rarement utilisés.
 
-Pour résoudre ce problème, j’ai conçu une application de messagerie dédiée exclusivement aux communications internes du gymnase : Messagyre. Son principe est similaire à celui de WhatsApp, à la différence que, plutôt que de nécessiter le numéro de téléphone du destinataire, Messagyre permet de communiquer simplement en connaissant son prénom (et, si nécessaire, son nom de famille), facilitant ainsi les échanges entre étudiants et enseignants.
+Pour répondre à ces problématiques, j’ai choisi comme sujet de mon Travail de Maturité la conception, le développement et la réalisation d’une application réunissant dans une seule plateforme toutes les fonctions essentielles à la vie scolaire. "Messagyre" n’est en effet pas seulement une application de messagerie, mais comprend également une section pour la gestion des notes et une autre dédiée aux devoirs, permettant ainsi aux élèves d’avoir tout le nécessaire à portée de main.
+
+Son système de communication est similaire à celui de WhatsApp\supercite{whatsapp}, mais avec une différence fondamentale: il ne nécessite pas le numéro de téléphone du destinataire, car il permet de communiquer simplement en connaissant son prénom (et, si nécessaire, son nom de famille), rendant ainsi les échanges entre étudiants et enseignants beaucoup plus rapides et accessibles. Le nom "Messagyre" provient de la fusion des mots "Messages" et "Gyre" (ce dernier étant lui-même une contraction de Gymnase de Renens).
 
 Je considère ce projet particulièrement intéressant et ambitieux. Bien qu’une application de chat puisse sembler simple à développer au premier abord, il s’agit en réalité d’un projet complexe nécessitant des compétences avancées, tant en programmation qu’en design.
 
-Avant de commencer ce projet, je possédais déjà des connaissances avancées en programmation. Je programme depuis l’âge de huit ou neuf ans, ayant appris en autodidacte plusieurs langages, notamment C\#, Python, Lua, Java, JavaScript et Dart.
+Avant de commencer ce projet, je possédais déjà des connaissances avancées en programmation. Je programme depuis l’âge de huit ou neuf ans, ayant appris en autodidacte plusieurs langages, notamment C\#\supercite{csharp}, Python, Lua, Java, JavaScript\supercite{nodejs} et Dart\supercite{dart}.
 
-Mes premières expériences en communication client-serveur consistaient en de simples échanges de données entre des pages HTML avec des scripts en JavaScript et un serveur basé sur Node.js. Cependant, afin de tester la faisabilité de ce projet et de proposer l’idée officiellement à la direction, j’ai développé un premier prototype en utilisant Unity comme client et un serveur en Node.js (JavaScript). Bien que le système fonctionnait, la principale difficulté était d’optimiser la communication entre ces deux langages, très différents dans leur approche.
+Mes premières expériences en communication client-serveur consistaient en de simples échanges de données entre des pages HTML avec des scripts en JavaScript\supercite{nodejs} et un serveur basé sur Node.js\supercite{nodejs}. Cependant, afin de tester la faisabilité de ce projet et de proposer l’idée officiellement à la direction, j’ai développé un premier prototype en utilisant Unity\supercite{visualstudio} comme client et un serveur en Node.js (JavaScript\supercite{nodejs}). Bien que le système fonctionnait, la principale difficulté était d’optimiser la communication entre ces deux langages, très différents dans leur approche.
 
-Après quelques recherches, j’ai découvert qu’il était possible de développer le serveur directement en C\#, en utilisant l’API ASP.NET de Microsoft. J’ai donc entièrement réécrit l’application sur Unity ainsi que le serveur, améliorant donc la stabilité et l’intégration du système. Pour le développement, j’ai utilisé Visual Studio 2022, l’environnement de développement de Microsoft, pour le client ainsi que pour le serveur.
+Après quelques recherches, j’ai découvert qu’il était possible de développer le serveur directement en C\#\supercite{csharp}, en utilisant l’API ASP.NET Core\supercite{aspnetcore} de Microsoft. J’ai donc entièrement réécrit l’application sur Unity\supercite{visualstudio} ainsi que le serveur, améliorant donc la stabilité et l’intégration du système. Pour le développement, j’ai utilisé Visual Studio 2022\supercite{visualstudio}, l’environnement de développement de Microsoft, pour le client ainsi que pour le serveur.
 
-Néanmoins, après avoir avancé avec Unity, j’ai constaté que cette plateforme n’était pas idéale pour développer une application mobile de messagerie, principalement à cause des contraintes liées à la gestion de l’interface utilisateur et à la lourdeur de l’environnement pour ce type d’application. J’ai alors décidé de migrer le client vers Flutter, un framework moderne spécialisé dans le développement d’interfaces mobiles performantes et adaptatives. Cette décision m’a permis d’améliorer considérablement l’expérience utilisateur tout en conservant ASP.NET Core pour la partie serveur.
-
-Grâce à ce parcours, j’ai pu non seulement approfondir mes compétences techniques en programmation réseau, architecture logicielle et développement multiplateforme, mais aussi apprendre à prendre des décisions stratégiques sur les technologies à adopter, en fonction des contraintes et des besoins du projet. Ce travail m’a également permis de mieux comprendre la complexité et les enjeux liés au développement d’applications communicantes modernes, me préparant ainsi à mes futures ambitions dans le domaine de l’informatique.
+Néanmoins, après avoir avancé avec Unity\supercite{visualstudio}, j’ai constaté que cette plateforme n’était pas idéale pour développer une application mobile de messagerie, principalement à cause des contraintes liées à la gestion de l’interface utilisateur et à la lourdeur de l’environnement pour ce type d’application. J’ai alors décidé de migrer le client vers Flutter\supercite{flutter}, un framework moderne spécialisé dans le développement d’interfaces mobiles performantes et adaptatives. Cette décision m’a permis d’améliorer considérablement l’expérience utilisateur tout en conservant ASP.NET Core\supercite{aspnetcore} pour la partie serveur.
 
 
 \chapter{Contexte et analyse préliminaire}
 
 \section{Panorama des applications de messagerie}
 
-Les applications de messagerie instantanée occupent aujourd’hui une place centrale dans la communication quotidienne, tant au niveau personnel que professionnel. Des services comme WhatsApp, Telegram ou Signal permettent des échanges rapides, souvent gratuits, et proposent diverses fonctionnalités telles que les appels vocaux, le partage de fichiers, et la création de groupes.
+Les applications de messagerie instantanée occupent aujourd’hui une place centrale dans la communication quotidienne, tant au niveau personnel que professionnel. Des services comme WhatsApp\supercite{whatsapp}, Telegram\supercite{telegram} ou Signal\supercite{signal} permettent des échanges rapides, souvent gratuits, et proposent diverses fonctionnalités telles que les appels vocaux, le partage de fichiers, et la création de groupes.
 
-Ces applications visent à faciliter la communication en temps réel, en garantissant à la fois la simplicité d’utilisation et la sécurité des échanges. Cependant, elles présentent parfois des limites dans le cadre de communications institutionnelles ou spécifiques, comme celles d’un établissement scolaire, où la gestion des utilisateurs et la confidentialité doivent être adaptées.
+Ces applications visent à faciliter la communication en temps réel, en garantissant à la fois la simplicité d’utilisation et la sécurité des échanges. Cependant, elles présentent parfois des limites dans le cadre de communications institutionnelles ou spécifiques, comme celles d’un établissement scolaire, où la gestion des utilisateurs et la confidentialité doivent être adaptées, contrairement à Microsoft Teams\supercite{teams} plus orienté vers les usages professionnels et collaboratifs.
 
 \section{Analyse de la concurrence}
 
-Les principales applications concurrentes sur le marché sont :
-
-\begin{itemize}
-	\item \textbf{WhatsApp} : très populaire, utilise le numéro de téléphone comme identifiant principal, ce qui peut poser des problèmes de confidentialité.
-	\item \textbf{Telegram} : offre plus de fonctionnalités avancées, comme des canaux publics et une meilleure gestion de la vie privée, mais nécessite un certain niveau de familiarité technique.
-	\item \textbf{Signal} : axé sur la sécurité et la confidentialité, avec un chiffrement de bout en bout par défaut.
-\end{itemize}
+Les principales applications concurrentes sur le marché sont WhatsApp\supercite{whatsapp}, Telegram\supercite{telegram}, Signal\supercite{signal} et Microsoft Teams\supercite{teams}. WhatsApp\supercite{whatsapp} est très populaire, mais utilise le numéro de téléphone comme identifiant principal, ce qui peut poser des problèmes de confidentialité. Telegram\supercite{telegram} offre davantage de fonctionnalités avancées, comme des canaux publics et une meilleure gestion de la vie privée, mais nécessite un certain niveau de familiarité technique. Signal\supercite{signal} se concentre sur la sécurité et la confidentialité, avec un chiffrement de bout en bout par défaut. Microsoft Teams\supercite{teams}, intégré à la suite Microsoft 365, permet la communication et la collaboration, mais reste plus formel et moins intuitif pour les échanges informels entre étudiants et enseignants.  
 
 Aucune de ces solutions ne répond parfaitement aux besoins spécifiques d’un environnement scolaire comme le Gymnase de Renens, notamment en termes de facilité d’accès basée uniquement sur le prénom et le nom, sans nécessiter de numéro de téléphone.
 
 \section{Technologies principales impliquées}
 
-Pour le développement de Messagyre, plusieurs technologies clés ont été utilisées au cours de l’évolution du projet :
+Pour le développement de Messagyre, plusieurs technologies clés ont été utilisées tout au long du projet. Pour le client mobile multiplateforme, Flutter\supercite{flutter} a été choisi, utilisant le langage Dart\supercite{dart}, permettant de créer une interface moderne, fluide et performante sur Android et iOS. Le serveur est développé avec ASP.NET Core\supercite{aspnetcore} en C\#\supercite{csharp}, garantissant robustesse, performance et facilité de maintenance. Initialement, le backend était développé en Node.js\supercite{nodejs} pour prototyper rapidement les fonctionnalités en temps réel.
 
-\begin{itemize}
-	\item \textbf{Unity} : utilisé pour développer la première version du client, permettant de prototyper rapidement l’application, notamment pour la gestion graphique et les interactions utilisateur.
-	\item \textbf{Node.js} : utilisé initialement comme serveur backend, pour sa simplicité et sa popularité dans les applications temps réel, notamment avec JavaScript.
-	\item \textbf{ASP.NET Core} : framework Microsoft adopté par la suite pour le serveur, offrant robustesse, performance et intégration native avec le langage C\#.
-	\item \textbf{Flutter} : framework open source de Google, utilisé pour le développement du client mobile multiplateforme dans la version finale, permettant une interface utilisateur performante et adaptée.
-	\item \textbf{HTTP et WebSocket} : protocoles de communication utilisés respectivement pour les requêtes classiques (authentification, récupération des données) et pour la messagerie instantanée en temps réel.
-	\item \textbf{MySQL} : système de gestion de base de données relationnelle, utilisé pour stocker les informations des utilisateurs et des messages.
-	\item \textbf{Railway} : plateforme cloud utilisée pour l’hébergement du serveur, facilitant le déploiement et la gestion de l’infrastructure backend.
-\end{itemize}
+La communication entre le client et le serveur utilise HTTP\supercite{http} pour les requêtes classiques (comme l'authentification et la récupération de données) et WebSocket\supercite{websocket} pour la messagerie instantanée en temps réel. Les données des utilisateurs et des messages sont stockées dans une base de données MySQL\supercite{mysql}, hébergée sur Railway\supercite{railway}, tandis que le serveur est actuellement hébergé sur Fly.io\supercite{flyio} pour des raisons de coût.
 
-\section{Choix technologiques}
+Pour la gestion locale des données sur l'appareil, comme l'historique des messages, Hive\supercite{hive} est utilisé. Les notifications push sont gérées via Firebase\supercite{firebase}, l'envoi des emails de vérification utilise les API Gmail\supercite{gmailapi}, et les photos de profil sont hébergées via Cloudinary\supercite{cloudinary}.
 
-Le choix des technologies a été guidé par plusieurs facteurs :
+Pour la conception graphique des icônes et des éléments visuels de l'application, des outils comme Remove.bg\supercite{removebg}, Pixlr E\supercite{pixlre} et Canva\supercite{canva} ont été utilisés. Enfin, le versionnage du code et la gestion du projet ont été réalisés avec Git\supercite{git} et GitLab\supercite{gitlab}, tandis que le développement s'est déroulé principalement sur Visual Studio\supercite{visualstudio} et Visual Studio Code\supercite{vscode}.
 
-\begin{itemize}
-	\item \textbf{Performance et scalabilité} : ASP.NET Core offre une meilleure performance serveur comparée à Node.js, tout en étant compatible avec mon expertise en C\#.
-	\item \textbf{Expérience utilisateur} : Flutter permet de concevoir une interface moderne et fluide, adaptée aux plateformes mobiles.
-	\item \textbf{Communication en temps réel} : l’utilisation combinée de HTTP pour les requêtes classiques et de WebSocket pour la messagerie instantanée garantit une communication efficace et réactive.
-	\item \textbf{Simplicité de gestion} : l’utilisation de MySQL via Railway simplifie le déploiement, l’hébergement et la gestion des données.
-	\item \textbf{Prototype rapide} : Unity et Node.js ont permis une première version rapide et fonctionnelle pour tester la faisabilité du projet.
-\end{itemize}
-
-Ces choix technologiques ont permis de construire une application à la fois performante, facile à maintenir, et adaptée aux besoins spécifiques du projet Messagyre.
+L'intégration de ces technologies a permis de créer une application complète, performante et évolutive, répondant aux besoins spécifiques de communication, de gestion des devoirs et des notes au sein du Gymnase de Renens.
 
 \chapter{Développement du projet}
 
 \section{Analyse des besoins et spécifications}
 
-L'application Messagyre doit répondre à plusieurs exigences fondamentales afin de faciliter la communication interne au Gymnase de Renens. Parmi les principales exigences fonctionnelles, on retrouve :
+L’application Messagyre a été conçue pour répondre à plusieurs besoins fondamentaux, dans le but de faciliter la communication interne au Gymnase de Renens tout en permettant une gestion complète des devoirs et des notes des élèves. L’application assure une authentification sécurisée des utilisateurs, permet l’envoi et la réception de messages texte en temps réel via WebSocket\supercite{websocket}, et gère les profils utilisateurs, incluant la possibilité d’ajouter une photo de profil hébergée sur Cloudinary\supercite{cloudinary} et d’autres informations de contact telles que l’adresse e-mail, le numéro de téléphone ou les liens vers les réseaux sociaux. Messagyre sert également de véritable agenda scolaire, permettant l’ajout de devoirs et de notes, et offre une interface intuitive et accessible même aux utilisateurs moins expérimentés, garantissant une utilisation rapide, agréable et sécurisée, tout en protégeant la confidentialité des communications\supercite{http}.
 
-\begin{itemize}
-	\item Permettre une authentification sécurisée des utilisateurs.
-	\item Autoriser l'envoi et la réception de messages texte en temps réel.
-	\item Gérer les profils utilisateur avec la possibilité d'ajouter une photo de profil et d'autres informations de contact (numéro de téléphone, adresse e-mail...).
-	\item Utiliser l'application comme un véritable agenda scolaire, avec ajout de devoirs et de notes.
-	\item Offrir une interface intuitive et accessible, même pour les utilisateurs peu expérimentés.
-	\item Garantir la confidentialité et la sécurité des communications.
-\end{itemize}
+Le public cible comprend principalement les élèves, les enseignants et le personnel du gymnase, avec une attention particulière portée à la facilité d’accès, sans nécessiter l’utilisation d’un numéro de téléphone. Des prototypes initiaux ont été réalisés pour définir la disposition des écrans principaux, tels que la page de connexion et d’inscription, la liste des conversations, la fenêtre de chat et le profil utilisateur, guidant ainsi le développement de l’interface.
 
-Le public cible est principalement composé d'élèves, d'enseignants et du personnel du gymnase, avec une attention particulière portée à la simplicité d'accès, sans nécessiter de numéro de téléphone.
+Pour permettre le bon fonctionnement de l’application, un backend a été nécessaire, c’est-à-dire un système chargé de gérer les utilisateurs et leurs interactions, y compris toutes les opérations liées aux messages. Pour cela, ASP.NET Core\supercite{aspnetcore}, un framework de Microsoft pour le développement d’applications web en C\#\supercite{csharp}, a été choisi, langage avec lequel je possède une expérience solide. Le backend gère les utilisateurs connectés à la plateforme, leurs informations personnelles comme le nom d’utilisateur, l’adresse e-mail, le mot de passe, la photo de profil et les détails du profil public, permet la création de nouveaux comptes et l’accès aux comptes existants, trie les messages et vérifie qu’ils sont correctement reçus par les destinataires. La communication entre le client et le serveur se fait via HTTP\supercite{http} pour les opérations classiques et WebSocket\supercite{websocket} pour la messagerie en temps réel.
 
-Des maquettes initiales ont été créées pour définir la disposition des écrans principaux, tels que la page de connexion et d'inscription, la liste des conversations, la fenêtre de chat et le profil utilisateur. Ces croquis ont guidé le développement de l'interface.
+Grâce à cette architecture, Messagyre combine sécurité, efficacité et simplicité d’utilisation, répondant de manière complète aux besoins de la vie scolaire numérique.
 
 \section{Développement du client (Flutter)}
 
-La structure de l'application mobile repose sur le framework Flutter, choisi pour sa capacité à créer des interfaces réactives et multiplateformes à partir d'une base de code unique.
+La structure de l’application mobile repose sur le framework Flutter\supercite{flutter}, choisi pour sa capacité à créer des interfaces réactives et multiplateformes à partir d’une base de code unique en Dart\supercite{dart}. Flutter permet également de visualiser en temps réel les modifications du code sans avoir à recompiler l’ensemble de l’application, grâce à la fonctionnalité de hot reload, ce qui rend le développement plus simple et plus rapide que d’autres systèmes, comme par exemple Unity, utilisé auparavant.
 
-\begin{itemize}
-	\item \textbf{Architecture} : L'application suit un modèle de gestion d'état centralisé (par exemple Provider ou Bloc) pour garantir une gestion efficace des données et de l'interface.
-	\item \textbf{Interface utilisateur} : L'interface a été conçue pour être simple et claire, avec des écrans dédiés à la connexion, à la création de compte, à la liste des conversations et à la messagerie.
-	\item \textbf{Fonctionnalités implémentées} :
-	\begin{itemize}
-		\item Authentification par nom d'utilisateur et mot de passe.
-		\item Création d'un compte personnel via l'adresse e-mail scolaire, avec vérification automatique par e-mail.
-		\item Envoi et réception de messages texte en temps réel.
-		\item Envoi d'images et gestion des photos de profil.
-		\item Gestion de son propre compte et visualisation du profil public des autres utilisateurs.
-		\item Mise à jour en temps réel de la liste de contacts et des conversations.
-	\end{itemize}
-\end{itemize}
+Pour la persistance locale des données, telles que l’historique des messages et les paramètres de l’utilisateur, sont utilisés Hive\supercite{hive} et Flutter Secure Storage\supercite{securestorage}, ce dernier servant également à stocker de manière sécurisée les mots de passe. Les notifications push sont gérées via Firebase\supercite{firebase}, qui les envoie directement du serveur au client, permettant aux utilisateurs de recevoir des mises à jour même lorsque l’application n’est pas active.
+
+L’interface utilisateur a été conçue en suivant le style iOS avec Cupertino, une bibliothèque de composants intégrée à Flutter qui reproduit fidèlement l’apparence et le comportement natif des applications Apple. Ce choix a été fait pour sa modernité et sa cohérence visuelle, offrant une expérience fluide et agréable aux utilisateurs.
+
+Les fonctionnalités implémentées incluent l’authentification par nom d’utilisateur et mot de passe, la création de comptes personnels via l’adresse e-mail scolaire avec vérification automatique à l’aide de l’API Gmail\supercite{gmailapi}, l’envoi et la réception de messages texte et images en temps réel, la gestion des photos de profil, et la mise à jour immédiate de la liste de contacts et des conversations.
+
+Pour les tests et le débogage, l’application a été exécutée sur des émulateurs d’Android Studio ainsi que sur deux appareils Android prêtés, ce qui a permis de vérifier le bon fonctionnement des fonctionnalités et l’interaction entre client et serveur.
 
 \section{Développement du serveur (ASP.NET Core)}
 
-Le serveur backend a été développé en ASP.NET Core, garantissant robustesse, performance et une plus grande facilité de développement grâce à mon expérience avec le langage C\#.
+Le serveur backend a été développé avec \textbf{ASP.NET Core}\supercite{aspnetcore}, un framework open source de Microsoft pour le développement d’applications web modernes, multiplateformes et hautes performances. J’ai choisi cette technologie pour sa robustesse, ses performances élevées et ma familiarité avec le langage C\#\supercite{csharp}.
 
-\begin{itemize}
-	\item \textbf{Architecture} : Le serveur est structuré en couches, séparant la gestion des requêtes, la gestion des comptes et la messagerie.
-	\item \textbf{Communication} : Utilisation de WebSocket pour la messagerie en temps réel et d'API REST HTTP pour les opérations classiques (authentification, récupération de données, modifications de compte).
-	\item \textbf{Authentification} : Mise en place d'un système sécurisé basé sur JSON Web Tokens (JWT) et RefreshTokens pour valider les sessions des utilisateurs et éviter une reconnexion à chaque ouverture de l'application.
-	\item \textbf{Base de données} : MySQL est utilisé pour stocker les informations des utilisateurs, les messages et les métadonnées. Le serveur est hébergé sur la plateforme Railway, ce qui facilite le déploiement et la gestion.
-\end{itemize}
+La communication en temps réel entre le client et le serveur repose sur \textbf{WebSocket}\supercite{websocket}, qui permet l’envoi et la réception instantanés de messages. Pour les opérations plus classiques, comme l’authentification, la création ou la modification d’un compte, le serveur expose des \textbf{API REST}\supercite{http}. Une API REST (Representational State Transfer) est un ensemble de règles qui permet à deux systèmes de communiquer via des requêtes HTTP standards (GET, POST, PUT, DELETE), de manière simple et uniforme, rendant ainsi les interactions entre client et serveur plus claires et évolutives.
+
+Le système d’authentification utilise les \textbf{JSON Web Tokens (JWT)}\supercite{http}, combinés à des refresh tokens, afin de valider et prolonger les sessions des utilisateurs sans exiger une reconnexion à chaque ouverture de l’application.
+
+La base de données relationnelle \textbf{MySQL}\supercite{mysql}, hébergée sur \textbf{Railway}\supercite{railway}, stocke les informations principales : comptes utilisateurs (nom, e-mail, mot de passe protégé, photo de profil, informations publiques), messages échangés et métadonnées associées (horodatage, statut de lecture, etc.).
+
+Le serveur est déployé sur \textbf{Fly.io}\supercite{flyio}, une plateforme cloud flexible et économique qui simplifie la mise en ligne et l’administration de l’infrastructure.
+
+Enfin, pour certaines fonctionnalités spécifiques, comme l’envoi automatique des e-mails de vérification, le serveur utilise l’\textbf{API Gmail}\supercite{gmailapi}, qui permet d’automatiser la confirmation des comptes utilisateurs et de rendre le processus d’inscription plus fiable.
 
 \section{Fonctionnalités avancées}
 
-Des fonctionnalités supplémentaires ont été intégrées pour améliorer l'expérience utilisateur et la qualité de l'application :
+Dans Messagyre, plusieurs fonctionnalités avancées ont été intégrées pour améliorer l'expérience utilisateur et la qualité globale de l'application. La gestion des photos de profil permet aux utilisateurs de télécharger une image personnelle qui est automatiquement mise à jour et affichée auprès des autres utilisateurs dès qu'elle est modifiée\supercite{cloudinary}. De plus, il est désormais possible de disposer d'un profil public consultable par les autres utilisateurs, contenant des informations de base telles que le nom, la photo et d'autres détails choisis par l'utilisateur, facilitant ainsi l'identification et l'interaction au sein de la plateforme.
 
-\begin{itemize}
-	\item Téléchargement et affichage des photos de profil avec détection automatique des changements.
-	\item (À faire) Notifications push pour informer les utilisateurs des nouveaux messages.
-	\item Optimisations des performances, notamment une gestion efficace des connexions WebSocket et la réduction des appels réseau.
-	\item Renforcement de la sécurité, y compris la validation des données, le chiffrement des communications et la protection contre les attaques courantes.
-\end{itemize}
+Les notifications push sont entièrement opérationnelles : le serveur envoie aux utilisateurs une alerte immédiate lorsqu'un nouveau message ou une communication importante est reçue, garantissant la réception en temps réel même lorsque l'application n'est pas ouverte au premier plan\supercite{firebase}. En termes de performances, l'application gère efficacement les connexions WebSocket\supercite{websocket} et réduit le nombre d'appels HTTP inutiles\supercite{http}, améliorant ainsi la vitesse et réduisant la consommation de données, ce qui est particulièrement important sur les appareils mobiles avec des connexions instables ou limitées.
 
+Concernant la sécurité, toutes les communications entre le client et le serveur sont chiffrées via HTTPS et des WebSockets sécurisés. Les données envoyées par les utilisateurs sont systématiquement validées côté serveur pour prévenir tout comportement inattendu ou malveillant. Des contre-mesures ont été mises en place pour se protéger contre les attaques courantes telles que les injections SQL, le Cross-Site Scripting (XSS) et les attaques de type Man-in-the-Middle (MITM), conformément aux recommandations de l'\textbf{OWASP}\supercite{owasp}, qui définit les bonnes pratiques pour sécuriser les applications web contre les vulnérabilités et attaques informatiques.
+
+Enfin, une page de débogage a été ajoutée dans les paramètres, permettant aux utilisateurs de vérifier d'éventuels problèmes avec l'application. Cette fonctionnalité est particulièrement utile pour détecter des erreurs qui ne se manifestent pas lors des tests sur émulateur ou sur les appareils de développement, facilitant ainsi le débogage et la résolution rapide des problèmes.
+
+%%%% CONTINUA QUI %%%%%
 \section{Tests et débogage}
 
 Le projet a suivi plusieurs phases de test pour garantir sa fiabilité :
@@ -414,6 +383,8 @@ J’espère que Messagyre pourra continuer à évoluer au-delà de ce travail de
 \chapter{Sources et bibliographie}
 
 Pour mener à bien le développement de Messagyre, je me suis appuyé sur diverses ressources fiables, disponibles en ligne. Voici les principales :
+
+\printbibliography
 
 \section{Documentation officielle}
 

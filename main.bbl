@@ -1,0 +1,446 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{teams}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=91da9dc9e484daf8dc9ed72055907025}{%
+           family={Corporation},
+           familyi={C\bibinitperiod},
+           given={Microsoft},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{91da9dc9e484daf8dc9ed72055907025}
+      \strng{fullhash}{91da9dc9e484daf8dc9ed72055907025}
+      \strng{fullhashraw}{91da9dc9e484daf8dc9ed72055907025}
+      \strng{bibnamehash}{91da9dc9e484daf8dc9ed72055907025}
+      \strng{authorbibnamehash}{91da9dc9e484daf8dc9ed72055907025}
+      \strng{authornamehash}{91da9dc9e484daf8dc9ed72055907025}
+      \strng{authorfullhash}{91da9dc9e484daf8dc9ed72055907025}
+      \strng{authorfullhashraw}{91da9dc9e484daf8dc9ed72055907025}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Solution de communication et collaboration utilisée pour comparaison.}
+      \field{title}{Microsoft Teams}
+      \verb{urlraw}
+      \verb https://www.microsoft.com/en/microsoft-teams/group-chat-software
+      \endverb
+      \verb{url}
+      \verb https://www.microsoft.com/en/microsoft-teams/group-chat-software
+      \endverb
+    \endentry
+    \entry{whatsapp}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=d4e7c287b1861b6b7bf278669dc3fd12}{%
+           family={LLC},
+           familyi={L\bibinitperiod},
+           given={WhatsApp},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{d4e7c287b1861b6b7bf278669dc3fd12}
+      \strng{fullhash}{d4e7c287b1861b6b7bf278669dc3fd12}
+      \strng{fullhashraw}{d4e7c287b1861b6b7bf278669dc3fd12}
+      \strng{bibnamehash}{d4e7c287b1861b6b7bf278669dc3fd12}
+      \strng{authorbibnamehash}{d4e7c287b1861b6b7bf278669dc3fd12}
+      \strng{authornamehash}{d4e7c287b1861b6b7bf278669dc3fd12}
+      \strng{authorfullhash}{d4e7c287b1861b6b7bf278669dc3fd12}
+      \strng{authorfullhashraw}{d4e7c287b1861b6b7bf278669dc3fd12}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Application de messagerie instantanée populaire utilisée pour comparaison.}
+      \field{title}{WhatsApp}
+      \verb{urlraw}
+      \verb https://www.whatsapp.com
+      \endverb
+      \verb{url}
+      \verb https://www.whatsapp.com
+      \endverb
+    \endentry
+    \entry{csharp}{online}{}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{note}{Langage de programmation utilisé pour le serveur.}
+      \field{title}{C Sharp}
+      \verb{urlraw}
+      \verb https://learn.microsoft.com/en-us/dotnet/csharp/
+      \endverb
+      \verb{url}
+      \verb https://learn.microsoft.com/en-us/dotnet/csharp/
+      \endverb
+    \endentry
+    \entry{nodejs}{online}{}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{note}{Utilisé pour prototyper rapidement le backend initial.}
+      \field{title}{Node.js}
+      \verb{urlraw}
+      \verb https://nodejs.org/
+      \endverb
+      \verb{url}
+      \verb https://nodejs.org/
+      \endverb
+    \endentry
+    \entry{dart}{online}{}{}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{title}
+      \field{note}{Langage de programmation utilisé avec Flutter.}
+      \field{title}{Dart}
+      \verb{urlraw}
+      \verb https://dart.dev/
+      \endverb
+      \verb{url}
+      \verb https://dart.dev/
+      \endverb
+    \endentry
+    \entry{visualstudio}{online}{}{}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labeltitlesource}{title}
+      \field{note}{IDE principal pour le développement du serveur.}
+      \field{title}{Visual Studio}
+      \verb{urlraw}
+      \verb https://visualstudio.microsoft.com/
+      \endverb
+      \verb{url}
+      \verb https://visualstudio.microsoft.com/
+      \endverb
+    \endentry
+    \entry{aspnetcore}{online}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{note}{Framework serveur robuste utilisé pour le backend.}
+      \field{title}{ASP.NET Core}
+      \verb{urlraw}
+      \verb https://dotnet.microsoft.com/apps/aspnet
+      \endverb
+      \verb{url}
+      \verb https://dotnet.microsoft.com/apps/aspnet
+      \endverb
+    \endentry
+    \entry{flutter}{online}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{note}{Framework utilisé pour le développement du client mobile multiplateforme.}
+      \field{title}{Flutter}
+      \verb{urlraw}
+      \verb https://flutter.dev/
+      \endverb
+      \verb{url}
+      \verb https://flutter.dev/
+      \endverb
+    \endentry
+    \entry{telegram}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=c60f4da8b5ce848a14e3b5ad887f9a5d}{%
+           family={FZ-LLC},
+           familyi={F\bibinithyphendelim L\bibinitperiod},
+           given={Telegram},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{c60f4da8b5ce848a14e3b5ad887f9a5d}
+      \strng{fullhash}{c60f4da8b5ce848a14e3b5ad887f9a5d}
+      \strng{fullhashraw}{c60f4da8b5ce848a14e3b5ad887f9a5d}
+      \strng{bibnamehash}{c60f4da8b5ce848a14e3b5ad887f9a5d}
+      \strng{authorbibnamehash}{c60f4da8b5ce848a14e3b5ad887f9a5d}
+      \strng{authornamehash}{c60f4da8b5ce848a14e3b5ad887f9a5d}
+      \strng{authorfullhash}{c60f4da8b5ce848a14e3b5ad887f9a5d}
+      \strng{authorfullhashraw}{c60f4da8b5ce848a14e3b5ad887f9a5d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Application de messagerie avec fonctionnalités avancées.}
+      \field{title}{Telegram}
+      \verb{urlraw}
+      \verb https://telegram.org
+      \endverb
+      \verb{url}
+      \verb https://telegram.org
+      \endverb
+    \endentry
+    \entry{signal}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=bd814bb02b2d96c8c7b401cb77dea445}{%
+           family={Foundation},
+           familyi={F\bibinitperiod},
+           given={Signal},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{bd814bb02b2d96c8c7b401cb77dea445}
+      \strng{fullhash}{bd814bb02b2d96c8c7b401cb77dea445}
+      \strng{fullhashraw}{bd814bb02b2d96c8c7b401cb77dea445}
+      \strng{bibnamehash}{bd814bb02b2d96c8c7b401cb77dea445}
+      \strng{authorbibnamehash}{bd814bb02b2d96c8c7b401cb77dea445}
+      \strng{authornamehash}{bd814bb02b2d96c8c7b401cb77dea445}
+      \strng{authorfullhash}{bd814bb02b2d96c8c7b401cb77dea445}
+      \strng{authorfullhashraw}{bd814bb02b2d96c8c7b401cb77dea445}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Application axée sur la sécurité et la confidentialité.}
+      \field{title}{Signal}
+      \verb{urlraw}
+      \verb https://signal.org
+      \endverb
+      \verb{url}
+      \verb https://signal.org
+      \endverb
+    \endentry
+    \entry{http}{online}{}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{note}{Protocole utilisé pour les requêtes classiques.}
+      \field{title}{HTTP}
+      \verb{urlraw}
+      \verb https://developer.mozilla.org/en-US/docs/Web/HTTP
+      \endverb
+      \verb{url}
+      \verb https://developer.mozilla.org/en-US/docs/Web/HTTP
+      \endverb
+    \endentry
+    \entry{websocket}{online}{}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{note}{Protocole utilisé pour la messagerie instantanée en temps réel.}
+      \field{title}{WebSocket}
+      \verb{urlraw}
+      \verb https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API
+      \endverb
+      \verb{url}
+      \verb https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API
+      \endverb
+    \endentry
+    \entry{mysql}{online}{}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{note}{Base de données relationnelle pour stocker utilisateurs et messages.}
+      \field{title}{MySQL}
+      \verb{urlraw}
+      \verb https://www.mysql.com/
+      \endverb
+      \verb{url}
+      \verb https://www.mysql.com/
+      \endverb
+    \endentry
+    \entry{railway}{online}{}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{note}{Plateforme cloud pour héberger la base de données.}
+      \field{title}{Railway}
+      \verb{urlraw}
+      \verb https://railway.app/
+      \endverb
+      \verb{url}
+      \verb https://railway.app/
+      \endverb
+    \endentry
+    \entry{flyio}{online}{}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{note}{Plateforme cloud utilisée pour héberger le serveur.}
+      \field{title}{Fly.io}
+      \verb{urlraw}
+      \verb https://fly.io/
+      \endverb
+      \verb{url}
+      \verb https://fly.io/
+      \endverb
+    \endentry
+    \entry{hive}{online}{}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{note}{Gestion locale des données sur l'appareil (historique messages).}
+      \field{title}{Hive}
+      \verb{urlraw}
+      \verb https://docs.hivedb.dev/
+      \endverb
+      \verb{url}
+      \verb https://docs.hivedb.dev/
+      \endverb
+    \endentry
+    \entry{firebase}{online}{}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{note}{Service pour gérer les notifications push.}
+      \field{title}{Firebase}
+      \verb{urlraw}
+      \verb https://firebase.google.com/
+      \endverb
+      \verb{url}
+      \verb https://firebase.google.com/
+      \endverb
+    \endentry
+    \entry{gmailapi}{online}{}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{note}{Utilisé pour envoyer les emails de vérification.}
+      \field{title}{Gmail API}
+      \verb{urlraw}
+      \verb https://developers.google.com/gmail/api
+      \endverb
+      \verb{url}
+      \verb https://developers.google.com/gmail/api
+      \endverb
+    \endentry
+    \entry{cloudinary}{online}{}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{note}{Hébergement des photos de profil.}
+      \field{title}{Cloudinary}
+      \verb{urlraw}
+      \verb https://cloudinary.com/
+      \endverb
+      \verb{url}
+      \verb https://cloudinary.com/
+      \endverb
+    \endentry
+    \entry{removebg}{online}{}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{note}{Outil utilisé pour créer et nettoyer les icônes.}
+      \field{title}{Remove.bg}
+      \verb{urlraw}
+      \verb https://www.remove.bg/
+      \endverb
+      \verb{url}
+      \verb https://www.remove.bg/
+      \endverb
+    \endentry
+    \entry{pixlre}{online}{}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{note}{Éditeur en ligne pour retouches d'images.}
+      \field{title}{Pixlr E}
+      \verb{urlraw}
+      \verb https://pixlr.com/e/
+      \endverb
+      \verb{url}
+      \verb https://pixlr.com/e/
+      \endverb
+    \endentry
+    \entry{canva}{online}{}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{note}{Outil pour créer les éléments graphiques de l'application.}
+      \field{title}{Canva}
+      \verb{urlraw}
+      \verb https://www.canva.com/
+      \endverb
+      \verb{url}
+      \verb https://www.canva.com/
+      \endverb
+    \endentry
+    \entry{git}{online}{}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{note}{Gestion de versions du code.}
+      \field{title}{Git}
+      \verb{urlraw}
+      \verb https://git-scm.com/
+      \endverb
+      \verb{url}
+      \verb https://git-scm.com/
+      \endverb
+    \endentry
+    \entry{gitlab}{online}{}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{note}{Plateforme pour le versionnage et la gestion du projet.}
+      \field{title}{GitLab}
+      \verb{urlraw}
+      \verb https://gitlab.com/
+      \endverb
+      \verb{url}
+      \verb https://gitlab.com/
+      \endverb
+    \endentry
+    \entry{vscode}{online}{}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{note}{Éditeur utilisé pour le développement du client et scripts.}
+      \field{title}{Visual Studio Code}
+      \verb{urlraw}
+      \verb https://code.visualstudio.com/
+      \endverb
+      \verb{url}
+      \verb https://code.visualstudio.com/
+      \endverb
+    \endentry
+    \entry{owasp}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=6975ae082e3872ce044ce19f2965a01f}{%
+           family={Foundation},
+           familyi={F\bibinitperiod},
+           given={OWASP},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{6975ae082e3872ce044ce19f2965a01f}
+      \strng{fullhash}{6975ae082e3872ce044ce19f2965a01f}
+      \strng{fullhashraw}{6975ae082e3872ce044ce19f2965a01f}
+      \strng{bibnamehash}{6975ae082e3872ce044ce19f2965a01f}
+      \strng{authorbibnamehash}{6975ae082e3872ce044ce19f2965a01f}
+      \strng{authornamehash}{6975ae082e3872ce044ce19f2965a01f}
+      \strng{authorfullhash}{6975ae082e3872ce044ce19f2965a01f}
+      \strng{authorfullhashraw}{6975ae082e3872ce044ce19f2965a01f}
+      \field{extraname}{2}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Ressource de référence pour la sécurité des applications web.}
+      \field{title}{OWASP Top Ten}
+      \verb{urlraw}
+      \verb https://owasp.org/www-project-top-ten/
+      \endverb
+      \verb{url}
+      \verb https://owasp.org/www-project-top-ten/
+      \endverb
+    \endentry
+  \enddatalist
+  \missing{securestorage}
+\endrefsection
+\endinput
+

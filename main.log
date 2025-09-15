@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2025.4.11)  25 JUN 2025 11:58
+This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2025.4.11)  15 SEP 2025 23:44
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -693,20 +693,258 @@ Package: titlesec 2025/01/04 v2.17 Sectioning titles
 (c:/texlive/2025/texmf-dist/tex/latex/psnfss/times.sty
 Package: times 2020/03/25 PSNFSS-v9.3 (SPQR) 
 )
+(c:/texlive/2025/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2024/03/21 v3.20 programmable bibliographies (PK/MW)
+
+(c:/texlive/2025/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count348
+
+(c:/texlive/2025/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+(c:/texlive/2025/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+)
+\c@tabx@nest=\count349
+\c@listtotal=\count350
+\c@listcount=\count351
+\c@liststart=\count352
+\c@liststop=\count353
+\c@citecount=\count354
+\c@citetotal=\count355
+\c@multicitecount=\count356
+\c@multicitetotal=\count357
+\c@instcount=\count358
+\c@maxnames=\count359
+\c@minnames=\count360
+\c@maxitems=\count361
+\c@minitems=\count362
+\c@citecounter=\count363
+\c@maxcitecounter=\count364
+\c@savedcitecounter=\count365
+\c@uniquelist=\count366
+\c@uniquename=\count367
+\c@refsection=\count368
+\c@refsegment=\count369
+\c@maxextratitle=\count370
+\c@maxextratitleyear=\count371
+\c@maxextraname=\count372
+\c@maxextradate=\count373
+\c@maxextraalpha=\count374
+\c@abbrvpenalty=\count375
+\c@highnamepenalty=\count376
+\c@lownamepenalty=\count377
+\c@maxparens=\count378
+\c@parenlevel=\count379
+\blx@tempcnta=\count380
+\blx@tempcntb=\count381
+\blx@tempcntc=\count382
+\c@blx@maxsection=\count383
+\blx@maxsegment@0=\count384
+\blx@notetype=\count385
+\blx@parenlevel@text=\count386
+\blx@parenlevel@foot=\count387
+\blx@sectionciteorder@0=\count388
+\blx@sectionciteorderinternal@0=\count389
+\blx@entrysetcounter=\count390
+\blx@biblioinstance=\count391
+\labelnumberwidth=\skip55
+\labelalphawidth=\skip56
+\biblabelsep=\skip57
+\bibitemsep=\skip58
+\bibnamesep=\skip59
+\bibinitsep=\skip60
+\bibparsep=\skip61
+\bibhang=\skip62
+\blx@bcfin=\read5
+\blx@bcfout=\write5
+\blx@langwohyphens=\language2
+\c@mincomprange=\count392
+\c@maxcomprange=\count393
+\c@mincompwidth=\count394
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(c:/texlive/2025/texmf-dist/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2024/03/21 v3.20 biblatex datamodel (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'numeric.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count395
+\c@savedafterword=\count396
+\c@annotator=\count397
+\c@savedannotator=\count398
+\c@author=\count399
+\c@savedauthor=\count400
+\c@bookauthor=\count401
+\c@savedbookauthor=\count402
+\c@commentator=\count403
+\c@savedcommentator=\count404
+\c@editor=\count405
+\c@savededitor=\count406
+\c@editora=\count407
+\c@savededitora=\count408
+\c@editorb=\count409
+\c@savededitorb=\count410
+\c@editorc=\count411
+\c@savededitorc=\count412
+\c@foreword=\count413
+\c@savedforeword=\count414
+\c@holder=\count415
+\c@savedholder=\count416
+\c@introduction=\count417
+\c@savedintroduction=\count418
+\c@namea=\count419
+\c@savednamea=\count420
+\c@nameb=\count421
+\c@savednameb=\count422
+\c@namec=\count423
+\c@savednamec=\count424
+\c@translator=\count425
+\c@savedtranslator=\count426
+\c@shortauthor=\count427
+\c@savedshortauthor=\count428
+\c@shorteditor=\count429
+\c@savedshorteditor=\count430
+\c@labelname=\count431
+\c@savedlabelname=\count432
+\c@institution=\count433
+\c@savedinstitution=\count434
+\c@lista=\count435
+\c@savedlista=\count436
+\c@listb=\count437
+\c@savedlistb=\count438
+\c@listc=\count439
+\c@savedlistc=\count440
+\c@listd=\count441
+\c@savedlistd=\count442
+\c@liste=\count443
+\c@savedliste=\count444
+\c@listf=\count445
+\c@savedlistf=\count446
+\c@location=\count447
+\c@savedlocation=\count448
+\c@organization=\count449
+\c@savedorganization=\count450
+\c@origlocation=\count451
+\c@savedoriglocation=\count452
+\c@origpublisher=\count453
+\c@savedorigpublisher=\count454
+\c@publisher=\count455
+\c@savedpublisher=\count456
+\c@language=\count457
+\c@savedlanguage=\count458
+\c@origlanguage=\count459
+\c@savedoriglanguage=\count460
+\c@pageref=\count461
+\c@savedpageref=\count462
+\shorthandwidth=\skip63
+\shortjournalwidth=\skip64
+\shortserieswidth=\skip65
+\shorttitlewidth=\skip66
+\shortauthorwidth=\skip67
+\shorteditorwidth=\skip68
+\locallabelnumberwidth=\skip69
+\locallabelalphawidth=\skip70
+\localshorthandwidth=\skip71
+\localshortjournalwidth=\skip72
+\localshortserieswidth=\skip73
+\localshorttitlewidth=\skip74
+\localshortauthorwidth=\skip75
+\localshorteditorwidth=\skip76
+Package biblatex Info: Trying to load enhanced support for Unicode engines...
+Package biblatex Info: ... file 'blx-unicode.def' found.
+
+(c:/texlive/2025/texmf-dist/tex/latex/biblatex/blx-unicode.def)
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(c:/texlive/2025/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2024/03/21 v3.20 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+
+(c:/texlive/2025/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2024/03/21 v3.20 biblatex compatibility (PK/MW)
+\c@textcitecount=\count463
+\c@textcitetotal=\count464
+\c@textcitemaxnames=\count465
+\c@biburlbigbreakpenalty=\count466
+\c@biburlbreakpenalty=\count467
+\c@biburlnumpenalty=\count468
+\c@biburlucpenalty=\count469
+\c@biburllcpenalty=\count470
+\biburlbigskip=\muskip18
+\biburlnumskip=\muskip19
+\biburlucskip=\muskip20
+\biburllcskip=\muskip21
+\c@smartand=\count471
+)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+
+(c:/texlive/2025/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
+File: numeric.bbx 2024/03/21 v3.20 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(c:/texlive/2025/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2024/03/21 v3.20 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count472
+\c@bbx:relatedtotal=\count473
+))
+Package biblatex Info: Trying to load citation style 'numeric'...
+Package biblatex Info: ... file 'numeric.cbx' found.
+
+(c:/texlive/2025/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
+File: numeric.cbx 2024/03/21 v3.20 biblatex citation style (PK/MW)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(c:/texlive/2025/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+)
+Package biblatex Info: LuaTeX detected.
+(biblatex)             Assuming input encoding 'utf8'.
+Package biblatex Info: Document encoding is UTF8 ....
+Package biblatex Info: ... and expl3
+(biblatex)             2025-03-26 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+
+(c:/texlive/2025/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
+Package: blx-case-expl3 2024/03/21 v3.20 expl3 case changing code for biblatex
+))
 (c:/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcblistings.code.tex
 Library (tcolorbox): 'tcblistings.code.tex' version '6.4.1'
 (c:/texlive/2025/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count348
+\lst@mode=\count474
 \lst@gtempboxa=\box83
 \lst@token=\toks42
-\lst@length=\count349
+\lst@length=\count475
 \lst@currlwidth=\dimen286
-\lst@column=\count350
-\lst@pos=\count351
+\lst@column=\count476
+\lst@pos=\count477
 \lst@lostspace=\dimen287
 \lst@width=\dimen288
-\lst@newlines=\count352
-\lst@lineno=\count353
+\lst@newlines=\count478
+\lst@lineno=\count479
 \lst@maxwidth=\dimen289
 
 (c:/texlive/2025/texmf-dist/tex/latex/listings/lstpatch.sty
@@ -714,8 +952,8 @@ File: lstpatch.sty 2024/09/23 1.10c (Carsten Heinz)
 )
 (c:/texlive/2025/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
-\c@lstnumber=\count354
-\lst@skipnumbers=\count355
+\c@lstnumber=\count480
+\lst@skipnumbers=\count481
 \lst@framebox=\box84
 )
 (c:/texlive/2025/texmf-dist/tex/latex/listings/listings.cfg
@@ -728,7 +966,7 @@ Library (tcolorbox): 'tcblistingscore.code.tex' version '6.4.1'
 (c:/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcbprocessing.code.tex
 Library (tcolorbox): 'tcbprocessing.code.tex' version '6.4.1'
 )
-\c@tcblisting=\count356
+\c@tcblisting=\count482
 )) (c:/texlive/2025/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
 Library (tcolorbox): 'tcbskins.code.tex' version '6.4.1'
 (c:/texlive/2025/texmf-dist/tex/latex/tikzfill/tikzfill.image.sty
@@ -814,29 +1052,31 @@ Space,Scale=.9,Path=./].
 (fontspec)             <->s*[.9]"[./Consolas.ttf]:mode=node;script=latn;languag
 e=dflt;"
 
+\@quotelevel=\count483
+\@quotereset=\count484
  (./main.aux)
 \openout1 = main.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
@@ -874,16 +1114,16 @@ LaTeX Font Info:    ... okay on input line 79.
 
 (c:/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count357
+\scratchcounter=\count485
 \scratchdimen=\dimen290
 \scratchbox=\box89
-\nofMPsegments=\count358
-\nofMParguments=\count359
+\nofMPsegments=\count486
+\nofMParguments=\count487
 \everyMPshowfont=\toks43
-\MPscratchCnt=\count360
+\MPscratchCnt=\count488
 \MPscratchDim=\dimen291
-\MPnumerator=\count361
-\makeMPintoPDFobject=\count362
+\MPnumerator=\count489
+\makeMPintoPDFobject=\count490
 \everyMPtoPDFconversion=\toks44
 ) (c:/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -901,77 +1141,102 @@ Package fontspec Info:
 
 \symlegacymaths=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 79.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 79.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 79.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 79.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 79.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 79.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 79.
-LaTeX Font Info:    Redeclaring math accent \check on input line 79.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 79.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 79.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 79.
-LaTeX Font Info:    Redeclaring math symbol \colon on input line 79.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 79.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 79.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 79.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 79.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 79.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 79.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 79.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 79.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 79.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 79.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 79.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 79.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 79.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 80.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 80.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 80.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 80.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 80.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 80.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 80.
+LaTeX Font Info:    Redeclaring math accent \check on input line 80.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 80.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 80.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 80.
+LaTeX Font Info:    Redeclaring math symbol \colon on input line 80.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 80.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 80.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 80.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 80.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 80.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 80.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 80.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 80.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 80.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 80.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 80.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 80.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 80.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 79.
+(Font)              `operators' in the math version `normal' on input line 80.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/RobotoLight(0)/m/n on input line 79.
+(Font)                  OT1/cmr/m/n --> TU/RobotoLight(0)/m/n on input line 80.
 
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 79.
+(Font)              `operators' in the math version `bold' on input line 80.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/RobotoLight(0)/m/n on input line 79
+(Font)                  OT1/cmr/bx/n --> TU/RobotoLight(0)/m/n on input line 80
 .
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  TU/RobotoLight(0)/m/n --> TU/RobotoLight(0)/m/n on inpu
-t line 79.
+t line 80.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/RobotoLight(0)/m/it on input line 7
-9.
+(Font)                  OT1/cmr/m/it --> TU/RobotoLight(0)/m/it on input line 8
+0.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/RobotoLight(0)/b/n on input line 79
+(Font)                  OT1/cmr/bx/n --> TU/RobotoLight(0)/b/n on input line 80
 .
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/phv/m/n on input line 79.
+(Font)                  OT1/cmss/m/n --> TU/phv/m/n on input line 80.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/Consolas.ttf(0)/m/n on input line 7
-9.
+(Font)                  OT1/cmtt/m/n --> TU/Consolas.ttf(0)/m/n on input line 8
+0.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  TU/RobotoLight(0)/m/n --> TU/RobotoLight(0)/b/n on inpu
-t line 79.
+t line 80.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> TU/RobotoLight(0)/b/it on input line 
-79.
+80.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/phv/b/n on input line 79.
+(Font)                  OT1/cmss/bx/n --> TU/phv/b/n on input line 80.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/Consolas.ttf(0)/b/n on input line 7
-9.
-Package hyperref Info: Link coloring OFF on input line 79.
+(Font)                  OT1/cmtt/m/n --> TU/Consolas.ttf(0)/b/n on input line 8
+0.
+Package hyperref Info: Link coloring OFF on input line 80.
 
 (./main.out) (./main.out)
-\@outlinefile=\write5
+\@outlinefile=\write6
 
-\openout5 = main.out
-\c@lstlisting=\count363
+\openout6 = main.out
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(c:/texlive/2025/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2024/03/21 v3.20 biblatex localization (PK/MW)
+)
+Package biblatex Info: LuaTeX detected.
+(biblatex)             Assuming input encoding 'utf8'.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+
+\openout5 = main.bcf
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'main.bbl' found.
+ (./main.bbl
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                securestorage
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+)
+Package biblatex Info: Reference section=0 on input line 80.
+Package biblatex Info: Reference segment=0 on input line 80.
+\c@lstlisting=\count491
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 83.
+(Font)              <14.4> on input line 84.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 83.
+(Font)              <7> on input line 84.
 
 
 [1
@@ -980,8 +1245,14 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 Chapter 1.
 
 LaTeX Font Warning: Font shape `TU/RobotoLight(0)/b/n' undefined
-(Font)              using `TU/RobotoLight(0)/m/n' instead on input line 84.
+(Font)              using `TU/RobotoLight(0)/m/n' instead on input line 85.
 
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 89.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 89.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 89.
 
 
 
@@ -989,51 +1260,61 @@ warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
 [1
 
 ]
-Overfull \hbox (5.39992pt too wide) in paragraph at lines 100--101
-\TU/RobotoLight(0)/m/n/12 frame-work mod-erne spé-cial-isé dans le développe-
-ment d’in-ter-faces mo-biles per-for-mantes
- []
-
-
 
 [2]
 Chapter 2.
-
-Overfull \hbox (3.65277pt too wide) in paragraph at lines 109--110
-\TU/RobotoLight(0)/m/n/12 vent gra-tu-its, et pro-posent di-verses fonc-tion-nal
--ités telles que les ap-pels vo-caux, le partage
- []
-
 
 
 [3
 
 ]
-Overfull \hbox (1.53838pt too wide) in paragraph at lines 134--135
-\TU/RobotoLight(0)/b/n/12 les re-quêtes clas-siques (au-then-tifi-ca-tion, r
-écupéra-tion des don-nées) et pour la mes-
+Overfull \hbox (6.38878pt too wide) in paragraph at lines 122--123
+\TU/RobotoLight(0)/m/n/12 bustesse, per-for-mance et fa-cil-ité de main-te-nanc
+e. Ini-tiale-ment, le back-end était développé
  []
 
 
 
 [4]
-
-[5]
 Chapter 3.
 
 
-[6
+[5
 
 ]
 
+LaTeX Warning: Citation 'securestorage' on page 6 undefined on input line 148.
+
+
+Overfull \hbox (24.51843pt too wide) in paragraph at lines 148--149
+[]\TU/RobotoLight(0)/m/n/12 Pour la per-sis-tance lo-cale des don-nées, telles que l
+’his-torique des mes-sages et les paramètres
+ []
+
+
+Overfull \hbox (3.30238pt too wide) in paragraph at lines 158--159
+\TU/RobotoLight(0)/b/n/12 hautes per-for-mances. J’ai choisi cette tech-nolo-g
+ie pour sa ro-bustesse, ses per-for-mances
+ []
+
+
+
+[6]
+
 [7]
+Overfull \hbox (11.66637pt too wide) in paragraph at lines 176--177
+[]\TU/RobotoLight(0)/b/n/12 Con-cer-nant la sécu-rité, toutes les com-mu-ni-ca
+-tions en-tre le client et le serveur sont chiffrées
+ []
+
+
 
 [8]
 
 [9]
 Chapter 4.
 
-Overfull \hbox (5.50789pt too wide) in paragraph at lines 232--233
+Overfull \hbox (5.50789pt too wide) in paragraph at lines 201--202
 []\TU/RobotoLight(0)/b/n/12 Cer-taines fonc-tion-nal-ités sec-ondaires sont en-
 core en cours de développe-ment ou prévues
  []
@@ -1043,26 +1324,26 @@ core en cours de développe-ment ou prévues
 [10
 
 ]
-<img/login.png, id=318, 1084.05pt x 2409.0pt>
+<img/login.png, id=428, 1084.05pt x 2409.0pt>
 File: img/login.png Graphic file (type png)
 <use img/login.png>
-Package luatex.def Info: img/login.png  used on input line 268.
+Package luatex.def Info: img/login.png  used on input line 237.
 (luatex.def)             Requested size: 227.62206pt x 505.79466pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 268--269
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 237--238
  [][] 
  []
 
 
 
 [11]
-<img/registration_email.png, id=323, 1084.05pt x 2409.0pt>
+<img/registration_email.png, id=433, 1084.05pt x 2409.0pt>
 File: img/registration_email.png Graphic file (type png)
 <use img/registration_email.png>
-Package luatex.def Info: img/registration_email.png  used on input line 279.
+Package luatex.def Info: img/registration_email.png  used on input line 248.
 (luatex.def)             Requested size: 227.62206pt x 505.79466pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 279--280
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 248--249
  [][] 
  []
 
@@ -1072,13 +1353,13 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 279--280
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.4.1
 '
 <./img/login.png>]
-<img/profile.png, id=330, 1084.05pt x 2409.0pt>
+<img/profile.png, id=440, 1084.05pt x 2409.0pt>
 File: img/profile.png Graphic file (type png)
 <use img/profile.png>
-Package luatex.def Info: img/profile.png  used on input line 312.
+Package luatex.def Info: img/profile.png  used on input line 281.
 (luatex.def)             Requested size: 227.62206pt x 505.79466pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 312--313
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 281--282
  [][] 
  []
 
@@ -1094,33 +1375,33 @@ warning  (pdf backend): ignoring duplicate destination with the name 'figure.4.3
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.4.4
 '
 <./img/registration_email.png>]
-<img/homework.png, id=339, 1084.05pt x 2409.0pt>
+<img/homework.png, id=449, 1084.05pt x 2409.0pt>
 File: img/homework.png Graphic file (type png)
 <use img/homework.png>
-Package luatex.def Info: img/homework.png  used on input line 323.
+Package luatex.def Info: img/homework.png  used on input line 292.
 (luatex.def)             Requested size: 145.68144pt x 323.73064pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 323--324
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 292--293
  [][] 
  []
 
-<img/new_homework.png, id=340, 1084.05pt x 2409.0pt>
+<img/new_homework.png, id=450, 1084.05pt x 2409.0pt>
 File: img/new_homework.png Graphic file (type png)
 <use img/new_homework.png>
-Package luatex.def Info: img/new_homework.png  used on input line 329.
+Package luatex.def Info: img/new_homework.png  used on input line 298.
 (luatex.def)             Requested size: 145.68144pt x 323.73064pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 329--330
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 298--299
  [][] 
  []
 
-<img/view_homework.png, id=341, 1084.05pt x 2409.0pt>
+<img/view_homework.png, id=451, 1084.05pt x 2409.0pt>
 File: img/view_homework.png Graphic file (type png)
 <use img/view_homework.png>
-Package luatex.def Info: img/view_homework.png  used on input line 335.
+Package luatex.def Info: img/view_homework.png  used on input line 304.
 (luatex.def)             Requested size: 145.68144pt x 323.73064pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 335--336
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 304--305
  [][] 
  []
 
@@ -1150,7 +1431,7 @@ Chapter 5.
 [16
 
 ]
-Overfull \hbox (2.6159pt too wide) in paragraph at lines 363--364
+Overfull \hbox (2.6159pt too wide) in paragraph at lines 332--333
 \TU/RobotoLight(0)/b/n/12 Une dif-fi-culté im-por-tante a été le choix d’un
 e plate-forme pour héberger le serveur ASP.NET
  []
@@ -1173,16 +1454,57 @@ Chapter 7.
 
 ]
 Chapter 8.
-LaTeX Font Info:    Font shape `TU/Consolas.ttf(0)/m/n' will be
-(Font)              scaled to size 10.79993pt on input line 421.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 421.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 421.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 421.
 
-Overfull \hbox (3.75674pt too wide) in paragraph at lines 425--426
+
+[21
+
+]
+LaTeX Font Info:    Font shape `TU/Consolas.ttf(0)/m/n' will be
+(Font)              scaled to size 10.79993pt on input line 387.
+
+Overfull \hbox (38.67114pt too wide) in paragraph at lines 388--388
+[]\TU/RobotoLight(0)/m/it/12 Vi-sual Stu-dio\TU/RobotoLight(0)/b/n/12 . IDE prin
+-ci-pal pour le développe-ment du serveur. \TU/RobotoLight(0)/m/sc/12 󰀦
+󰀣󰀝\TU/RobotoLight(0)/b/n/12 : []$\TU/Consolas.ttf(0)/m/n/12 https : / / vi
+sualstudio .
+ []
+
+
+Overfull \hbox (18.76744pt too wide) in paragraph at lines 388--388
+[]\TU/RobotoLight(0)/b/n/12 Tele-gram FZ-LLC. \TU/RobotoLight(0)/m/it/12 Tele-gr
+am\TU/RobotoLight(0)/b/n/12 . Ap-pli-ca-tion de mes-sagerie avec fonc-tion-nal-i
+tés avancées.
+ []
+
+
+Overfull \hbox (6.54593pt too wide) in paragraph at lines 388--388
+[]\TU/RobotoLight(0)/m/it/12 Rail-way\TU/RobotoLight(0)/b/n/12 . Plate-forme clo
+ud pour héberger la base de don-nées. \TU/RobotoLight(0)/m/sc/12 󰀦󰀣
+󰀝\TU/RobotoLight(0)/b/n/12 : []$\TU/Consolas.ttf(0)/m/n/12 https : / / railwa
+y .
+ []
+
+
+
+[22
+
+]
+Overfull \hbox (0.40749pt too wide) in paragraph at lines 388--388
+[]\TU/RobotoLight(0)/m/it/12 Re-move.bg\TU/RobotoLight(0)/b/n/12 . Outil util-is
+é pour créer et net-toyer les icônes. \TU/RobotoLight(0)/m/sc/12 󰀦󰀣
+󰀝\TU/RobotoLight(0)/b/n/12 : []$\TU/Consolas.ttf(0)/m/n/12 https : / / www . remove .
+ []
+
+
+Overfull \hbox (2.70808pt too wide) in paragraph at lines 388--388
+[]\TU/RobotoLight(0)/m/it/12 Git-Lab\TU/RobotoLight(0)/b/n/12 . Plate-forme pour
+ le ver-sion-nage et la ges-tion du pro-jet. \TU/RobotoLight(0)/m/sc/12 󰀦
+󰀣󰀝\TU/RobotoLight(0)/b/n/12 : []$\TU/Consolas.ttf(0)/m/n/12 https : / / gi
+tlab .
+ []
+
+
+Overfull \hbox (3.75674pt too wide) in paragraph at lines 396--397
 []\TU/RobotoLight(0)/m/it/12 C# \TU/RobotoLight(0)/b/n/12 (syn-taxe et cu-riosit
 és) — []$\TU/Consolas.ttf(0)/m/n/12 https://learn.microsoft.com/en-[]us/dotne
 t/csharp/$[] 
@@ -1190,56 +1512,54 @@ t/csharp/$[]
 
 
 
-[21
-
-]
-Overfull \hbox (127.89677pt too wide) in paragraph at lines 443--444
+[23]
+Overfull \hbox (127.89677pt too wide) in paragraph at lines 414--415
 []\TU/RobotoLight(0)/b/n/12 Guide sur Cu-per-ti-noN-av-i-ga-tion-Bar — []$\TU
 /Consolas.ttf(0)/m/n/12 https://tillitsdone.com/blogs/cupertino-[]navigation-[]
 bar-[]guide/$[] 
  []
 
 
-Overfull \hbox (46.94746pt too wide) in paragraph at lines 445--446
+Overfull \hbox (46.94746pt too wide) in paragraph at lines 416--417
 []\TU/RobotoLight(0)/b/n/12 Vidéo YouTube sur LargeTi-tle Cu-per-tino — []$\
 TU/Consolas.ttf(0)/m/n/12 https://www.youtube.com/watch?v=Uu7s2vigU3A$[] 
  []
 
 
 
-[22]
+[24]
 
-[23]
+[25]
 Chapter 9.
 
-Overfull \hbox (62.8411pt too wide) in paragraph at lines 495--496
+Overfull \hbox (62.8411pt too wide) in paragraph at lines 466--467
 []\TU/RobotoLight(0)/b/n/12 Di-a-gramme UML : []$\TU/Consolas.ttf(0)/m/n/12 http
 s://lucid.app/lucidchart/b8dadd52-[]61fd-[]468b-[]8bd6-[]a81aa133eb02/
  []
 
 
-Overfull \hbox (201.23024pt too wide) in paragraph at lines 495--496
+Overfull \hbox (201.23024pt too wide) in paragraph at lines 466--467
 \TU/Consolas.ttf(0)/m/n/12 edit?viewport_loc=-[]3637%2C-[]1769%2C9681%2C4831%2C0
 _0&invitationId=inv_fa22bca5-[]082d-[]4666-[]b827-[]15f4adaa3a38$[] 
  []
 
-<img/logo_purple.png, id=422, 1027.84pt x 1027.84pt>
+<img/logo_purple.png, id=582, 1027.84pt x 1027.84pt>
 File: img/logo_purple.png Graphic file (type png)
 <use img/logo_purple.png>
-Package luatex.def Info: img/logo_purple.png  used on input line 506.
+Package luatex.def Info: img/logo_purple.png  used on input line 477.
 (luatex.def)             Requested size: 143.40028pt x 143.39474pt.
-<img/logo_full.png, id=423, 1027.84pt x 1027.84pt>
+<img/logo_full.png, id=583, 1027.84pt x 1027.84pt>
 File: img/logo_full.png Graphic file (type png)
 <use img/logo_full.png>
-Package luatex.def Info: img/logo_full.png  used on input line 512.
+Package luatex.def Info: img/logo_full.png  used on input line 483.
 (luatex.def)             Requested size: 143.40028pt x 143.39474pt.
 
 
-[24
+[26
 
 ]
 
-[25
+[27
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.9.1
 '
 
@@ -1248,14 +1568,14 @@ warning  (pdf backend): ignoring duplicate destination with the name 'figure.9.2
 <./img/logo_purple.png><./img/logo_full.png>]
 Chapter 10.
 LaTeX Font Info:    Font shape `TU/Consolas.ttf(0)/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 524.
-\pydata@fh@0=\write6
+(Font)              scaled to size 8.99994pt on input line 495.
+\pydata@fh@0=\write7
 
-\openout6 = _FAD58DE7366495DB4650CFEFAC2FCD61.data.minted
-runsystem(latexminted config  --timestamp 20250625115845 FAD58DE7366495DB4650CFE
+\openout7 = _FAD58DE7366495DB4650CFEFAC2FCD61.data.minted
+runsystem(latexminted config  --timestamp 20250915234438 FAD58DE7366495DB4650CFE
 FAC2FCD61)...executed.
 (./_FAD58DE7366495DB4650CFEFAC2FCD61.config.minted)
-runsystem(latexminted cleanconfig  --timestamp 20250625115845 FAD58DE7366495DB46
+runsystem(latexminted cleanconfig  --timestamp 20250915234438 FAD58DE7366495DB46
 50CFEFAC2FCD61)...executed.
 
 (./_minted/default.style.minted)
@@ -1268,43 +1588,43 @@ LaTeX Font Info:    Font shape `TU/Consolas.ttf(0)/b/n' will be
 (Font)              scaled to size 10.79993pt on input line 2.
 
 
-[26
+[28
 
 ])
-Overfull \hbox (12.77328pt too wide) in paragraph at lines 562--563
+Overfull \hbox (12.77328pt too wide) in paragraph at lines 533--534
 \TU/RobotoLight(0)/b/n/12 Une in-stance de la classe [] con-tient trois in-for-m
 a-tions prin-ci-pales : le compte ([])
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 569--571
+Underfull \hbox (badness 10000) in paragraph at lines 540--542
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 569--571
+Underfull \hbox (badness 10000) in paragraph at lines 540--542
 
  []
 
 
 
-[27] (./_minted/D8580C0365DA58A14D671DEE9DF2CF72.highlight.minted
+[29] (./_minted/D8580C0365DA58A14D671DEE9DF2CF72.highlight.minted
 
-[28])
+[30])
 
-[29]
-Underfull \hbox (badness 10000) in paragraph at lines 639--641
+[31]
+Underfull \hbox (badness 10000) in paragraph at lines 610--612
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 639--641
+Underfull \hbox (badness 10000) in paragraph at lines 610--612
 
  []
 
 (./_minted/37BC1FA5F453D1240EE6BF583808F59B.highlight.minted
 
-[30]
+[32]
 
 LaTeX Font Warning: Font shape `TU/Consolas.ttf(0)/m/it' undefined
 (Font)              using `TU/Consolas.ttf(0)/m/n' instead on input line 18.
@@ -1313,112 +1633,112 @@ LaTeX Font Info:    Font shape `TU/Consolas.ttf(0)/m/it' will be
 (Font)              scaled to size 10.79993pt on input line 40.
 )
 
-[31]
-Underfull \hbox (badness 10000) in paragraph at lines 701--707
+[33]
+Underfull \hbox (badness 10000) in paragraph at lines 672--678
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 711--713
+Underfull \hbox (badness 10000) in paragraph at lines 682--684
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 711--713
+Underfull \hbox (badness 10000) in paragraph at lines 682--684
 
  []
 
 (./_minted/51EDF3A83CE4E6A9ECF8FF245478A6DC.highlight.minted
 
-[32]) (./_minted/8C602A00C4EA90C743031C0ABEBD6316.highlight.minted)
+[34]) (./_minted/8C602A00C4EA90C743031C0ABEBD6316.highlight.minted)
 (./_minted/6B52AF849A36361DEA847B7098355C11.highlight.minted
 
-[33])
+[35])
 
-[34]
-Underfull \hbox (badness 10000) in paragraph at lines 792--794
+[36]
+Underfull \hbox (badness 10000) in paragraph at lines 763--765
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 792--794
+Underfull \hbox (badness 10000) in paragraph at lines 763--765
 
  []
 
 (./_minted/580FD3BEF1154C6B9FE3CF5349BC16DB.highlight.minted)
 
-[35] (./_minted/8CE0376E8CFF8D2E3255885BB26EE692.highlight.minted)
+[37] (./_minted/8CE0376E8CFF8D2E3255885BB26EE692.highlight.minted)
 
-[36]
-Underfull \hbox (badness 10000) in paragraph at lines 864--866
+[38]
+Underfull \hbox (badness 10000) in paragraph at lines 835--837
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 864--866
+Underfull \hbox (badness 10000) in paragraph at lines 835--837
 
  []
 
 (./_minted/6BC59C39280F9C9EFC235ACE26AEA8B9.highlight.minted)
 (./_minted/4C2EF2EC9DA7D692E23FD89F777C4098.highlight.minted
 
-[37]
-
-[38]) (./_minted/4937D3A4B22FE29CFC6201B955898D8F.highlight.minted)
-(./_minted/03DA54255707C9FF6034CD158EE4B0D3.highlight.minted
-
 [39]
 
-[40]
+[40]) (./_minted/4937D3A4B22FE29CFC6201B955898D8F.highlight.minted)
+(./_minted/03DA54255707C9FF6034CD158EE4B0D3.highlight.minted
 
-[41])
-Underfull \hbox (badness 10000) in paragraph at lines 1082--1084
-
- []
-
-
+[41]
 
 [42]
-Underfull \hbox (badness 10000) in paragraph at lines 1095--1097
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1105--1107
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1114--1116
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1114--1116
+[43])
+Underfull \hbox (badness 10000) in paragraph at lines 1053--1055
 
  []
 
 
 
-[43] (./_minted/F8FB961EC87F466F2DFEB6346F26522A.highlight.minted
+[44]
+Underfull \hbox (badness 10000) in paragraph at lines 1066--1068
 
-[44])
-Overfull \hbox (5.01784pt too wide) in paragraph at lines 1155--1160
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1076--1078
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1085--1087
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1085--1087
+
+ []
+
+
+
+[45] (./_minted/F8FB961EC87F466F2DFEB6346F26522A.highlight.minted
+
+[46])
+Overfull \hbox (5.01784pt too wide) in paragraph at lines 1126--1131
 \TU/RobotoLight(0)/b/n/12 SQL. In questo caso la [] per-me-tte al pro-gramma di con-net-tersi al database
  []
 
 (./_minted/B9BD6A08E3F5DE821946F6065A23F850.highlight.minted
 
-[45])
-Overfull \hbox (27.87376pt too wide) in paragraph at lines 1207--1208
+[47])
+Overfull \hbox (27.87376pt too wide) in paragraph at lines 1178--1179
 []\TU/RobotoLight(0)/b/n/12 4. In-vio del co-mando e l’at-tesa della risposta,
  en-trambi gestiti da []. 
  []
 
 
 
-[46]
-Overfull \hbox (12.41272pt too wide) in paragraph at lines 1212--1213
+[48]
+Overfull \hbox (12.41272pt too wide) in paragraph at lines 1183--1184
 \TU/RobotoLight(0)/m/it/12 nes-sione al server SQL”\TU/RobotoLight(0)/b/n/12 
 , \TU/RobotoLight(0)/m/it/12 ”Creazione del co-mando”\TU/RobotoLight(0)/b/n
 /12 , \TU/RobotoLight(0)/m/it/12 ”In-vio del co-mando e at-tesa della risposta
@@ -1427,40 +1747,40 @@ Overfull \hbox (12.41272pt too wide) in paragraph at lines 1212--1213
 
 (./_minted/2884D2ED6596617DBA513E4048AC630D.highlight.minted)
 
-[47] (./_minted/C85D095B9BAAA57AA7DAF55C11815DA7.highlight.minted)
+[49] (./_minted/C85D095B9BAAA57AA7DAF55C11815DA7.highlight.minted)
 (./_minted/4BECAF5DEE53B28B9137BCA88E78C51B.highlight.minted
 
-[48]) (./_minted/1B36E5CE6391B600A2C594CD448CFC8D.highlight.minted
+[50]) (./_minted/1B36E5CE6391B600A2C594CD448CFC8D.highlight.minted
 
-[49])
-Overfull \hbox (14.55354pt too wide) in paragraph at lines 1307--1308
+[51])
+Overfull \hbox (14.55354pt too wide) in paragraph at lines 1278--1279
 \TU/RobotoLight(0)/b/n/12 Quando il server riceve un seg-nale con il val-ore del
 la vari-abile [] pari a [],
  []
 
 (./_minted/2341A9F22518604F4B6AEAB646EFFF38.highlight.minted)
-Overfull \hbox (22.19522pt too wide) in paragraph at lines 1325--1328
+Overfull \hbox (22.19522pt too wide) in paragraph at lines 1296--1299
 \TU/RobotoLight(0)/b/n/12 ([]) del mes-sag-gio. In-fine viene in-vi-ato il mes-s
 ag-gio, chia-mando il metodo [],
  []
 
 
-Overfull \hbox (1.30075pt too wide) in paragraph at lines 1331--1332
+Overfull \hbox (1.30075pt too wide) in paragraph at lines 1302--1303
 \TU/RobotoLight(0)/b/n/12 Come visto prece-den-te-mente, per l’in-vio di un me
 s-sag-gio a par-tire dal server, viene chiam-
  []
 
 (./_minted/6B033E14A28C55D4BAB3FDA9D8D8AAAC.highlight.minted
 
-[50])
-Overfull \hbox (29.8962pt too wide) in paragraph at lines 1364--1368
+[52])
+Overfull \hbox (29.8962pt too wide) in paragraph at lines 1335--1339
 []\TU/RobotoLight(0)/b/n/12 Come si puo capire dai com-menti in in-glese, viene dap-prima cer-cato l
 ’ac-count []
  []
 
 
 
-[51] (./main.aux)
+[53] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-03-26>
@@ -1469,28 +1789,39 @@ L3 programming layer <2025-03-26>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: FF53B31A5AE246DD8F700D63635F72F7;11106.
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: DF59416FAB88969ABE69BE638B6E66BC;11132
+(rerunfilecheck)             After:  5E1E43D5C38BCC1BCABAD0543CBFFA3B;10948.
+Package logreq Info: Writing requests to 'main.run.xml'.
+
+\openout1 = main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 32354 strings out of 471941
- 125083,1373583 words of node,token memory allocated
- 468 words of node memory still in use:
-   3 hlist, 1 vlist, 1 rule, 2 glue, 3 kern, 1 glyph, 8 attribute, 53 glue_spec,
- 8 attribute_list, 2 write, 3 pdf_action nodes
-   avail lists: 1:1,2:2774,3:1512,4:680,5:305,6:43,7:5008,8:171,9:468,10:6,11:39
-7
- 57987 multiletter control sequences out of 65536+600000
- 56 fonts using 5826031 bytes
- 96i,10n,100p,948b,912s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 39741 strings out of 471941
+ 125083,1977958 words of node,token memory allocated
+ 658 words of node memory still in use:
+   3 hlist, 1 vlist, 1 rule, 2 glue, 3 kern, 1 glyph, 21 attribute, 65 glue_spec
+, 21 attribute_list, 2 write, 16 pdf_action nodes
+   avail lists: 1:3,2:2774,3:1512,4:680,5:358,6:53,7:5659,8:171,9:468,10:8,11:43
+3
+ 65260 multiletter control sequences out of 65536+600000
+ 57 fonts using 6026999 bytes
+ 96i,10n,100p,1094b,1212s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+warning  (pdf backend): unreferenced destination with name 'section.3.6'
 <./Consolas.ttf><c:/texlive/2025/texmf-dist/fonts/opentype/google/roboto/Roboto-
 LightItalic.otf><c:/texlive/2025/texmf-dist/fonts/opentype/google/roboto/Roboto-
 Light.otf>
-Output written on main.pdf (52 pages, 901623 bytes).
+Output written on main.pdf (54 pages, 919058 bytes).
 
-PDF statistics: 579 PDF objects out of 1000 (max. 8388607)
- 495 compressed objects within 5 object streams
- 129 named destinations out of 1000 (max. 131072)
+PDF statistics: 739 PDF objects out of 1000 (max. 8388607)
+ 651 compressed objects within 7 object streams
+ 158 named destinations out of 1000 (max. 131072)
  544 words of extra memory for PDF output out of 10000 (max. 100000000)
 
