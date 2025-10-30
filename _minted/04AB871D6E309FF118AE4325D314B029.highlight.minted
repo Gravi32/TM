@@ -6,35 +6,37 @@
 \PYG{+w}{	}\PYG{k}{public}\PYG{+w}{ }\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{Signal}
 \PYG{+w}{	}\PYG{p}{\PYGZob{}}
 \PYG{+w}{		}\PYG{n+na}{[JsonIgnore]}\PYG{+w}{ }\PYG{k}{public}\PYG{+w}{ }\PYG{n}{User}\PYG{o}{?}\PYG{+w}{ }\PYG{n}{Sender}\PYG{p}{;}
-
+\PYG{+w}{		}
 \PYG{+w}{		}\PYG{k}{public}\PYG{+w}{ }\PYG{n}{SignalType}\PYG{+w}{ }\PYG{n}{Type}\PYG{p}{;}
 \PYG{+w}{		}\PYG{k}{public}\PYG{+w}{ }\PYG{n}{Dictionary}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{string}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{string}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{Data}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
-
+\PYG{+w}{		}
 \PYG{+w}{		}\PYG{k}{public}\PYG{+w}{ }\PYG{n+nf}{Signal}\PYG{p}{(}\PYG{n}{SignalType}\PYG{+w}{ }\PYG{n}{Type}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{User}\PYG{o}{?}\PYG{+w}{ }\PYG{n}{Sender}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{null}\PYG{p}{)}
 \PYG{+w}{		}\PYG{p}{\PYGZob{}}
 \PYG{+w}{			}\PYG{k}{this}\PYG{p}{.}\PYG{n}{Type}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Type}\PYG{p}{;}
 \PYG{+w}{			}\PYG{k}{this}\PYG{p}{.}\PYG{n}{Sender}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Sender}\PYG{p}{;}
 \PYG{+w}{		}\PYG{p}{\PYGZcb{}}
-
+\PYG{+w}{		}
 \PYG{+w}{		}\PYG{k}{public}\PYG{+w}{ }\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n+nf}{Pack}\PYG{p}{(}\PYG{p}{)}
 \PYG{+w}{		}\PYG{p}{\PYGZob{}}
 \PYG{+w}{			}\PYG{k}{return}\PYG{+w}{ }\PYG{n}{JsonConvert}\PYG{p}{.}\PYG{n}{SerializeObject}\PYG{p}{(}\PYG{k}{this}\PYG{p}{)}\PYG{p}{;}
 \PYG{+w}{		}\PYG{p}{\PYGZcb{}}
-\PYG{+w}{			}
+\PYG{+w}{		}
 \PYG{+w}{		}\PYG{k}{public}\PYG{+w}{ }\PYG{k}{static}\PYG{+w}{ }\PYG{n}{Signal}\PYG{o}{?}\PYG{+w}{ }\PYG{n}{Unpack}\PYG{p}{(}\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{Source}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{User}\PYG{+w}{ }\PYG{n}{Sender}\PYG{p}{)}
 \PYG{+w}{		}\PYG{p}{\PYGZob{}}
 \PYG{+w}{			}\PYG{n}{Signal}\PYG{o}{?}\PYG{+w}{ }\PYG{n}{Result}\PYG{p}{;}
-
-\PYG{+w}{			}\PYG{k}{try}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n}{Result}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{JsonConvert}\PYG{p}{.}\PYG{n}{DeserializeObject}\PYG{o}{\PYGZlt{}}\PYG{n}{Signal}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{n}{Source}\PYG{p}{)}\PYG{p}{;}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{			}
+\PYG{+w}{			}\PYG{k}{try}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{				}\PYG{n}{Result}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{JsonConvert}\PYG{p}{.}\PYG{n}{DeserializeObject}\PYG{o}{\PYGZlt{}}\PYG{n}{Signal}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{n}{Source}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{				}\PYG{p}{\PYGZcb{}}
 \PYG{+w}{			}\PYG{k}{catch}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{k}{return}\PYG{+w}{ }\PYG{k}{null}\PYG{p}{;}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}
-
+\PYG{+w}{			}
 \PYG{+w}{			}\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{Result}\PYG{+w}{ }\PYG{o}{!=}\PYG{+w}{ }\PYG{k}{null}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{Result}\PYG{p}{.}\PYG{n}{Sender}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Sender}\PYG{p}{;}
-
+\PYG{+w}{			}
 \PYG{+w}{			}\PYG{k}{return}\PYG{+w}{ }\PYG{n}{Result}\PYG{p}{;}
 \PYG{+w}{		}\PYG{p}{\PYGZcb{}}
 \PYG{+w}{		}
 \PYG{+w}{	}\PYG{p}{\PYGZcb{}}
-
+\PYG{+w}{	}
 \PYG{+w}{	}\PYG{k}{public}\PYG{+w}{ }\PYG{k}{enum}\PYG{+w}{ }\PYG{n}{SignalType}
 \PYG{+w}{	}\PYG{p}{\PYGZob{}}
 \PYG{+w}{		}\PYG{n}{Login}\PYG{p}{,}

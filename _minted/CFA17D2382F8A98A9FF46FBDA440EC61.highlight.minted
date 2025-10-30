@@ -1,0 +1,46 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{async}\PYG{+w}{ }\PYG{n}{Task}\PYG{+w}{ }\PYG{n+nf}{OnConnection}\PYG{p}{(}\PYG{n}{HttpContext}\PYG{+w}{ }\PYG{n}{HttpRequest}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+\PYG{+w}{	}\PYG{n}{WebSocket}\PYG{+w}{ }\PYG{n}{Socket}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{await}\PYG{+w}{ }\PYG{n}{HttpRequest}\PYG{p}{.}\PYG{n}{WebSockets}\PYG{p}{.}\PYG{n}{AcceptWebSocketAsync}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{	}\PYG{n}{User}\PYG{+w}{ }\PYG{n}{User}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Server}\PYG{p}{.}\PYG{n}{OnConnection}\PYG{p}{(}\PYG{n}{Socket}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{n}{WebSocketReceiveResult}\PYG{o}{?}\PYG{+w}{ }\PYG{n}{Result}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{null}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k+kt}{byte}\PYG{p}{[}\PYG{p}{]}\PYG{+w}{ }\PYG{n}{Buffer}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{+w}{ }\PYG{k+kt}{byte}\PYG{p}{[}\PYG{l+m+mi}{1024}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{l+m+mi}{4}\PYG{p}{]}\PYG{p}{;}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{k}{do}
+\PYG{+w}{	}\PYG{p}{\PYGZob{}}
+\PYG{+w}{		}\PYG{k}{try}
+\PYG{+w}{		}\PYG{p}{\PYGZob{}}
+\PYG{+w}{			}\PYG{n}{Result}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{await}\PYG{+w}{ }\PYG{n}{Socket}\PYG{p}{.}\PYG{n}{ReceiveAsync}\PYG{p}{(}
+\PYG{+w}{				}\PYG{k}{new}\PYG{+w}{ }\PYG{n}{ArraySegment}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{byte}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{n}{Buffer}\PYG{p}{)}\PYG{p}{,}
+\PYG{+w}{				}\PYG{n}{CancellationToken}\PYG{p}{.}\PYG{n}{None}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{			}
+\PYG{+w}{			}\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{Message}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Encoding}\PYG{p}{.}\PYG{n}{UTF8}\PYG{p}{.}\PYG{n}{GetString}\PYG{p}{(}
+\PYG{+w}{				}\PYG{n}{Buffer}\PYG{p}{,}
+\PYG{+w}{				}\PYG{l+m+mi}{0}\PYG{p}{,}
+\PYG{+w}{				}\PYG{n}{Result}\PYG{p}{.}\PYG{n}{Count}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{			}
+\PYG{+w}{			}\PYG{n}{Server}\PYG{p}{.}\PYG{n}{OnSignal}\PYG{p}{(}\PYG{n}{User}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Message}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{		}\PYG{p}{\PYGZcb{}}
+\PYG{+w}{		}\PYG{k}{catch}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{Exception}\PYG{+w}{ }\PYG{n}{Ex}\PYG{p}{)}
+\PYG{+w}{		}\PYG{p}{\PYGZob{}}
+\PYG{+w}{			}\PYG{n}{Log}\PYG{p}{(}\PYG{l+s}{\PYGZdl{}\PYGZdq{}Error while receiving: \PYGZob{}Ex.Message\PYGZcb{}\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{			}\PYG{k}{break}\PYG{p}{;}
+\PYG{+w}{		}\PYG{p}{\PYGZcb{}}
+\PYG{+w}{	}\PYG{p}{\PYGZcb{}}
+\PYG{+w}{	}\PYG{k}{while}\PYG{+w}{ }\PYG{p}{(}\PYG{o}{!}\PYG{n}{Result}\PYG{p}{.}\PYG{n}{CloseStatus}\PYG{p}{.}\PYG{n}{HasValue}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{n}{Running}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{	}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{n}{Server}\PYG{p}{.}\PYG{n}{OnDisconnection}\PYG{p}{(}\PYG{n}{User}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{Socket}\PYG{p}{.}\PYG{n}{State}\PYG{+w}{ }\PYG{o}{!=}\PYG{+w}{ }\PYG{n}{WebSocketState}\PYG{p}{.}\PYG{n}{Open}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}
+\PYG{+w}{	}\PYG{n}{Socket}\PYG{p}{.}\PYG{n}{State}\PYG{+w}{ }\PYG{o}{!=}\PYG{+w}{ }\PYG{n}{WebSocketState}\PYG{p}{.}\PYG{n}{CloseSent}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}
+\PYG{+w}{	}\PYG{n}{Socket}\PYG{p}{.}\PYG{n}{State}\PYG{+w}{ }\PYG{o}{!=}\PYG{+w}{ }\PYG{n}{WebSocketState}\PYG{p}{.}\PYG{n}{CloseReceived}\PYG{p}{)}
+\PYG{+w}{	}\PYG{k}{return}\PYG{p}{;}
+\PYG{+w}{	}
+\PYG{+w}{	}\PYG{k}{await}\PYG{+w}{ }\PYG{n}{Socket}\PYG{p}{.}\PYG{n}{CloseAsync}\PYG{p}{(}
+\PYG{+w}{		}\PYG{n}{WebSocketCloseStatus}\PYG{p}{.}\PYG{n}{NormalClosure}\PYG{p}{,}
+\PYG{+w}{		}\PYG{n}{Result}\PYG{o}{?.}\PYG{n}{CloseStatusDescription}\PYG{p}{,}
+\PYG{+w}{		}\PYG{n}{CancellationToken}\PYG{p}{.}\PYG{n}{None}\PYG{p}{)}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{MintedVerbatim}

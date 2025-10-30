@@ -1,0 +1,64 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{using}\PYG{+w}{ }\PYG{n+nn}{Newtonsoft.Json}\PYG{p}{;}
+
+\PYG{k}{namespace}\PYG{+w}{ }\PYG{n+nn}{MessagyreServer.Classes}
+\PYG{p}{\PYGZob{}}
+\PYG{+w}{	}\PYG{k}{public}\PYG{+w}{ }\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{Account}
+\PYG{+w}{	}\PYG{p}{\PYGZob{}}
+\PYG{+w}{		}\PYG{k}{public}\PYG{+w}{ }\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{Username}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{k}{get}\PYG{p}{;}\PYG{+w}{ }\PYG{k}{set}\PYG{p}{;}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{		}\PYG{k}{public}\PYG{+w}{ }\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{Password}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{k}{get}\PYG{p}{;}\PYG{+w}{ }\PYG{k}{private}\PYG{+w}{ }\PYG{k}{set}\PYG{p}{;}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{		}\PYG{k}{public}\PYG{+w}{ }\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{EmailAddress}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{k}{get}\PYG{p}{;}\PYG{+w}{ }\PYG{k}{set}\PYG{p}{;}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{		}\PYG{k}{public}\PYG{+w}{ }\PYG{n}{DateTime}\PYG{+w}{ }\PYG{n}{CreationDate}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{k}{get}\PYG{p}{;}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{		}\PYG{k}{public}\PYG{+w}{ }\PYG{n}{DateTime}\PYG{o}{?}\PYG{+w}{ }\PYG{n}{LastLogin}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{k}{get}\PYG{p}{;}\PYG{+w}{ }\PYG{k}{set}\PYG{p}{;}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{		}\PYG{k}{public}\PYG{+w}{ }\PYG{k+kt}{bool}\PYG{+w}{ }\PYG{n}{Banned}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{k}{get}\PYG{p}{;}\PYG{+w}{ }\PYG{k}{set}\PYG{p}{;}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{		}
+\PYG{+w}{		}\PYG{k}{public}\PYG{+w}{ }\PYG{n}{List}\PYG{o}{\PYGZlt{}}\PYG{n}{Signal}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{Inbox}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{k}{get}\PYG{p}{;}\PYG{+w}{ }\PYG{k}{set}\PYG{p}{;}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{		}
+\PYG{+w}{		}
+\PYG{+w}{		}\PYG{c+c1}{// Constructors}
+\PYG{+w}{		}\PYG{k}{public}\PYG{+w}{ }\PYG{n+nf}{Account}\PYG{p}{(}
+\PYG{+w}{			}\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{username}\PYG{p}{,}
+\PYG{+w}{			}\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{password}\PYG{p}{,}
+\PYG{+w}{			}\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{emailAddress}\PYG{p}{)}
+\PYG{+w}{		}\PYG{p}{\PYGZob{}}
+\PYG{+w}{			}\PYG{n}{Username}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{username}\PYG{p}{;}
+\PYG{+w}{			}\PYG{n}{Password}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Hash}\PYG{p}{(}\PYG{n}{password}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{			}\PYG{n}{EmailAddress}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{emailAddress}\PYG{p}{;}
+\PYG{+w}{			}\PYG{n}{CreationDate}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{DateTime}\PYG{p}{.}\PYG{n}{UtcNow}\PYG{p}{;}
+\PYG{+w}{		}\PYG{p}{\PYGZcb{}}
+\PYG{+w}{		}
+\PYG{+w}{		}\PYG{n+na}{[JsonConstructor]}
+\PYG{+w}{		}\PYG{k}{public}\PYG{+w}{ }\PYG{n+nf}{Account}\PYG{p}{(}
+\PYG{+w}{			}\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{username}\PYG{p}{,}
+\PYG{+w}{			}\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{password}\PYG{p}{,}
+\PYG{+w}{			}\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{emailAddress}\PYG{p}{,}
+\PYG{+w}{			}\PYG{n}{DateTime}\PYG{+w}{ }\PYG{n}{creationDate}\PYG{p}{,}
+\PYG{+w}{			}\PYG{n}{DateTime}\PYG{o}{?}\PYG{+w}{ }\PYG{n}{lastLogin}\PYG{p}{,}
+\PYG{+w}{			}\PYG{k+kt}{bool}\PYG{+w}{ }\PYG{n}{banned}\PYG{p}{)}
+\PYG{+w}{		}\PYG{p}{\PYGZob{}}
+\PYG{+w}{			}\PYG{n}{Username}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{username}\PYG{p}{;}
+\PYG{+w}{			}\PYG{n}{Password}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{password}\PYG{p}{;}
+\PYG{+w}{			}\PYG{n}{EmailAddress}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{emailAddress}\PYG{p}{;}
+\PYG{+w}{			}\PYG{n}{CreationDate}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{creationDate}\PYG{p}{;}
+\PYG{+w}{			}\PYG{n}{LastLogin}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{lastLogin}\PYG{p}{;}
+\PYG{+w}{			}\PYG{n}{Banned}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{banned}\PYG{p}{;}
+\PYG{+w}{		}\PYG{p}{\PYGZcb{}}
+\PYG{+w}{		}
+\PYG{+w}{		}
+\PYG{+w}{		}
+\PYG{+w}{		}\PYG{c+c1}{// Private methods}
+\PYG{+w}{		}\PYG{k}{private}\PYG{+w}{ }\PYG{k}{static}\PYG{+w}{ }\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n+nf}{Hash}\PYG{p}{(}\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{Password}\PYG{p}{)}
+\PYG{+w}{			}\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n}{BCrypt}\PYG{p}{.}\PYG{n}{Net}\PYG{p}{.}\PYG{n}{BCrypt}\PYG{p}{.}\PYG{n}{HashPassword}\PYG{p}{(}\PYG{n}{Password}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{		}
+\PYG{+w}{		}
+\PYG{+w}{		}
+\PYG{+w}{		}\PYG{c+c1}{// Public methods}
+\PYG{+w}{		}\PYG{k}{public}\PYG{+w}{ }\PYG{k+kt}{bool}\PYG{+w}{ }\PYG{n+nf}{TryPassword}\PYG{p}{(}\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{Attempt}\PYG{p}{)}
+\PYG{+w}{			}\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n}{BCrypt}\PYG{p}{.}\PYG{n}{Net}\PYG{p}{.}\PYG{n}{BCrypt}\PYG{p}{.}\PYG{n}{Verify}\PYG{p}{(}\PYG{n}{Attempt}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Password}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{		}
+\PYG{+w}{		}\PYG{k}{public}\PYG{+w}{ }\PYG{k}{static}\PYG{+w}{ }\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n+nf}{GetUsernameFromEmail}\PYG{p}{(}\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{Address}\PYG{p}{)}
+\PYG{+w}{			}\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n}{Address}\PYG{p}{.}\PYG{n}{Split}\PYG{p}{(}\PYG{l+s+sc}{\PYGZsq{}@\PYGZsq{}}\PYG{p}{)}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{;}
+\PYG{+w}{		}
+\PYG{+w}{	}\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{MintedVerbatim}

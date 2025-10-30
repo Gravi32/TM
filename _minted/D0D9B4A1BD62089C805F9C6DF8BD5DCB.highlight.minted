@@ -1,7 +1,7 @@
 \begin{MintedVerbatim}[commandchars=\\\{\}]
 \PYG{k}{async}\PYG{+w}{ }\PYG{n}{Task}\PYG{+w}{ }\PYG{n+nf}{RequestsHandling}\PYG{p}{(}\PYG{n}{HttpContext}\PYG{+w}{ }\PYG{n}{Context}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Func}\PYG{o}{\PYGZlt{}}\PYG{n}{Task}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{Next}\PYG{p}{)}
 \PYG{p}{\PYGZob{}}
-\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{Context}\PYG{p}{.}\PYG{n}{WebSockets}\PYG{p}{.}\PYG{n}{IsWebSocketRequest}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{await}\PYG{+w}{ }\PYG{n}{OnConnection}\PYG{p}{(}\PYG{n}{Context}\PYG{p}{)}\PYG{p}{;}
-\PYG{+w}{    }\PYG{k}{else}\PYG{+w}{ }\PYG{k}{await}\PYG{+w}{ }\PYG{n+nf}{Next}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{Context}\PYG{p}{.}\PYG{n}{WebSockets}\PYG{p}{.}\PYG{n}{IsWebSocketRequest}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{await}\PYG{+w}{ }\PYG{n}{OnConnection}\PYG{p}{(}\PYG{n}{Context}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{	}\PYG{k}{else}\PYG{+w}{ }\PYG{k}{await}\PYG{+w}{ }\PYG{n+nf}{Next}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
 \PYG{p}{\PYGZcb{}}
 \end{MintedVerbatim}

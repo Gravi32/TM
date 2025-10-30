@@ -8,14 +8,15 @@
 \PYG{p}{\PYGZob{}}
 \PYG{+w}{	}\PYG{k}{public}\PYG{+w}{ }\PYG{k}{static}\PYG{+w}{ }\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{AccountsManager}
 \PYG{+w}{	}\PYG{p}{\PYGZob{}}
-\PYG{+w}{		}\PYG{k}{private}\PYG{+w}{ }\PYG{k}{static}\PYG{+w}{ }\PYG{k}{readonly}\PYG{+w}{ }\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{ConnectionString}\PYG{+w}{ }\PYG{o}{=}\PYG{l+s}{\PYGZdq{}Server=metro.proxy.rlwy.net;Port=17551;Database=railway;User=root;Password=uGZBAjgfYSXFTcfJDWySgEVBxjScuDwB;\PYGZbs{}r\PYGZbs{}n\PYGZdq{}}\PYG{p}{;}
+\PYG{+w}{		}\PYG{k}{private}\PYG{+w}{ }\PYG{k}{static}\PYG{+w}{ }\PYG{k}{readonly}\PYG{+w}{ }\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{ConnectionString}\PYG{+w}{ }\PYG{o}{=}
+\PYG{+w}{		}\PYG{l+s}{\PYGZdq{}Server=...;Port=...;Database=...;User=...;Password=...;\PYGZbs{}r\PYGZbs{}n\PYGZdq{}}\PYG{p}{;}
 \PYG{+w}{		}
 \PYG{+w}{		}\PYG{k}{public}\PYG{+w}{ }\PYG{k}{static}\PYG{+w}{ }\PYG{k+kt}{bool}\PYG{+w}{ }\PYG{n+nf}{GetAccount}\PYG{p}{(}\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{Username}\PYG{p}{,}\PYG{+w}{ }\PYG{k}{out}\PYG{+w}{ }\PYG{n}{Account}\PYG{o}{?}\PYG{+w}{ }\PYG{n}{Result}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{p}{.}\PYG{p}{.}\PYG{p}{.}\PYG{p}{\PYGZcb{}}
 \PYG{+w}{		}
 \PYG{+w}{		}\PYG{k}{public}\PYG{+w}{ }\PYG{k}{static}\PYG{+w}{ }\PYG{k}{void}\PYG{+w}{ }\PYG{n+nf}{AddAccount}\PYG{p}{(}\PYG{n}{Account}\PYG{+w}{ }\PYG{n}{NewAccount}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{p}{.}\PYG{p}{.}\PYG{p}{.}\PYG{p}{\PYGZcb{}}
 \PYG{+w}{		}
 \PYG{+w}{		}\PYG{k}{public}\PYG{+w}{ }\PYG{k}{static}\PYG{+w}{ }\PYG{k}{void}\PYG{+w}{ }\PYG{n+nf}{DeleteAccount}\PYG{p}{(}\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{Username}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{p}{.}\PYG{p}{.}\PYG{p}{.}\PYG{p}{\PYGZcb{}}
-
+\PYG{+w}{		}
 \PYG{+w}{		}\PYG{k}{public}\PYG{+w}{ }\PYG{k}{static}\PYG{+w}{ }\PYG{n}{List}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{string}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{SearchAccount}\PYG{p}{(}\PYG{k+kt}{string}\PYG{+w}{ }\PYG{n}{Query}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{p}{.}\PYG{p}{.}\PYG{p}{.}\PYG{p}{\PYGZcb{}}
 \PYG{+w}{		}
 \PYG{+w}{		}\PYG{k}{public}\PYG{+w}{ }\PYG{k}{static}\PYG{+w}{ }\PYG{k}{void}\PYG{+w}{ }\PYG{n+nf}{OnSearchSignal}\PYG{p}{(}\PYG{n}{Signal}\PYG{+w}{ }\PYG{n}{SearchSignal}\PYG{p}{)}

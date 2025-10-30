@@ -64,6 +64,7 @@
       \strng{authornamehash}{d4e7c287b1861b6b7bf278669dc3fd12}
       \strng{authorfullhash}{d4e7c287b1861b6b7bf278669dc3fd12}
       \strng{authorfullhashraw}{d4e7c287b1861b6b7bf278669dc3fd12}
+      \field{extraname}{1}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
@@ -214,6 +215,49 @@
       \verb https://signal.org
       \endverb
     \endentry
+    \entry{google}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=11bb1d2fc83a61c4b40b81c2f83149db}{%
+           family={LLC},
+           familyi={L\bibinitperiod},
+           given={Google},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{11bb1d2fc83a61c4b40b81c2f83149db}
+      \strng{fullhash}{11bb1d2fc83a61c4b40b81c2f83149db}
+      \strng{fullhashraw}{11bb1d2fc83a61c4b40b81c2f83149db}
+      \strng{bibnamehash}{11bb1d2fc83a61c4b40b81c2f83149db}
+      \strng{authorbibnamehash}{11bb1d2fc83a61c4b40b81c2f83149db}
+      \strng{authornamehash}{11bb1d2fc83a61c4b40b81c2f83149db}
+      \strng{authorfullhash}{11bb1d2fc83a61c4b40b81c2f83149db}
+      \strng{authorfullhashraw}{11bb1d2fc83a61c4b40b81c2f83149db}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Moteur de recherche.}
+      \field{title}{Google}
+      \verb{urlraw}
+      \verb https://www.google.com/
+      \endverb
+      \verb{url}
+      \verb https://www.google.com/
+      \endverb
+    \endentry
+    \entry{microsoft}{online}{}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{note}{Framework utilisé pour le développement du serveur backend.}
+      \field{title}{Microsoft ASP.NET Core}
+      \verb{urlraw}
+      \verb https://learn.microsoft.com/aspnet/core
+      \endverb
+      \verb{url}
+      \verb https://learn.microsoft.com/aspnet/core
+      \endverb
+    \endentry
     \entry{http}{online}{}{}
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
@@ -267,8 +311,8 @@
       \endverb
     \endentry
     \entry{flyio}{online}{}{}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labeltitlesource}{title}
       \field{note}{Plateforme cloud utilisée pour héberger le serveur.}
       \field{title}{Fly.io}
@@ -280,8 +324,8 @@
       \endverb
     \endentry
     \entry{hive}{online}{}{}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labeltitlesource}{title}
       \field{note}{Gestion locale des données sur l'appareil (historique messages).}
       \field{title}{Hive}
@@ -303,6 +347,19 @@
       \endverb
       \verb{url}
       \verb https://firebase.google.com/
+      \endverb
+    \endentry
+    \entry{smtp}{online}{}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{note}{Utilisé pour l’envoi d’emails via un serveur de messagerie.}
+      \field{title}{Simple Mail Transfer Protocol (SMTP)}
+      \verb{urlraw}
+      \verb https://datatracker.ietf.org/doc/html/rfc5321
+      \endverb
+      \verb{url}
+      \verb https://datatracker.ietf.org/doc/html/rfc5321
       \endverb
     \endentry
     \entry{gmailapi}{online}{}{}
@@ -370,9 +427,22 @@
       \verb https://www.canva.com/
       \endverb
     \endentry
+    \entry{adobeexpress}{online}{}{}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{title}
+      \field{note}{Outil pour créer et retoucher les éléments graphiques de l'application.}
+      \field{title}{Adobe Express}
+      \verb{urlraw}
+      \verb https://www.adobe.com/fr/express/
+      \endverb
+      \verb{url}
+      \verb https://www.adobe.com/fr/express/
+      \endverb
+    \endentry
     \entry{git}{online}{}{}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labeltitlesource}{title}
       \field{note}{Gestion de versions du code.}
       \field{title}{Git}
@@ -383,22 +453,22 @@
       \verb https://git-scm.com/
       \endverb
     \endentry
-    \entry{gitlab}{online}{}{}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+    \entry{github}{online}{}{}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labeltitlesource}{title}
       \field{note}{Plateforme pour le versionnage et la gestion du projet.}
-      \field{title}{GitLab}
+      \field{title}{GitHub}
       \verb{urlraw}
-      \verb https://gitlab.com/
+      \verb https://github.com/
       \endverb
       \verb{url}
-      \verb https://gitlab.com/
+      \verb https://github.com/
       \endverb
     \endentry
     \entry{vscode}{online}{}{}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labeltitlesource}{title}
       \field{note}{Éditeur utilisé pour le développement du client et scripts.}
       \field{title}{Visual Studio Code}
@@ -407,6 +477,84 @@
       \endverb
       \verb{url}
       \verb https://code.visualstudio.com/
+      \endverb
+    \endentry
+    \entry{https}{online}{}{}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{title}
+      \field{note}{Protocole sécurisé pour la transmission des données sur Internet.}
+      \field{title}{HTTPS}
+      \verb{urlraw}
+      \verb https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview
+      \endverb
+      \verb{url}
+      \verb https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview
+      \endverb
+    \endentry
+    \entry{securestorage}{online}{}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{note}{Librairie officielle de Flutter pour stocker et chiffrer des données.}
+      \field{title}{Flutter Secure Storage}
+      \verb{urlraw}
+      \verb https://pub.dev/packages/flutter_secure_storage
+      \endverb
+      \verb{url}
+      \verb https://pub.dev/packages/flutter_secure_storage
+      \endverb
+    \endentry
+    \entry{uuid}{online}{}{}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labeltitlesource}{title}
+      \field{note}{Utilisé pour générer des identifiants uniques dans l’application.}
+      \field{title}{Universally Unique Identifier (UUID)}
+      \verb{urlraw}
+      \verb https://datatracker.ietf.org/doc/html/rfc4122
+      \endverb
+      \verb{url}
+      \verb https://datatracker.ietf.org/doc/html/rfc4122
+      \endverb
+    \endentry
+    \entry{bcrypt}{online}{}{}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labeltitlesource}{title}
+      \field{note}{Algorithme utilisé pour le hachage sécurisé des mots de passe.}
+      \field{title}{bcrypt}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Bcrypt
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Bcrypt
+      \endverb
+    \endentry
+    \entry{jwt}{online}{}{}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labeltitlesource}{title}
+      \field{note}{Utilisé pour l’authentification et la gestion des sessions utilisateurs.}
+      \field{title}{JSON Web Token (JWT)}
+      \verb{urlraw}
+      \verb https://datatracker.ietf.org/doc/html/rfc7519
+      \endverb
+      \verb{url}
+      \verb https://datatracker.ietf.org/doc/html/rfc7519
+      \endverb
+    \endentry
+    \entry{googleapi}{online}{}{}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labeltitlesource}{title}
+      \field{note}{Utilisées pour interagir avec divers services Google, y compris Gmail.}
+      \field{title}{Google APIs}
+      \verb{urlraw}
+      \verb https://developers.google.com/apis-explorer
+      \endverb
+      \verb{url}
+      \verb https://developers.google.com/apis-explorer
       \endverb
     \endentry
     \entry{owasp}{online}{}{}
@@ -426,8 +574,8 @@
       \strng{authorfullhash}{6975ae082e3872ce044ce19f2965a01f}
       \strng{authorfullhashraw}{6975ae082e3872ce044ce19f2965a01f}
       \field{extraname}{2}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{Ressource de référence pour la sécurité des applications web.}
@@ -439,8 +587,47 @@
       \verb https://owasp.org/www-project-top-ten/
       \endverb
     \endentry
+    \entry{androidstudio}{online}{}{}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labeltitlesource}{title}
+      \field{note}{IDE pour le développement d'applications pour Android utilisé pour tester Messagyre.}
+      \field{title}{Android Studio}
+      \verb{urlraw}
+      \verb https://developer.android.com/studio?hl=fr
+      \endverb
+      \verb{url}
+      \verb https://developer.android.com/studio?hl=fr
+      \endverb
+    \endentry
+    \entry{chrome}{online}{}{}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labeltitlesource}{title}
+      \field{note}{Moteur de recherche utilisé pour l'envoi de requêtes HTTP et HTTPS.}
+      \field{title}{Google Chrome}
+      \verb{urlraw}
+      \verb https://www.google.com/intl/fr/chrome/
+      \endverb
+      \verb{url}
+      \verb https://www.google.com/intl/fr/chrome/
+      \endverb
+    \endentry
+    \entry{mysqlworkbench}{online}{}{}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labeltitlesource}{title}
+      \field{note}{Logiciel officiel pour gérer la base de données.}
+      \field{title}{MySQL Workbench 8.0 CE}
+      \verb{urlraw}
+      \verb https://www.mysql.com/products/workbench/
+      \endverb
+      \verb{url}
+      \verb https://www.mysql.com/products/workbench/
+      \endverb
+    \endentry
   \enddatalist
-  \missing{securestorage}
+  \missing{apirest}
 \endrefsection
 \endinput
 
