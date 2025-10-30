@@ -86,7 +86,9 @@ ItalicFont  = *Italic,
 \begin{document}
 	
 	\maketitle
-	%\tableofcontents
+	
+	\renewcommand{\contentsname}{Table des matières}
+	\tableofcontents
 	
 	\chapter{Introduction}
 	
@@ -391,72 +393,6 @@ ItalicFont  = *Italic,
 	Personnellement, je considère ce projet comme l’un des travaux les plus complets et significatifs que j’aie jamais réalisés. Il a une grande valeur, tant du point de vue professionnel — car il démontre mes compétences de développeur — que du point de vue personnel — car il m’a appris à croire en mes idées et à les porter jusqu’au bout avec détermination.
 	
 	J’espère que Messagyre pourra continuer à évoluer au-delà de ce travail de maturité. Qu’il puisse être utile aux élèves et aux enseignants, et peut-être devenir un véritable outil de communication scolaire, simple, sécurisé et accessible à tous.
-	
-	
-	\chapter{Sources et bibliographie}
-	
-	Pour mener à bien le développement de Messagyre, je me suis appuyé sur diverses ressources disponibles en ligne. Voici les principales :
-	
-	\printbibliography[heading=none]
-	
-	\section{Documentations officielles consultées}
-	
-	\begin{itemize}
-		\item \textit{Flutter} — \url{https://docs.flutter.dev}
-		\item \textit{Flutter API} — \url{https://api.flutter.dev}
-		\item \textit{Dart} — \url{https://dart.dev/guides}
-		\item \textit{ASP.NET Core} — \url{https://learn.microsoft.com/fr-fr/aspnet/core}
-		\item \textit{C\#} (syntaxe et curiosités) — \url{https://learn.microsoft.com/en-us/dotnet/csharp/}
-		\item \textit{MySQL} — \url{https://dev.mysql.com/doc/}
-		\item \textit{JWT (JSON Web Tokens)} — \url{https://jwt.io/introduction}
-		\item \textit{Railway} — \url{https://docs.railway.app}
-		\item \textit{Fly.io} — \url{https://fly.io/docs/} : plateforme utilisée pour déployer le serveur ASP.NET.
-		\item \textit{pub.dev} — \url{https://pub.dev} : plateforme utilisée pour trouver et installer des paquets et extensions Flutter.
-		\item \textit{Gmail API} — \url{https://developers.google.com/gmail/api} : utilisée pour l’envoi d’emails de vérification.
-		\item \textit{Bcrypt} — \url{https://github.com/BCryptNet/bcrypt.net} : utilisée pour le hachage sécurisé des mots de passe.
-		\item \textit{UUID} — \url{https://www.uuidgenerator.net/} : utilisée pour générer des identifiants uniques.
-	\end{itemize}
-	
-	\section{Tutoriels, articles et forums}
-	
-	\begin{itemize}
-		\item Stack Overflow — \url{https://stackoverflow.com}
-		\item GitHub Discussions — \url{https://github.com}
-		\item Flutter Community — \url{https://fluttercommunity.dev}
-		\item Railway Community Forum — \url{https://community.railway.app}
-		\item TeX Stack Exchange — \url{https://tex.stackexchange.com}
-		\item Reddit (r/FlutterDev, r/dotnet, r/webdev) — \url{https://www.reddit.com}
-		\item Wikipédia — pages sur \textit{Base64} et \textit{JSON Web Token} pour la compréhension des concepts fondamentaux.
-		\item Chaine YouTube officielle de Flutter \url{https://www.youtube.com/@flutterdev}
-		\item Installation des drivers Android et utilisation d’ADB — \url{https://androidmtk.com}
-	\end{itemize}
-	
-	\section{Outils d’assistance}
-	
-	\begin{itemize}
-		\item \textbf{ChatGPT (OpenAI)} — pour générer du code, trouver des solutions optimisées et explorer des alternatives techniques.
-		\item \textbf{Google Gemini} — pour la recherche de documentation complémentaire et l’exploration d’approches différentes.
-		\item \textbf{Claude (Anthropic)} — pour obtenir des résumés techniques et des explications de concepts complexes.
-		\item \textbf{GitHub Copilot} — utilisé via Visual Studio Code pour l’auto-complétion de code, facilitant et accélérant le développement.
-	\end{itemize}
-	
-	
-	\section{Outils de développement}
-	
-	\begin{itemize}
-		\item \textbf{Visual Studio 2022} — environnement de développement principal pour ASP.NET Core et le serveur.
-		\item \textbf{Visual Studio Code} — utilisé pour éditer des fichiers Dart, JSON, SQL et pour les tests rapides côté client.
-		\item \textbf{Android Studio} — utilisé pour installer les SDK Android et tester l’application Flutter via son émulateur intégré.
-		\item \textbf{Apple XCode} — utilisé pour construire l'application pour les dispositifs Apple (iOS).
-	\end{itemize}
-	
-	\section{Autres inspirations et connaissances utiles}
-	
-	\begin{itemize}
-		\item Cours de mathématiques sur la cryptographie (Gymnase de Renens) — a contribué à mieux comprendre les principes de sécurité appliqués à l’application (notamment l’utilisation des tokens, des mots de passe hachés et de la confidentialité des échanges).
-		\item \textbf{Patternico} — utilisé pour générer les motifs de fond dans les fenêtres de discussion.
-		\item \textbf{Google Maps} — utilisé pour dessiner l’icône de l’application à partir de la vue aérienne du bâtiment du gymnase.
-	\end{itemize}
 	
 	\chapter{Annexes}
 	
@@ -1450,5 +1386,71 @@ Comme on peut le comprendre à partir des commentaires en anglais, le compte \co
 Ensuite, le serveur vérifie si l’utilisateur destinataire est actuellement en ligne, en parcourant la liste des utilisateurs connectés (\code{ConnectedUsers}) contenue dans la classe \code{Server}, afin de déterminer le traitement à effectuer :  
 Si l’utilisateur est en ligne, le message lui est directement envoyé via la méthode \code{Receive} de la classe \code{User}.  
 Sinon, s’il n’apparaît pas dans la liste des utilisateurs connectés, le message est ajouté à la liste \code{Inbox} de son compte, afin qu’il lui soit transmis lors de sa prochaine reconnexion.
+
+	\chapter{Sources et bibliographie}
+
+Pour mener à bien le développement de Messagyre, je me suis appuyé sur diverses ressources disponibles en ligne. Voici les principales :
+
+\printbibliography[heading=none]
+
+\section{Documentations officielles consultées}
+
+\begin{itemize}
+	\item \textit{Flutter} — \url{https://docs.flutter.dev}
+	\item \textit{Flutter API} — \url{https://api.flutter.dev}
+	\item \textit{Dart} — \url{https://dart.dev/guides}
+	\item \textit{ASP.NET Core} — \url{https://learn.microsoft.com/fr-fr/aspnet/core}
+	\item \textit{C\#} (syntaxe et curiosités) — \url{https://learn.microsoft.com/en-us/dotnet/csharp/}
+	\item \textit{MySQL} — \url{https://dev.mysql.com/doc/}
+	\item \textit{JWT (JSON Web Tokens)} — \url{https://jwt.io/introduction}
+	\item \textit{Railway} — \url{https://docs.railway.app}
+	\item \textit{Fly.io} — \url{https://fly.io/docs/} : plateforme utilisée pour déployer le serveur ASP.NET.
+	\item \textit{pub.dev} — \url{https://pub.dev} : plateforme utilisée pour trouver et installer des paquets et extensions Flutter.
+	\item \textit{Gmail API} — \url{https://developers.google.com/gmail/api} : utilisée pour l’envoi d’emails de vérification.
+	\item \textit{Bcrypt} — \url{https://github.com/BCryptNet/bcrypt.net} : utilisée pour le hachage sécurisé des mots de passe.
+	\item \textit{UUID} — \url{https://www.uuidgenerator.net/} : utilisée pour générer des identifiants uniques.
+\end{itemize}
+
+\section{Tutoriels, articles et forums}
+
+\begin{itemize}
+	\item Stack Overflow — \url{https://stackoverflow.com}
+	\item GitHub Discussions — \url{https://github.com}
+	\item Flutter Community — \url{https://fluttercommunity.dev}
+	\item Railway Community Forum — \url{https://community.railway.app}
+	\item TeX Stack Exchange — \url{https://tex.stackexchange.com}
+	\item Reddit (r/FlutterDev, r/dotnet, r/webdev) — \url{https://www.reddit.com}
+	\item Wikipédia — pages sur \textit{Base64} et \textit{JSON Web Token} pour la compréhension des concepts fondamentaux.
+	\item Chaine YouTube officielle de Flutter \url{https://www.youtube.com/@flutterdev}
+	\item Installation des drivers Android et utilisation d’ADB — \url{https://androidmtk.com}
+\end{itemize}
+
+\section{Outils d’assistance}
+
+\begin{itemize}
+	\item \textbf{ChatGPT (OpenAI)} — pour générer du code, trouver des solutions optimisées et explorer des alternatives techniques.
+	\item \textbf{Google Gemini} — pour la recherche de documentation complémentaire et l’exploration d’approches différentes.
+	\item \textbf{Claude (Anthropic)} — pour obtenir des résumés techniques et des explications de concepts complexes.
+	\item \textbf{GitHub Copilot} — utilisé via Visual Studio Code pour l’auto-complétion de code, facilitant et accélérant le développement.
+\end{itemize}
+
+
+\section{Outils de développement}
+
+\begin{itemize}
+	\item \textbf{Visual Studio 2022} — environnement de développement principal pour ASP.NET Core et le serveur.
+	\item \textbf{Visual Studio Code} — utilisé pour éditer des fichiers Dart, JSON, SQL et pour les tests rapides côté client.
+	\item \textbf{Android Studio} — utilisé pour installer les SDK Android et tester l’application Flutter via son émulateur intégré.
+	\item \textbf{Apple XCode} — utilisé pour construire l'application pour les dispositifs Apple (iOS).
+\end{itemize}
+
+\section{Autres inspirations et connaissances utiles}
+
+\begin{itemize}
+	\item Cours de mathématiques sur la cryptographie (Gymnase de Renens) — a contribué à mieux comprendre les principes de sécurité appliqués à l’application (notamment l’utilisation des tokens, des mots de passe hachés et de la confidentialité des échanges).
+	\item \textbf{Patternico} — utilisé pour générer les motifs de fond dans les fenêtres de discussion.
+	\item \textbf{Google Maps} — utilisé pour dessiner l’icône de l’application à partir de la vue aérienne du bâtiment du gymnase.
+\end{itemize}
+
 
 \end{document}

@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2025.4.11)  30 OCT 2025 16:13
+This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2025.4.11)  30 OCT 2025 16:37
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -1234,25 +1234,25 @@ Package biblatex Info: Reference section=0 on input line 86.
 Package biblatex Info: Reference segment=0 on input line 86.
 \c@lstlisting=\count491
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 90.
+(Font)              <14.4> on input line 89.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 90.
+(Font)              <7> on input line 89.
 
 
 [1
 
 {c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Chapter 1.
 
 LaTeX Font Warning: Font shape `TU/RobotoLight(0)/b/n' undefined
 (Font)              using `TU/RobotoLight(0)/m/n' instead on input line 91.
 
+(./main.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 93.
+(Font)              <12> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 93.
+(Font)              <8> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 93.
+(Font)              <6> on input line 3.
 
 
 
@@ -1261,120 +1261,134 @@ warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
 
 ]
 
-[2]
-Chapter 2.
+[2])
+\tf@toc=\write7
+
+\openout7 = main.toc
 
 
-[3
+[3]
+Chapter 1.
+
+
+[4
 
 ]
 
-[4]
-
 [5]
-Chapter 3.
+Chapter 2.
 
 
 [6
 
 ]
-Overfull \hbox (24.51843pt too wide) in paragraph at lines 154--155
-[]\TU/RobotoLight(0)/m/n/12 Pour la per-sis-tance lo-cale des don-nées, telles que l
+
+[7]
+
+[8]
+Chapter 3.
+
+
+[9
+
+]
+Overfull \hbox (24.51843pt too wide) in paragraph at lines 156--157
+[]\TU/RobotoLight(0)/b/n/12 Pour la per-sis-tance lo-cale des don-nées, telles que l
 ’his-torique des mes-sages et les paramètres
  []
 
 
 
-[7]
-Overfull \hbox (0.39839pt too wide) in paragraph at lines 167--168
+[10]
+Overfull \hbox (0.39839pt too wide) in paragraph at lines 169--170
 \TU/RobotoLight(0)/b/n/12 d’ap-pli-ca-tions web mod-ernes, mul-ti-plate-formes
  et hautes per-for-mances. J’ai choisi cette
  []
 
 
-LaTeX Warning: Citation 'apirest' on page 8 undefined on input line 169.
+LaTeX Warning: Citation 'apirest' on page 11 undefined on input line 171.
 
 
-Overfull \hbox (5.43118pt too wide) in paragraph at lines 169--170
+Overfull \hbox (5.43118pt too wide) in paragraph at lines 171--172
 \TU/RobotoLight(0)/b/n/12 clas-siques, comme l’au-then-tifi-ca-tion, la créa-
 tion ou la mod-i-fi-ca-tion d’un compte, le serveur
  []
 
 
 
-[8]
-Overfull \hbox (8.95436pt too wide) in paragraph at lines 175--176
+[11]
+Overfull \hbox (8.95436pt too wide) in paragraph at lines 177--178
 \TU/RobotoLight(0)/b/n/12 et la bi-ogra-phie, ainsi que d’autres don-nées n
 éces-saires à cer-taines fonc-tion-nal-ités comme
  []
 
 
 
-[9]
-Overfull \hbox (11.66637pt too wide) in paragraph at lines 185--186
+[12]
+Overfull \hbox (11.66637pt too wide) in paragraph at lines 187--188
 []\TU/RobotoLight(0)/b/n/12 Con-cer-nant la sécu-rité, toutes les com-mu-ni-ca
 -tions en-tre le client et le serveur sont chiffrées
  []
 
 
 
-[10]
+[13]
 
-[11]
+[14]
 Chapter 4.
 
-Overfull \hbox (5.50789pt too wide) in paragraph at lines 205--206
+Overfull \hbox (5.50789pt too wide) in paragraph at lines 207--208
 []\TU/RobotoLight(0)/b/n/12 Cer-taines fonc-tion-nal-ités sec-ondaires sont en-
 core en cours de développe-ment ou prévues
  []
 
 
 
-[12
+[15
 
 ]
-<img/login.png, id=375, 1084.05pt x 2409.0pt>
+<img/login.png, id=432, 1084.05pt x 2409.0pt>
 File: img/login.png Graphic file (type png)
 <use img/login.png>
-Package luatex.def Info: img/login.png  used on input line 241.
+Package luatex.def Info: img/login.png  used on input line 243.
 (luatex.def)             Requested size: 227.62206pt x 505.79466pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 241--242
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 243--244
  [][] 
  []
 
 
 
-[13]
-<img/registration_email.png, id=380, 1084.05pt x 2409.0pt>
+[16]
+<img/registration_email.png, id=438, 1084.05pt x 2409.0pt>
 File: img/registration_email.png Graphic file (type png)
 <use img/registration_email.png>
-Package luatex.def Info: img/registration_email.png  used on input line 252.
+Package luatex.def Info: img/registration_email.png  used on input line 254.
 (luatex.def)             Requested size: 227.62206pt x 505.79466pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 252--253
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 254--255
  [][] 
  []
 
 
 
-[14
+[17
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.4.1
 '
 <./img/login.png>]
-<img/profile.png, id=387, 1084.05pt x 2409.0pt>
+<img/profile.png, id=445, 1084.05pt x 2409.0pt>
 File: img/profile.png Graphic file (type png)
 <use img/profile.png>
-Package luatex.def Info: img/profile.png  used on input line 285.
+Package luatex.def Info: img/profile.png  used on input line 287.
 (luatex.def)             Requested size: 227.62206pt x 505.79466pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 285--286
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 287--288
  [][] 
  []
 
 
 
-[15
+[18
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.4.2
 '
 
@@ -1384,44 +1398,44 @@ warning  (pdf backend): ignoring duplicate destination with the name 'figure.4.3
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.4.4
 '
 <./img/registration_email.png>]
-<img/homework.png, id=396, 1084.05pt x 2409.0pt>
+<img/homework.png, id=454, 1084.05pt x 2409.0pt>
 File: img/homework.png Graphic file (type png)
 <use img/homework.png>
-Package luatex.def Info: img/homework.png  used on input line 296.
+Package luatex.def Info: img/homework.png  used on input line 298.
 (luatex.def)             Requested size: 145.68144pt x 323.73064pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 296--297
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 298--299
  [][] 
  []
 
-<img/new_homework.png, id=397, 1084.05pt x 2409.0pt>
+<img/new_homework.png, id=455, 1084.05pt x 2409.0pt>
 File: img/new_homework.png Graphic file (type png)
 <use img/new_homework.png>
-Package luatex.def Info: img/new_homework.png  used on input line 302.
+Package luatex.def Info: img/new_homework.png  used on input line 304.
 (luatex.def)             Requested size: 145.68144pt x 323.73064pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 302--303
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 304--305
  [][] 
  []
 
-<img/view_homework.png, id=398, 1084.05pt x 2409.0pt>
+<img/view_homework.png, id=456, 1084.05pt x 2409.0pt>
 File: img/view_homework.png Graphic file (type png)
 <use img/view_homework.png>
-Package luatex.def Info: img/view_homework.png  used on input line 308.
+Package luatex.def Info: img/view_homework.png  used on input line 310.
 (luatex.def)             Requested size: 145.68144pt x 323.73064pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 308--309
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 310--311
  [][] 
  []
 
 
 
-[16
+[19
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.4.5
 '
 <./img/profile.png>]
 
-[17
+[20
 warning  (pdf backend): ignoring duplicate destination with the name 'figure.4.6
 '
 
@@ -1437,234 +1451,157 @@ warning  (pdf backend): ignoring duplicate destination with the name 'figure.4.9
 Chapter 5.
 
 
-[18
+[21
 
 ]
 
-[19]
-Overfull \hbox (3.77031pt too wide) in paragraph at lines 351--352
+[22]
+Overfull \hbox (3.77031pt too wide) in paragraph at lines 353--354
 \TU/RobotoLight(0)/b/n/12 tion-ner l’ap-pli-ca-tion, ce qui m’a per-mis 
 — et me per-me-t-tra en-core — de con-tin-uer à dévelop-
  []
 
 
 
-[20]
+[23]
 
-[21]
+[24]
 Chapter 6.
 
 
-[22
+[25
 
 ]
 Chapter 7.
 
 
-[23
+[26
 
 ]
 Chapter 8.
 LaTeX Font Info:    Font shape `TU/Consolas.ttf(0)/m/n' will be
-(Font)              scaled to size 10.79993pt on input line 400.
-
-Overfull \hbox (38.67114pt too wide) in paragraph at lines 400--400
-[]\TU/RobotoLight(0)/m/it/12 Vi-sual Stu-dio\TU/RobotoLight(0)/b/n/12 . IDE prin
--ci-pal pour le développe-ment du serveur. \TU/RobotoLight(0)/m/sc/12 󰀦
-󰀣󰀝\TU/RobotoLight(0)/b/n/12 : []$\TU/Consolas.ttf(0)/m/n/12 https : / / vi
-sualstudio .
- []
-
-
-Overfull \hbox (18.76744pt too wide) in paragraph at lines 400--400
-[]\TU/RobotoLight(0)/b/n/12 Tele-gram FZ-LLC. \TU/RobotoLight(0)/m/it/12 Tele-gr
-am\TU/RobotoLight(0)/b/n/12 . Ap-pli-ca-tion de mes-sagerie avec fonc-tion-nal-i
-tés avancées.
- []
-
-
-Overfull \hbox (0.37767pt too wide) in paragraph at lines 400--400
-[]\TU/RobotoLight(0)/m/it/12 Mi-crosoft ASP.NET Core\TU/RobotoLight(0)/b/n/12 . Frame-work util-is
-é pour le développe-ment du serveur back-
- []
-
-
-
-[24
-
-]
-Overfull \hbox (6.54593pt too wide) in paragraph at lines 400--400
-[]\TU/RobotoLight(0)/m/it/12 Rail-way\TU/RobotoLight(0)/b/n/12 . Plate-forme clo
-ud pour héberger la base de don-nées. \TU/RobotoLight(0)/m/sc/12 󰀦󰀣
-󰀝\TU/RobotoLight(0)/b/n/12 : []$\TU/Consolas.ttf(0)/m/n/12 https : / / railwa
-y .
- []
-
-
-Overfull \hbox (0.40749pt too wide) in paragraph at lines 400--400
-[]\TU/RobotoLight(0)/m/it/12 Re-move.bg\TU/RobotoLight(0)/b/n/12 . Outil util-is
-é pour créer et net-toyer les icônes. \TU/RobotoLight(0)/m/sc/12 󰀦󰀣
-󰀝\TU/RobotoLight(0)/b/n/12 : []$\TU/Consolas.ttf(0)/m/n/12 https : / / www . remove .
- []
-
-
-
-[25]
-Overfull \hbox (7.6737pt too wide) in paragraph at lines 400--400
-[]\TU/RobotoLight(0)/m/it/12 Google Chrome\TU/RobotoLight(0)/b/n/12 . Mo-teur de
- recherche util-isé pour l’en-voi de re-quêtes HTTP et HTTPS.
- []
-
-
-Overfull \hbox (3.75674pt too wide) in paragraph at lines 409--410
-[]\TU/RobotoLight(0)/m/it/12 C# \TU/RobotoLight(0)/b/n/12 (syn-taxe et cu-riosit
-és) — []$\TU/Consolas.ttf(0)/m/n/12 https://learn.microsoft.com/en-[]us/dotne
-t/csharp/$[] 
- []
-
-
-Overfull \hbox (10.34296pt too wide) in paragraph at lines 413--414
-[]\TU/RobotoLight(0)/m/it/12 Fly.io \TU/RobotoLight(0)/b/n/12 — []$\TU/Consol
-as.ttf(0)/m/n/12 https://fly.io/docs/$[] \TU/RobotoLight(0)/b/n/12 : plate-forme
- util-isée pour dé-ployer le serveur ASP.NET. 
- []
-
-
-Overfull \hbox (19.16913pt too wide) in paragraph at lines 415--416
-[]\TU/RobotoLight(0)/m/it/12 Gmail API \TU/RobotoLight(0)/b/n/12 — []$\TU/Con
-solas.ttf(0)/m/n/12 https://developers.google.com/gmail/api$[] \TU/RobotoLight(
-0)/b/n/12 : util-isée pour l’en-voi d’emails
- []
-
-
-
-[26]
-
-[27]
-
-[28]
-Chapter 9.
-<img/client_repo_qr_code.png, id=545, 2055.68pt x 2055.68pt>
+(Font)              scaled to size 10.79993pt on input line 404.
+<img/client_repo_qr_code.png, id=501, 2055.68pt x 2055.68pt>
 File: img/client_repo_qr_code.png Graphic file (type png)
 <use img/client_repo_qr_code.png>
-Package luatex.def Info: img/client_repo_qr_code.png  used on input line 478.
+Package luatex.def Info: img/client_repo_qr_code.png  used on input line 414.
 (luatex.def)             Requested size: 145.68144pt x 145.66885pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 478--479
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 414--415
  [][] 
  []
 
-<img/server_repo_qr_code.png, id=546, 2055.68pt x 2055.68pt>
+<img/server_repo_qr_code.png, id=502, 2055.68pt x 2055.68pt>
 File: img/server_repo_qr_code.png Graphic file (type png)
 <use img/server_repo_qr_code.png>
-Package luatex.def Info: img/server_repo_qr_code.png  used on input line 484.
+Package luatex.def Info: img/server_repo_qr_code.png  used on input line 420.
 (luatex.def)             Requested size: 145.68144pt x 145.66885pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 484--485
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 420--421
  [][] 
  []
 
 
-Overfull \hbox (21.78397pt too wide) in paragraph at lines 495--496
+Overfull \hbox (21.78397pt too wide) in paragraph at lines 431--432
 [][]$\TU/Consolas.ttf(0)/m/n/12 https://lucid.app/lucidchart/b8dadd52-[]61fd-[]
 468b-[]8bd6-[]a81aa133eb02/edit?viewport_
  []
 
 
-Overfull \hbox (88.10033pt too wide) in paragraph at lines 495--496
+Overfull \hbox (88.10033pt too wide) in paragraph at lines 431--432
 \TU/Consolas.ttf(0)/m/n/12 loc=-[]3637%2C-[]1769%2C9681%2C4831%2C0_0&invitationI
 d=inv_fa22bca5-[]082d-[]4666-[]b827-[]15f4adaa3a38$[] 
  []
 
-<img/server_uml_qr_code.png, id=548, 2055.68pt x 2055.68pt>
+<img/server_uml_qr_code.png, id=504, 2055.68pt x 2055.68pt>
 File: img/server_uml_qr_code.png Graphic file (type png)
 <use img/server_uml_qr_code.png>
-Package luatex.def Info: img/server_uml_qr_code.png  used on input line 501.
+Package luatex.def Info: img/server_uml_qr_code.png  used on input line 437.
 (luatex.def)             Requested size: 145.68144pt x 145.66885pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 501--502
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 437--438
  [][] 
  []
 
 
 
-[29
+[27
 
 
-warning  (pdf backend): ignoring duplicate destination with the name 'figure.9.1
+warning  (pdf backend): ignoring duplicate destination with the name 'figure.8.1
 '
 
-warning  (pdf backend): ignoring duplicate destination with the name 'figure.9.2
+warning  (pdf backend): ignoring duplicate destination with the name 'figure.8.2
 '
 <./img/client_repo_qr_code.png><./img/server_repo_qr_code.png>]
-<img/logo_purple.png, id=558, 1027.84pt x 1027.84pt>
+<img/logo_purple.png, id=515, 1027.84pt x 1027.84pt>
 File: img/logo_purple.png Graphic file (type png)
 <use img/logo_purple.png>
-Package luatex.def Info: img/logo_purple.png  used on input line 518.
+Package luatex.def Info: img/logo_purple.png  used on input line 454.
 (luatex.def)             Requested size: 143.40028pt x 143.39474pt.
-<img/logo_full.png, id=559, 1027.84pt x 1027.84pt>
+<img/logo_full.png, id=516, 1027.84pt x 1027.84pt>
 File: img/logo_full.png Graphic file (type png)
 <use img/logo_full.png>
-Package luatex.def Info: img/logo_full.png  used on input line 524.
+Package luatex.def Info: img/logo_full.png  used on input line 460.
 (luatex.def)             Requested size: 143.40028pt x 143.39474pt.
-<img/rounded_logo_purple.png, id=560, 501.875pt x 501.875pt>
+<img/rounded_logo_purple.png, id=517, 501.875pt x 501.875pt>
 File: img/rounded_logo_purple.png Graphic file (type png)
 <use img/rounded_logo_purple.png>
-Package luatex.def Info: img/rounded_logo_purple.png  used on input line 536.
+Package luatex.def Info: img/rounded_logo_purple.png  used on input line 472.
 (luatex.def)             Requested size: 101.97656pt x 101.97374pt.
-<img/rounded_logo_white.png, id=561, 1027.84pt x 1027.84pt>
+<img/rounded_logo_white.png, id=518, 1027.84pt x 1027.84pt>
 File: img/rounded_logo_white.png Graphic file (type png)
 <use img/rounded_logo_white.png>
-Package luatex.def Info: img/rounded_logo_white.png  used on input line 542.
+Package luatex.def Info: img/rounded_logo_white.png  used on input line 478.
 (luatex.def)             Requested size: 101.97656pt x 101.97447pt.
-<img/rounded_logo_full.png, id=562, 1027.84pt x 1027.84pt>
+<img/rounded_logo_full.png, id=519, 1027.84pt x 1027.84pt>
 File: img/rounded_logo_full.png Graphic file (type png)
 <use img/rounded_logo_full.png>
-Package luatex.def Info: img/rounded_logo_full.png  used on input line 547.
+Package luatex.def Info: img/rounded_logo_full.png  used on input line 483.
 (luatex.def)             Requested size: 101.97656pt x 101.97447pt.
 
 
-[30
-warning  (pdf backend): ignoring duplicate destination with the name 'figure.9.3
+[28
+warning  (pdf backend): ignoring duplicate destination with the name 'figure.8.3
 '
 
-warning  (pdf backend): ignoring duplicate destination with the name 'figure.9.4
+warning  (pdf backend): ignoring duplicate destination with the name 'figure.8.4
 '
 
-warning  (pdf backend): ignoring duplicate destination with the name 'figure.9.5
+warning  (pdf backend): ignoring duplicate destination with the name 'figure.8.5
 '
 <./img/server_uml_qr_code.png><./img/logo_purple.png><./img/logo_full.png>]
-<img/logo_gyre.png, id=576, 105.39375pt x 64.24pt>
+<img/logo_gyre.png, id=532, 105.39375pt x 64.24pt>
 File: img/logo_gyre.png Graphic file (type png)
 <use img/logo_gyre.png>
-Package luatex.def Info: img/logo_gyre.png  used on input line 558.
+Package luatex.def Info: img/logo_gyre.png  used on input line 494.
 (luatex.def)             Requested size: 101.97656pt x 62.15881pt.
 LaTeX Font Info:    Font shape `TU/Consolas.ttf(0)/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 577.
+(Font)              scaled to size 8.99994pt on input line 513.
 
 
-[31
-warning  (pdf backend): ignoring duplicate destination with the name 'figure.9.6
+[29
+warning  (pdf backend): ignoring duplicate destination with the name 'figure.8.6
 '
 
-warning  (pdf backend): ignoring duplicate destination with the name 'figure.9.7
+warning  (pdf backend): ignoring duplicate destination with the name 'figure.8.7
 '
 
-warning  (pdf backend): ignoring duplicate destination with the name 'figure.9.8
+warning  (pdf backend): ignoring duplicate destination with the name 'figure.8.8
 '
 
-warning  (pdf backend): ignoring duplicate destination with the name 'figure.9.9
+warning  (pdf backend): ignoring duplicate destination with the name 'figure.8.9
 '
 <./img/rounded_logo_purple.png><./img/rounded_logo_white.png><./img/rounded_logo
 _full.png><./img/logo_gyre.png>]
-\pydata@fh@0=\write7
+\pydata@fh@0=\write8
 
-\openout7 = _FAD58DE7366495DB4650CFEFAC2FCD61.data.minted
-runsystem(latexminted config  --timestamp 20251030161321 FAD58DE7366495DB4650CFE
+\openout8 = _FAD58DE7366495DB4650CFEFAC2FCD61.data.minted
+runsystem(latexminted config  --timestamp 20251030163737 FAD58DE7366495DB4650CFE
 FAC2FCD61)...executed.
 
 (./_FAD58DE7366495DB4650CFEFAC2FCD61.config.minted)
-runsystem(latexminted cleanconfig  --timestamp 20251030161321 FAD58DE7366495DB46
+runsystem(latexminted cleanconfig  --timestamp 20251030163737 FAD58DE7366495DB46
 50CFEFAC2FCD61)...executed.
 
 (./_minted/default.style.minted)
@@ -1677,229 +1614,271 @@ LaTeX Font Info:    Font shape `TU/Consolas.ttf(0)/b/n' will be
 (Font)              scaled to size 10.79993pt on input line 2.
 
 
-[32])
-Overfull \hbox (12.77328pt too wide) in paragraph at lines 615--616
+[30])
+Overfull \hbox (12.77328pt too wide) in paragraph at lines 551--552
 \TU/RobotoLight(0)/b/n/12 Une in-stance de la classe [] con-tient trois in-for-m
 a-tions prin-ci-pales : le compte ([])
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 622--624
+Underfull \hbox (badness 10000) in paragraph at lines 558--560
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 622--624
+Underfull \hbox (badness 10000) in paragraph at lines 558--560
 
  []
 
 (./_minted/04AB871D6E309FF118AE4325D314B029.highlight.minted
 
-[33]
+[31]
 
-[34])
-Underfull \hbox (badness 10000) in paragraph at lines 694--696
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 694--696
+[32])
+Underfull \hbox (badness 10000) in paragraph at lines 630--632
 
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 630--632
 
-[35] (./_minted/0425AE990F71F51DF068C6430C6D5C8C.highlight.minted
+ []
+
+
+
+[33] (./_minted/0425AE990F71F51DF068C6430C6D5C8C.highlight.minted
 
 LaTeX Font Warning: Font shape `TU/Consolas.ttf(0)/m/it' undefined
 (Font)              using `TU/Consolas.ttf(0)/m/n' instead on input line 18.
 
 
 
-[36]
+[34]
 LaTeX Font Info:    Font shape `TU/Consolas.ttf(0)/m/it' will be
 (Font)              scaled to size 10.79993pt on input line 49.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 768--774
+Underfull \hbox (badness 10000) in paragraph at lines 704--710
 
  []
 
 
 
-[37]
-Underfull \hbox (badness 10000) in paragraph at lines 778--780
+[35]
+Underfull \hbox (badness 10000) in paragraph at lines 714--716
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 778--780
+Underfull \hbox (badness 10000) in paragraph at lines 714--716
 
  []
 
 (./_minted/51EDF3A83CE4E6A9ECF8FF245478A6DC.highlight.minted
 
-[38]) (./_minted/D0D9B4A1BD62089C805F9C6DF8BD5DCB.highlight.minted)
+[36]) (./_minted/D0D9B4A1BD62089C805F9C6DF8BD5DCB.highlight.minted)
 (./_minted/CFA17D2382F8A98A9FF46FBDA440EC61.highlight.minted
 
-[39])
-Underfull \hbox (badness 10000) in paragraph at lines 867--869
+[37])
+Underfull \hbox (badness 10000) in paragraph at lines 803--805
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 867--869
-
- []
-
-
-
-[40] (./_minted/57661D5C54AD3FF0D75F61D783B820AA.highlight.minted)
-
-[41] (./_minted/E05A8D05B50E137236B2E55F8D3CD7C8.highlight.minted)
-Underfull \hbox (badness 10000) in paragraph at lines 939--941
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 939--941
+Underfull \hbox (badness 10000) in paragraph at lines 803--805
 
  []
 
 
 
-[42] (./_minted/6BC59C39280F9C9EFC235ACE26AEA8B9.highlight.minted)
+[38] (./_minted/57661D5C54AD3FF0D75F61D783B820AA.highlight.minted)
+
+[39] (./_minted/E05A8D05B50E137236B2E55F8D3CD7C8.highlight.minted)
+Underfull \hbox (badness 10000) in paragraph at lines 875--877
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 875--877
+
+ []
+
+
+
+[40] (./_minted/6BC59C39280F9C9EFC235ACE26AEA8B9.highlight.minted)
 (./_minted/CDDE7E4024B5086B6F1EE76C2A3E34B9.highlight.minted
+
+[41]
+
+[42]) (./_minted/4937D3A4B22FE29CFC6201B955898D8F.highlight.minted)
+(./_minted/30D2D9E4239CE0F0B0DAC41EDDCE731E.highlight.minted
 
 [43]
 
-[44]) (./_minted/4937D3A4B22FE29CFC6201B955898D8F.highlight.minted)
-(./_minted/30D2D9E4239CE0F0B0DAC41EDDCE731E.highlight.minted
+[44]
 
 [45]
 
-[46]
+[46])
+Underfull \hbox (badness 10000) in paragraph at lines 1100--1102
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1113--1115
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1123--1125
+
+ []
+
+
 
 [47]
-
-[48])
-Underfull \hbox (badness 10000) in paragraph at lines 1164--1166
+Underfull \hbox (badness 10000) in paragraph at lines 1132--1134
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1177--1179
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1187--1189
-
- []
-
-
-
-[49]
-Underfull \hbox (badness 10000) in paragraph at lines 1196--1198
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1196--1198
+Underfull \hbox (badness 10000) in paragraph at lines 1132--1134
 
  []
 
 (./_minted/CC356FBE22CBB21C38F9821B45ED8C1E.highlight.minted
 
-[50])
-Overfull \hbox (6.82251pt too wide) in paragraph at lines 1246--1247
+[48])
+Overfull \hbox (6.82251pt too wide) in paragraph at lines 1182--1183
 \TU/RobotoLight(0)/b/n/12 compte ou d’en véri-fier l’ex-is-tence. Pour fonc
 -tion-ner, elle né-ces-site un paramètre [],
  []
 
-
-\openout7 = _FAD58DE7366495DB4650CFEFAC2FCD61.data.minted
-runsystem(latexminted highlight  --timestamp 20251030161321 FAD58DE7366495DB4650
-CFEFAC2FCD61)...executed.
 (./_minted/A0BE1C51A54AF8443A451F5723A00FEC.highlight.minted
 
-[51])
+[49])
 
-[52]
-Overfull \hbox (56.48174pt too wide) in paragraph at lines 1291--1292
+[50]
+Overfull \hbox (56.48174pt too wide) in paragraph at lines 1227--1228
 []\TU/RobotoLight(0)/b/n/12 4. En-voi de la com-mande et at-tente de la réponse
 , tous deux gérés par []; 
  []
 
 
-Overfull \hbox (34.11719pt too wide) in paragraph at lines 1300--1301
+Overfull \hbox (34.11719pt too wide) in paragraph at lines 1236--1237
 \TU/RobotoLight(0)/b/n/12 Cette méth-ode est ap-pelée lorsqu’il est néces-s
 aire de créer un nou-veau compte. L’[]
  []
 
-
-\openout7 = _FAD58DE7366495DB4650CFEFAC2FCD61.data.minted
-runsystem(latexminted highlight  --timestamp 20251030161321 FAD58DE7366495DB4650
-CFEFAC2FCD61)...executed.
 (./_minted/2884D2ED6596617DBA513E4048AC630D.highlight.minted
 
-[53])
-Overfull \hbox (45.21753pt too wide) in paragraph at lines 1323--1324
+[51])
+Overfull \hbox (45.21753pt too wide) in paragraph at lines 1259--1260
 \TU/RobotoLight(0)/b/n/12 vu précédem-ment avec [], la méth-ode util-isée es
 t [],
  []
 
-
-\openout7 = _FAD58DE7366495DB4650CFEFAC2FCD61.data.minted
-runsystem(latexminted highlight  --timestamp 20251030161321 FAD58DE7366495DB4650
-CFEFAC2FCD61)...executed.
 (./_minted/C85D095B9BAAA57AA7DAF55C11815DA7.highlight.minted)
-\openout7 = _FAD58DE7366495DB4650CFEFAC2FCD61.data.minted
-
-runsystem(latexminted highlight  --timestamp 20251030161321 FAD58DE7366495DB4650
-CFEFAC2FCD61)...executed.
-
 (./_minted/4BECAF5DEE53B28B9137BCA88E78C51B.highlight.minted
 
-[54])
-\openout7 = _FAD58DE7366495DB4650CFEFAC2FCD61.data.minted
+[52]) (./_minted/1B36E5CE6391B600A2C594CD448CFC8D.highlight.minted
 
-runsystem(latexminted highlight  --timestamp 20251030161321 FAD58DE7366495DB4650
-CFEFAC2FCD61)...executed.
- (./_minted/1B36E5CE6391B600A2C594CD448CFC8D.highlight.minted
-
-[55])
-Overfull \hbox (1.536pt too wide) in paragraph at lines 1392--1393
+[53])
+Overfull \hbox (1.536pt too wide) in paragraph at lines 1328--1329
 \TU/RobotoLight(0)/b/n/12 Lorsque le serveur reçoit un sig-nal dont la vari-abl
 e [] vaut [], la classe
  []
 
-
-\openout7 = _FAD58DE7366495DB4650CFEFAC2FCD61.data.minted
-runsystem(latexminted highlight  --timestamp 20251030161321 FAD58DE7366495DB4650
-CFEFAC2FCD61)...executed.
 (./_minted/2341A9F22518604F4B6AEAB646EFFF38.highlight.minted)
 
-[56]
-\openout7 = _FAD58DE7366495DB4650CFEFAC2FCD61.data.minted
-
-runsystem(latexminted highlight  --timestamp 20251030161321 FAD58DE7366495DB4650
-CFEFAC2FCD61)...executed.
- (./_minted/6B033E14A28C55D4BAB3FDA9D8D8AAAC.highlight.minted)
-Overfull \hbox (40.07222pt too wide) in paragraph at lines 1449--1453
+[54] (./_minted/6B033E14A28C55D4BAB3FDA9D8D8AAAC.highlight.minted)
+Overfull \hbox (40.07222pt too wide) in paragraph at lines 1385--1389
 []\TU/RobotoLight(0)/b/n/12 Comme on peut le com-pren-dre à par-tir des com-men
 -taires en anglais, le compte []
  []
 
 
 
-[57]
+[55]
+
+[56]
+Chapter 9.
+
+Overfull \hbox (38.67114pt too wide) in paragraph at lines 1394--1394
+[]\TU/RobotoLight(0)/m/it/12 Vi-sual Stu-dio\TU/RobotoLight(0)/b/n/12 . IDE prin
+-ci-pal pour le développe-ment du serveur. \TU/RobotoLight(0)/m/sc/12 󰀦
+󰀣󰀝\TU/RobotoLight(0)/b/n/12 : []$\TU/Consolas.ttf(0)/m/it/12 https : / / 
+visualstudio .
+ []
+
+
+Overfull \hbox (18.76744pt too wide) in paragraph at lines 1394--1394
+[]\TU/RobotoLight(0)/b/n/12 Tele-gram FZ-LLC. \TU/RobotoLight(0)/m/it/12 Tele-gr
+am\TU/RobotoLight(0)/b/n/12 . Ap-pli-ca-tion de mes-sagerie avec fonc-tion-nal-i
+tés avancées.
+ []
+
+
+Overfull \hbox (0.37767pt too wide) in paragraph at lines 1394--1394
+[]\TU/RobotoLight(0)/m/it/12 Mi-crosoft ASP.NET Core\TU/RobotoLight(0)/b/n/12 . Frame-work util-is
+é pour le développe-ment du serveur back-
+ []
+
+
+
+[57
+
+]
+Overfull \hbox (6.54593pt too wide) in paragraph at lines 1394--1394
+[]\TU/RobotoLight(0)/m/it/12 Rail-way\TU/RobotoLight(0)/b/n/12 . Plate-forme clo
+ud pour héberger la base de don-nées. \TU/RobotoLight(0)/m/sc/12 󰀦󰀣
+󰀝\TU/RobotoLight(0)/b/n/12 : []$\TU/Consolas.ttf(0)/m/it/12 https : / / railw
+ay .
+ []
+
+
+Overfull \hbox (0.40749pt too wide) in paragraph at lines 1394--1394
+[]\TU/RobotoLight(0)/m/it/12 Re-move.bg\TU/RobotoLight(0)/b/n/12 . Outil util-is
+é pour créer et net-toyer les icônes. \TU/RobotoLight(0)/m/sc/12 󰀦󰀣
+󰀝\TU/RobotoLight(0)/b/n/12 : []$\TU/Consolas.ttf(0)/m/it/12 https : / / www 
+. remove .
+ []
+
+
 
 [58]
-\openout7 = _FAD58DE7366495DB4650CFEFAC2FCD61.data.minted
+Overfull \hbox (7.6737pt too wide) in paragraph at lines 1394--1394
+[]\TU/RobotoLight(0)/m/it/12 Google Chrome\TU/RobotoLight(0)/b/n/12 . Mo-teur de
+ recherche util-isé pour l’en-voi de re-quêtes HTTP et HTTPS.
+ []
 
-runsystem(latexminted clean  --timestamp 20251030161321 FAD58DE7366495DB4650CFEF
-AC2FCD61)...executed.
- (./main.aux)
+
+Overfull \hbox (3.75674pt too wide) in paragraph at lines 1403--1404
+[]\TU/RobotoLight(0)/m/it/12 C# \TU/RobotoLight(0)/b/n/12 (syn-taxe et cu-riosit
+és) — []$\TU/Consolas.ttf(0)/m/it/12 https://learn.microsoft.com/en-[]us/dotn
+et/csharp/$[] 
+ []
+
+
+Overfull \hbox (10.34296pt too wide) in paragraph at lines 1407--1408
+[]\TU/RobotoLight(0)/m/it/12 Fly.io \TU/RobotoLight(0)/b/n/12 — []$\TU/Consol
+as.ttf(0)/m/it/12 https://fly.io/docs/$[] \TU/RobotoLight(0)/b/n/12 : plate-form
+e util-isée pour dé-ployer le serveur ASP.NET. 
+ []
+
+
+Overfull \hbox (19.16913pt too wide) in paragraph at lines 1409--1410
+[]\TU/RobotoLight(0)/m/it/12 Gmail API \TU/RobotoLight(0)/b/n/12 — []$\TU/Con
+solas.ttf(0)/m/it/12 https://developers.google.com/gmail/api$[] \TU/RobotoLight
+(0)/b/n/12 : util-isée pour l’en-voi d’emails
+ []
+
+
+
+[59]
+
+[60]
+
+[61] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-03-26>
@@ -1909,30 +1888,30 @@ L3 programming layer <2025-03-26>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 78DE325D1C432AF49B00895ACB227C60;7217.
+(rerunfilecheck)             Checksum: 0D5CD42CFC5F54C9650D14F0328C1A6C;7217.
 Package logreq Info: Writing requests to 'main.run.xml'.
 
 \openout1 = main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 39856 strings out of 471941
+ 39855 strings out of 471941
  125083,1977958 words of node,token memory allocated
  648 words of node memory still in use:
    3 hlist, 1 vlist, 1 rule, 2 glue, 3 kern, 1 glyph, 20 attribute, 65 glue_spec
 , 20 attribute_list, 2 write, 15 pdf_action nodes
-   avail lists: 1:3,2:2708,3:2008,4:698,5:475,6:56,7:7155,8:171,9:456,10:17,11:5
+   avail lists: 1:3,2:2680,3:2008,4:698,5:475,6:57,7:7157,8:171,9:456,10:17,11:5
 26
- 65339 multiletter control sequences out of 65536+600000
+ 65343 multiletter control sequences out of 65536+600000
  57 fonts using 6026999 bytes
  96i,10n,100p,1346b,1213s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2025/texmf-dist/fonts/opentype/google/roboto/Roboto-LightItalic.otf>
 <./Consolas.ttf><c:/texlive/2025/texmf-dist/fonts/opentype/google/roboto/Roboto-
-LightItalic.otf><c:/texlive/2025/texmf-dist/fonts/opentype/google/roboto/Roboto-
 Light.otf>
-Output written on main.pdf (59 pages, 1536630 bytes).
+Output written on main.pdf (62 pages, 1540924 bytes).
 
-PDF statistics: 735 PDF objects out of 1000 (max. 8388607)
- 628 compressed objects within 7 object streams
- 157 named destinations out of 1000 (max. 131072)
+PDF statistics: 794 PDF objects out of 1000 (max. 8388607)
+ 684 compressed objects within 7 object streams
+ 161 named destinations out of 1000 (max. 131072)
  344 words of extra memory for PDF output out of 10000 (max. 100000000)
 

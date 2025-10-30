@@ -1,0 +1,64 @@
+\contentsline {chapter}{\numberline {1}Introduction}{4}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Contexte et analyse préliminaire}{6}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Panorama des applications de messagerie}{6}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Analyse de la concurrence}{6}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Technologies principales impliquées}{7}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Développement du projet}{9}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Analyse des besoins et spécifications}{9}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Développement du client (Flutter)}{10}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Développement du serveur (ASP.NET Core)}{11}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Fonctionnalités avancées}{12}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Tests et débogage}{13}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Résultats obtenus}{15}{chapter.4}%
+\contentsline {section}{\numberline {4.1}État actuel de l'application}{15}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Comparaison avec les objectifs initiaux}{15}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Captures d’écran de l’application}{16}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Difficultés rencontrées}{21}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Difficultés techniques}{21}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Hébergement et budget}{22}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Difficultés organisationnelles}{23}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Comment j’ai surmonté les difficultés}{24}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Bilan personnel}{25}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Conclusion}{26}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Annexes}{27}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Code source}{27}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Diagrammes}{27}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Icônes de l’application}{28}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Structure du serveur}{29}{section.8.4}%
+\contentsline {subsection}{\numberline {8.4.1}User.cs}{30}{subsection.8.4.1}%
+\contentsline {subsubsection}{Extrait du code}{30}{subsection.8.4.1}%
+\contentsline {subsubsection}{Variables principales}{31}{subsection.8.4.1}%
+\contentsline {subsubsection}{Methodes}{31}{subsection.8.4.1}%
+\contentsline {subsection}{\numberline {8.4.2}Signal.cs}{31}{subsection.8.4.2}%
+\contentsline {subsubsection}{Extrait du code}{31}{subsection.8.4.2}%
+\contentsline {subsubsection}{Variables principales}{33}{subsection.8.4.2}%
+\contentsline {subsubsection}{Methodes}{33}{subsection.8.4.2}%
+\contentsline {subsection}{\numberline {8.4.3}Account.cs}{34}{subsection.8.4.3}%
+\contentsline {subsubsection}{Extrait du code}{34}{subsection.8.4.3}%
+\contentsline {subsubsection}{Variables}{35}{subsection.8.4.3}%
+\contentsline {subsubsection}{Methodes}{36}{subsection.8.4.3}%
+\contentsline {subsection}{\numberline {8.4.4}Program.cs (Entry point)}{36}{subsection.8.4.4}%
+\contentsline {subsubsection}{Démarrage du serveur}{36}{subsection.8.4.4}%
+\contentsline {subsubsection}{Gestion des requêtes}{37}{subsection.8.4.4}%
+\contentsline {subsubsection}{Gestion des connexions}{37}{subsection.8.4.4}%
+\contentsline {subsection}{\numberline {8.4.5}Server.cs}{39}{subsection.8.4.5}%
+\contentsline {subsection}{\numberline {8.4.6}Authenticator.cs}{41}{subsection.8.4.6}%
+\contentsline {subsubsection}{Login: Accès à un compte existant}{41}{subsection.8.4.6}%
+\contentsline {subsubsection}{Registration: Creation d'un nouveau compte}{43}{subsection.8.4.6}%
+\contentsline {subsection}{\numberline {8.4.7}AccountsManager.cs}{48}{subsection.8.4.7}%
+\contentsline {subsubsection}{Extrait du code}{48}{subsection.8.4.7}%
+\contentsline {subsubsection}{Variables}{49}{subsection.8.4.7}%
+\contentsline {subsubsection}{Obtention d’un compte}{49}{subsection.8.4.7}%
+\contentsline {subsubsection}{Création d’un compte}{51}{subsection.8.4.7}%
+\contentsline {subsubsection}{Suppression d’un compte}{52}{subsection.8.4.7}%
+\contentsline {subsubsection}{Recherche d’un compte}{52}{subsection.8.4.7}%
+\contentsline {subsection}{\numberline {8.4.8}Messages.cs}{53}{subsection.8.4.8}%
+\contentsline {subsubsection}{Extrait du code}{53}{subsection.8.4.8}%
+\contentsline {subsubsection}{Réception d’un message}{54}{subsection.8.4.8}%
+\contentsline {subsubsection}{Envoi d’un message}{54}{subsection.8.4.8}%
+\contentsline {chapter}{\numberline {9}Sources et bibliographie}{57}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Documentations officielles consultées}{59}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Tutoriels, articles et forums}{60}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Outils d’assistance}{60}{section.9.3}%
+\contentsline {section}{\numberline {9.4}Outils de développement}{61}{section.9.4}%
+\contentsline {section}{\numberline {9.5}Autres inspirations et connaissances utiles}{61}{section.9.5}%
