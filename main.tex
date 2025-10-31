@@ -1,19 +1,21 @@
 \documentclass[12pt]{report}
-\usepackage[a4paper, left=2cm, right=2cm, top=2.5cm, bottom=2.5cm]{geometry} % Margins
-\usepackage{graphicx} % Images
-\usepackage{fontspec} % System fonts
-\usepackage{hyperref} % Links
-\usepackage{minted} % Code
-\usepackage{tcolorbox} % Code background
-\usepackage{setspace} % Interline spacing
+\usepackage[a4paper, left=2cm, right=2cm, top=2.5cm, bottom=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{fontspec}
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage{tcolorbox}
+\usepackage{setspace}
 \usepackage{titlesec}
-\usepackage{float} % Images H
+\usepackage{float}
 \usepackage{times}
-\usepackage[backend=biber,style=numeric,sorting=none]{biblatex} % Bibliography
+\usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
+\usepackage{ragged2e} % per \RaggedLeft, \RaggedRight ecc.
+
 \addbibresource{bibliography.bib}
 
-\definecolor{Titles}{RGB}{100, 25, 104} % Dark blue
-\setcounter{secnumdepth}{2} % No ".0" in the titles
+\definecolor{Titles}{RGB}{159, 6, 167}
+\setcounter{secnumdepth}{2}
 
 \geometry{a4paper, margin=2.5cm}
 
@@ -28,7 +30,6 @@
 \titleformat{\subsection}
 {\color{Titles}\normalfont\Large\bfseries}
 {\thesubsection}{1em}{}
-
 
 \tcbuselibrary{listings, skins, breakable}
 
@@ -52,9 +53,6 @@
 	showspaces=false, 
 	showstringspaces=false
 }
-
-
-
 
 \newtcbox{\code}{
 	on line,
@@ -80,12 +78,35 @@ ItalicFont  = *Italic,
 \setlength{\parskip}{1em}
 \onehalfspacing
 
-\title{Messagyre}
-\author{Travail de Maturité de Pietro Gravina}
-
 \begin{document}
 	
-	\maketitle
+	\begin{titlepage}
+		\centering
+		
+		{\Huge Gymnase de Renens\\[0.5em]}
+		{\large Travail de Maturité 2024 - 2025}
+		
+		\vfill
+		
+		\includegraphics[width=4cm]{img/rounded_logo_full.png}\\[1em]
+		{\Huge Messagyre\\[0.5em]}
+		{\large Le gymnase à portée de main}
+		
+		\vfill
+		
+		\noindent
+		\begin{minipage}[t]{0.48\textwidth}
+			\RaggedRight
+			Répondant :\\
+			Joachim Hugonot
+		\end{minipage}%
+		\hfill
+		\begin{minipage}[t]{0.48\textwidth}
+			\RaggedLeft
+			Auteur :\\
+			Pietro Gravina
+		\end{minipage}
+	\end{titlepage}
 	
 	\renewcommand{\contentsname}{Table des matières}
 	\tableofcontents
@@ -232,91 +253,91 @@ ItalicFont  = *Italic,
 	
 	Voici quelques captures d’écran de Messagyre dans son état actuel, accompagnées d’une brève description :
 	
-	\begin{itemize}
-		
-		\item \textbf{Page de connexion} : avec les champs de saisie et le bouton de connexion.
-		
-		\begin{figure}[H]
+	\begin{figure}[H]
+		\centering
+		\begin{minipage}[t]{0.45\textwidth}
 			\centering
-			\begin{minipage}[t]{0.5\textwidth}
-				\centering
-				\fbox{\includegraphics[width=\textwidth]{img/login.png}}
-				\caption{Page de connexion}
-			\end{minipage}
-		\end{figure}
-		
-		\item \textbf{Page d'inscription} : formulaire avec vérification de l’adresse e-mail.
-		
-		\begin{figure}[H]
+			\fbox{\includegraphics[width=\textwidth]{img/login.png}}
+			\caption*{\textbf{Page de connexion} : avec les champs de saisie et le bouton de connexion.}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[t]{0.45\textwidth}
 			\centering
-			\begin{minipage}[t]{0.5\textwidth}
-				\centering
-				\fbox{\includegraphics[width=\textwidth]{img/registration_email.png}}
-				\caption{Page d'inscription}
-			\end{minipage}
-		\end{figure}
-		
-		\item \textbf{Liste des conversations} : affichage des contacts et des derniers messages reçus.
-		
-		\begin{figure}[H]
-			\centering
-			\begin{minipage}[t]{0.5\textwidth}
-				\centering
-				%	\fbox{\includegraphics[width=\textwidth]{img/chats.png}}
-				\caption{Liste des conversations}
-			\end{minipage}
-		\end{figure}
-		
-		\item \textbf{Fenêtre de discussion} : interface avec les messages envoyés et reçus.
-		
-		\begin{figure}[H]
-			\centering
-			\begin{minipage}[t]{0.5\textwidth}
-				\centering
-				%	\fbox{\includegraphics[width=\textwidth]{img/chat.png}}
-				\caption{Fenêtre de discussion}
-			\end{minipage}
-		\end{figure}
-		
-		\item \textbf{Profil utilisateur} : aperçu d’un compte avec photo et informations visibles.
-		
-		\begin{figure}[H]
-			\centering
-			\begin{minipage}[t]{0.5\textwidth}
-				\centering
-				\fbox{\includegraphics[width=\textwidth]{img/profile.png}}
-				\caption{Profil utilisateur}
-			\end{minipage}
-		\end{figure}
-		
-		\item \textbf{Page des devoirs} : liste des prochains devoirs, ajout d’un nouveau et visualisation des détails.
-		
-		\begin{figure}[H]
-			\centering
-			\begin{minipage}[t]{0.32\textwidth}
-				\centering
-				\fbox{\includegraphics[width=\textwidth]{img/homework.png}}
-				\caption*{Liste des devoirs}
-			\end{minipage}
-			\hfill
-			\begin{minipage}[t]{0.32\textwidth}
-				\centering
-				\fbox{\includegraphics[width=\textwidth]{img/new_homework.png}}
-				\caption*{Ajout d’un devoir}
-			\end{minipage}
-			\hfill
-			\begin{minipage}[t]{0.32\textwidth}
-				\centering
-				\fbox{\includegraphics[width=\textwidth]{img/view_homework.png}}
-				\caption*{Détail d’un devoir}
-			\end{minipage}
-			\caption{Interface de la page « Devoirs »}
-		\end{figure}
-		
-	\end{itemize}
+			\fbox{\includegraphics[width=\textwidth]{img/registration_email.png}}
+			\caption*{\textbf{Page d'inscription} : formulaire avec vérification de l’adresse e-mail.}
+		\end{minipage}
+	\end{figure}
 	
+	\begin{figure}[H]
+		\centering
+		\begin{minipage}[t]{0.45\textwidth}
+			\centering
+			\fbox{\includegraphics[width=\textwidth]{img/screenshots/chats_page.jpeg}}
+			\caption*{\textbf{Liste des conversations} : affichage des contacts et des derniers messages reçus.}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[t]{0.45\textwidth}
+			\centering
+			\fbox{\includegraphics[width=\textwidth]{img/screenshots/chat_page.jpeg}}
+			\caption*{\textbf{Fenêtre de discussion} : interface avec les messages envoyés et reçus.}
+		\end{minipage}
+	\end{figure}
 	
+	\begin{figure}[H]
+		\centering
+		\begin{minipage}[t]{0.45\textwidth}
+			\centering
+			\fbox{\includegraphics[width=\textwidth]{img/screenshots/profile_page.jpeg}}
+			\caption*{\textbf{Profil utilisateur} : aperçu d’un compte avec photo et informations visibles.}
+		\end{minipage}
+	\end{figure}
 	
+	\begin{figure}[H]
+		\centering
+		\begin{minipage}[t]{0.45\textwidth}
+			\centering
+			\fbox{\includegraphics[width=\textwidth]{img/screenshots/homework_page.jpeg}}
+			\caption*{\textbf{Page des devoirs} : liste des prochains devoirs, ajout d’un nouveau et visualisation des détails.}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[t]{0.45\textwidth}
+			\centering
+			\fbox{\includegraphics[width=\textwidth]{img/screenshots/add_homework_page.jpeg}}
+			\caption*{\textbf{Ajout d'un devoir} : page qui permet à l'utilisateur d'ajouter un devoir à la liste.}
+		\end{minipage}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\begin{minipage}[t]{0.45\textwidth}
+			\centering
+			\fbox{\includegraphics[width=\textwidth]{img/screenshots/grades_page.jpeg}}
+			\caption*{\textbf{Page des notes} : affichage des moyennes et des résultats obtenus dans chaque matière.}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[t]{0.45\textwidth}
+			\centering
+			\fbox{\includegraphics[width=\textwidth]{img/screenshots/add_grade_page.jpeg}}
+			\caption*{\textbf{Ajout d’une note} : formulaire permettant d’ajouter une nouvelle note avec matière et coefficient.}
+		\end{minipage}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\begin{minipage}[t]{0.45\textwidth}
+			\centering
+			\fbox{\includegraphics[width=\textwidth]{img/screenshots/search_page.jpeg}}
+			\caption*{\textbf{Page de recherche} : permet de trouver d’autres utilisateurs ou conversations rapidement.}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[t]{0.45\textwidth}
+			\centering
+			\fbox{\includegraphics[width=\textwidth]{img/screenshots/settings_page.jpeg}}
+			\caption*{\textbf{Page des paramètres} : options de personnalisation du profil et de gestion de l’application.}
+		\end{minipage}
+	\end{figure}
+	
+			
 	\chapter{Difficultés rencontrées}
 	
 	\section{Difficultés techniques}
@@ -1451,6 +1472,5 @@ Pour mener à bien le développement de Messagyre, je me suis appuyé sur divers
 	\item \textbf{Patternico} — utilisé pour générer les motifs de fond dans les fenêtres de discussion.
 	\item \textbf{Google Maps} — utilisé pour dessiner l’icône de l’application à partir de la vue aérienne du bâtiment du gymnase.
 \end{itemize}
-
 
 \end{document}
