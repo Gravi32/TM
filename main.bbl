@@ -544,19 +544,6 @@
       \verb https://datatracker.ietf.org/doc/html/rfc7519
       \endverb
     \endentry
-    \entry{googleapi}{online}{}{}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
-      \field{labeltitlesource}{title}
-      \field{note}{Utilisées pour interagir avec divers services Google, y compris Gmail.}
-      \field{title}{Google APIs}
-      \verb{urlraw}
-      \verb https://developers.google.com/apis-explorer
-      \endverb
-      \verb{url}
-      \verb https://developers.google.com/apis-explorer
-      \endverb
-    \endentry
     \entry{owasp}{online}{}{}
       \name{author}{1}{}{%
         {{hash=6975ae082e3872ce044ce19f2965a01f}{%
@@ -628,6 +615,7 @@
     \endentry
   \enddatalist
   \missing{apirest}
+  \missing{googleapi}
 \endrefsection
 \endinput
 

@@ -1,17 +1,18 @@
 [0] Config.pm:308> INFO - This is Biber 2.20
 [0] Config.pm:311> INFO - Logfile is 'main.blg'
-[101] biber-MSWIN64:340> INFO - === 
-[136] Biber.pm:420> INFO - Reading 'main.bcf'
-[255] Biber.pm:994> INFO - Found 40 citekeys in bib section 0
-[270] Biber.pm:4463> INFO - Processing section 0
-[281] Biber.pm:4654> INFO - Looking for bibtex file 'bibliography.bib' for section 0
-[331] bibtex.pm:1713> INFO - LaTeX decoding ...
-[363] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
-[420] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[420] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[420] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
-[420] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
-[442] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[450] bbl.pm:779> INFO - Output to main.bbl
-[450] Biber.pm:131> WARN - I didn't find a database entry for 'apirest' (section 0)
-[450] Biber.pm:133> INFO - WARNINGS: 1
+[190] biber-MSWIN64:340> INFO - === 
+[242] Biber.pm:420> INFO - Reading 'main.bcf'
+[459] Biber.pm:994> INFO - Found 40 citekeys in bib section 0
+[494] Biber.pm:4463> INFO - Processing section 0
+[515] Biber.pm:4654> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[578] bibtex.pm:1713> INFO - LaTeX decoding ...
+[609] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
+[707] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[707] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[707] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
+[708] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[745] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[757] bbl.pm:779> INFO - Output to main.bbl
+[758] Biber.pm:131> WARN - I didn't find a database entry for 'apirest' (section 0)
+[758] Biber.pm:131> WARN - I didn't find a database entry for 'googleapi' (section 0)
+[758] Biber.pm:133> INFO - WARNINGS: 2

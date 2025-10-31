@@ -1,19 +1,21 @@
 \documentclass[12pt]{report}
-\usepackage[a4paper, left=2cm, right=2cm, top=2.5cm, bottom=2.5cm]{geometry} % Margins
-\usepackage{graphicx} % Images
-\usepackage{fontspec} % System fonts
-\usepackage{hyperref} % Links
-\usepackage{minted} % Code
-\usepackage{tcolorbox} % Code background
-\usepackage{setspace} % Interline spacing
+\usepackage[a4paper, left=2cm, right=2cm, top=2.5cm, bottom=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{fontspec}
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage{tcolorbox}
+\usepackage{setspace}
 \usepackage{titlesec}
-\usepackage{float} % Images H
+\usepackage{float}
 \usepackage{times}
-\usepackage[backend=biber,style=numeric,sorting=none]{biblatex} % Bibliography
+\usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
+\usepackage{ragged2e} % per \RaggedLeft, \RaggedRight ecc.
+
 \addbibresource{bibliography.bib}
 
-\definecolor{Titles}{RGB}{100, 25, 104} % Dark blue
-\setcounter{secnumdepth}{2} % No ".0" in the titles
+\definecolor{Titles}{RGB}{159, 6, 167}
+\setcounter{secnumdepth}{2}
 
 \geometry{a4paper, margin=2.5cm}
 
@@ -28,7 +30,6 @@
 \titleformat{\subsection}
 {\color{Titles}\normalfont\Large\bfseries}
 {\thesubsection}{1em}{}
-
 
 \tcbuselibrary{listings, skins, breakable}
 
@@ -52,9 +53,6 @@
 	showspaces=false, 
 	showstringspaces=false
 }
-
-
-
 
 \newtcbox{\code}{
 	on line,
@@ -80,13 +78,38 @@ ItalicFont  = *Italic,
 \setlength{\parskip}{1em}
 \onehalfspacing
 
-\title{Messagyre}
-\author{Travail de Maturité de Pietro Gravina}
-
 \begin{document}
 	
-	\maketitle
-	%\tableofcontents
+	\begin{titlepage}
+		\centering
+		
+		{\Huge Gymnase de Renens\\[0.5em]}
+		{\large Travail de Maturité 2024 - 2025}
+		
+		\vfill
+		
+		\includegraphics[width=4cm]{img/rounded_logo_full.png}\\[1em]
+		{\Huge Messagyre\\[0.5em]}
+		{\large Le gymnase à portée de main}
+		
+		\vfill
+		
+		\noindent
+		\begin{minipage}[t]{0.48\textwidth}
+			\RaggedRight
+			Répondant :\\
+			Joachim Hugonot
+		\end{minipage}%
+		\hfill
+		\begin{minipage}[t]{0.48\textwidth}
+			\RaggedLeft
+			Auteur :\\
+			Pietro Gravina
+		\end{minipage}
+	\end{titlepage}
+	
+	\renewcommand{\contentsname}{Table des matières}
+	\tableofcontents
 	
 	\chapter{Introduction}
 	
@@ -230,91 +253,91 @@ ItalicFont  = *Italic,
 	
 	Voici quelques captures d’écran de Messagyre dans son état actuel, accompagnées d’une brève description :
 	
-	\begin{itemize}
-		
-		\item \textbf{Page de connexion} : avec les champs de saisie et le bouton de connexion.
-		
-		\begin{figure}[H]
+	\begin{figure}[H]
+		\centering
+		\begin{minipage}[t]{0.45\textwidth}
 			\centering
-			\begin{minipage}[t]{0.5\textwidth}
-				\centering
-				\fbox{\includegraphics[width=\textwidth]{img/login.png}}
-				\caption{Page de connexion}
-			\end{minipage}
-		\end{figure}
-		
-		\item \textbf{Page d'inscription} : formulaire avec vérification de l’adresse e-mail.
-		
-		\begin{figure}[H]
+			\fbox{\includegraphics[width=\textwidth]{img/login.png}}
+			\caption*{\textbf{Page de connexion} : avec les champs de saisie et le bouton de connexion.}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[t]{0.45\textwidth}
 			\centering
-			\begin{minipage}[t]{0.5\textwidth}
-				\centering
-				\fbox{\includegraphics[width=\textwidth]{img/registration_email.png}}
-				\caption{Page d'inscription}
-			\end{minipage}
-		\end{figure}
-		
-		\item \textbf{Liste des conversations} : affichage des contacts et des derniers messages reçus.
-		
-		\begin{figure}[H]
-			\centering
-			\begin{minipage}[t]{0.5\textwidth}
-				\centering
-				%	\fbox{\includegraphics[width=\textwidth]{img/chats.png}}
-				\caption{Liste des conversations}
-			\end{minipage}
-		\end{figure}
-		
-		\item \textbf{Fenêtre de discussion} : interface avec les messages envoyés et reçus.
-		
-		\begin{figure}[H]
-			\centering
-			\begin{minipage}[t]{0.5\textwidth}
-				\centering
-				%	\fbox{\includegraphics[width=\textwidth]{img/chat.png}}
-				\caption{Fenêtre de discussion}
-			\end{minipage}
-		\end{figure}
-		
-		\item \textbf{Profil utilisateur} : aperçu d’un compte avec photo et informations visibles.
-		
-		\begin{figure}[H]
-			\centering
-			\begin{minipage}[t]{0.5\textwidth}
-				\centering
-				\fbox{\includegraphics[width=\textwidth]{img/profile.png}}
-				\caption{Profil utilisateur}
-			\end{minipage}
-		\end{figure}
-		
-		\item \textbf{Page des devoirs} : liste des prochains devoirs, ajout d’un nouveau et visualisation des détails.
-		
-		\begin{figure}[H]
-			\centering
-			\begin{minipage}[t]{0.32\textwidth}
-				\centering
-				\fbox{\includegraphics[width=\textwidth]{img/homework.png}}
-				\caption*{Liste des devoirs}
-			\end{minipage}
-			\hfill
-			\begin{minipage}[t]{0.32\textwidth}
-				\centering
-				\fbox{\includegraphics[width=\textwidth]{img/new_homework.png}}
-				\caption*{Ajout d’un devoir}
-			\end{minipage}
-			\hfill
-			\begin{minipage}[t]{0.32\textwidth}
-				\centering
-				\fbox{\includegraphics[width=\textwidth]{img/view_homework.png}}
-				\caption*{Détail d’un devoir}
-			\end{minipage}
-			\caption{Interface de la page « Devoirs »}
-		\end{figure}
-		
-	\end{itemize}
+			\fbox{\includegraphics[width=\textwidth]{img/registration_email.png}}
+			\caption*{\textbf{Page d'inscription} : formulaire avec vérification de l’adresse e-mail.}
+		\end{minipage}
+	\end{figure}
 	
+	\begin{figure}[H]
+		\centering
+		\begin{minipage}[t]{0.45\textwidth}
+			\centering
+			\fbox{\includegraphics[width=\textwidth]{img/screenshots/chats_page.jpeg}}
+			\caption*{\textbf{Liste des conversations} : affichage des contacts et des derniers messages reçus.}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[t]{0.45\textwidth}
+			\centering
+			\fbox{\includegraphics[width=\textwidth]{img/screenshots/chat_page.jpeg}}
+			\caption*{\textbf{Fenêtre de discussion} : interface avec les messages envoyés et reçus.}
+		\end{minipage}
+	\end{figure}
 	
+	\begin{figure}[H]
+		\centering
+		\begin{minipage}[t]{0.45\textwidth}
+			\centering
+			\fbox{\includegraphics[width=\textwidth]{img/screenshots/profile_page.jpeg}}
+			\caption*{\textbf{Profil utilisateur} : aperçu d’un compte avec photo et informations visibles.}
+		\end{minipage}
+	\end{figure}
 	
+	\begin{figure}[H]
+		\centering
+		\begin{minipage}[t]{0.45\textwidth}
+			\centering
+			\fbox{\includegraphics[width=\textwidth]{img/screenshots/homework_page.jpeg}}
+			\caption*{\textbf{Page des devoirs} : liste des prochains devoirs, ajout d’un nouveau et visualisation des détails.}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[t]{0.45\textwidth}
+			\centering
+			\fbox{\includegraphics[width=\textwidth]{img/screenshots/add_homework_page.jpeg}}
+			\caption*{\textbf{Ajout d'un devoir} : page qui permet à l'utilisateur d'ajouter un devoir à la liste.}
+		\end{minipage}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\begin{minipage}[t]{0.45\textwidth}
+			\centering
+			\fbox{\includegraphics[width=\textwidth]{img/screenshots/grades_page.jpeg}}
+			\caption*{\textbf{Page des notes} : affichage des moyennes et des résultats obtenus dans chaque matière.}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[t]{0.45\textwidth}
+			\centering
+			\fbox{\includegraphics[width=\textwidth]{img/screenshots/add_grade_page.jpeg}}
+			\caption*{\textbf{Ajout d’une note} : formulaire permettant d’ajouter une nouvelle note avec matière et coefficient.}
+		\end{minipage}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\begin{minipage}[t]{0.45\textwidth}
+			\centering
+			\fbox{\includegraphics[width=\textwidth]{img/screenshots/search_page.jpeg}}
+			\caption*{\textbf{Page de recherche} : permet de trouver d’autres utilisateurs ou conversations rapidement.}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[t]{0.45\textwidth}
+			\centering
+			\fbox{\includegraphics[width=\textwidth]{img/screenshots/settings_page.jpeg}}
+			\caption*{\textbf{Page des paramètres} : options de personnalisation du profil et de gestion de l’application.}
+		\end{minipage}
+	\end{figure}
+	
+			
 	\chapter{Difficultés rencontrées}
 	
 	\section{Difficultés techniques}
@@ -391,72 +414,6 @@ ItalicFont  = *Italic,
 	Personnellement, je considère ce projet comme l’un des travaux les plus complets et significatifs que j’aie jamais réalisés. Il a une grande valeur, tant du point de vue professionnel — car il démontre mes compétences de développeur — que du point de vue personnel — car il m’a appris à croire en mes idées et à les porter jusqu’au bout avec détermination.
 	
 	J’espère que Messagyre pourra continuer à évoluer au-delà de ce travail de maturité. Qu’il puisse être utile aux élèves et aux enseignants, et peut-être devenir un véritable outil de communication scolaire, simple, sécurisé et accessible à tous.
-	
-	
-	\chapter{Sources et bibliographie}
-	
-	Pour mener à bien le développement de Messagyre, je me suis appuyé sur diverses ressources disponibles en ligne. Voici les principales :
-	
-	\printbibliography[heading=none]
-	
-	\section{Documentations officielles consultées}
-	
-	\begin{itemize}
-		\item \textit{Flutter} — \url{https://docs.flutter.dev}
-		\item \textit{Flutter API} — \url{https://api.flutter.dev}
-		\item \textit{Dart} — \url{https://dart.dev/guides}
-		\item \textit{ASP.NET Core} — \url{https://learn.microsoft.com/fr-fr/aspnet/core}
-		\item \textit{C\#} (syntaxe et curiosités) — \url{https://learn.microsoft.com/en-us/dotnet/csharp/}
-		\item \textit{MySQL} — \url{https://dev.mysql.com/doc/}
-		\item \textit{JWT (JSON Web Tokens)} — \url{https://jwt.io/introduction}
-		\item \textit{Railway} — \url{https://docs.railway.app}
-		\item \textit{Fly.io} — \url{https://fly.io/docs/} : plateforme utilisée pour déployer le serveur ASP.NET.
-		\item \textit{pub.dev} — \url{https://pub.dev} : plateforme utilisée pour trouver et installer des paquets et extensions Flutter.
-		\item \textit{Gmail API} — \url{https://developers.google.com/gmail/api} : utilisée pour l’envoi d’emails de vérification.
-		\item \textit{Bcrypt} — \url{https://github.com/BCryptNet/bcrypt.net} : utilisée pour le hachage sécurisé des mots de passe.
-		\item \textit{UUID} — \url{https://www.uuidgenerator.net/} : utilisée pour générer des identifiants uniques.
-	\end{itemize}
-	
-	\section{Tutoriels, articles et forums}
-	
-	\begin{itemize}
-		\item Stack Overflow — \url{https://stackoverflow.com}
-		\item GitHub Discussions — \url{https://github.com}
-		\item Flutter Community — \url{https://fluttercommunity.dev}
-		\item Railway Community Forum — \url{https://community.railway.app}
-		\item TeX Stack Exchange — \url{https://tex.stackexchange.com}
-		\item Reddit (r/FlutterDev, r/dotnet, r/webdev) — \url{https://www.reddit.com}
-		\item Wikipédia — pages sur \textit{Base64} et \textit{JSON Web Token} pour la compréhension des concepts fondamentaux.
-		\item Chaine YouTube officielle de Flutter \url{https://www.youtube.com/@flutterdev}
-		\item Installation des drivers Android et utilisation d’ADB — \url{https://androidmtk.com}
-	\end{itemize}
-	
-	\section{Outils d’assistance}
-	
-	\begin{itemize}
-		\item \textbf{ChatGPT (OpenAI)} — pour générer du code, trouver des solutions optimisées et explorer des alternatives techniques.
-		\item \textbf{Google Gemini} — pour la recherche de documentation complémentaire et l’exploration d’approches différentes.
-		\item \textbf{Claude (Anthropic)} — pour obtenir des résumés techniques et des explications de concepts complexes.
-		\item \textbf{GitHub Copilot} — utilisé via Visual Studio Code pour l’auto-complétion de code, facilitant et accélérant le développement.
-	\end{itemize}
-	
-	
-	\section{Outils de développement}
-	
-	\begin{itemize}
-		\item \textbf{Visual Studio 2022} — environnement de développement principal pour ASP.NET Core et le serveur.
-		\item \textbf{Visual Studio Code} — utilisé pour éditer des fichiers Dart, JSON, SQL et pour les tests rapides côté client.
-		\item \textbf{Android Studio} — utilisé pour installer les SDK Android et tester l’application Flutter via son émulateur intégré.
-		\item \textbf{Apple XCode} — utilisé pour construire l'application pour les dispositifs Apple (iOS).
-	\end{itemize}
-	
-	\section{Autres inspirations et connaissances utiles}
-	
-	\begin{itemize}
-		\item Cours de mathématiques sur la cryptographie (Gymnase de Renens) — a contribué à mieux comprendre les principes de sécurité appliqués à l’application (notamment l’utilisation des tokens, des mots de passe hachés et de la confidentialité des échanges).
-		\item \textbf{Patternico} — utilisé pour générer les motifs de fond dans les fenêtres de discussion.
-		\item \textbf{Google Maps} — utilisé pour dessiner l’icône de l’application à partir de la vue aérienne du bâtiment du gymnase.
-	\end{itemize}
 	
 	\chapter{Annexes}
 	
@@ -1450,5 +1407,70 @@ Comme on peut le comprendre à partir des commentaires en anglais, le compte \co
 Ensuite, le serveur vérifie si l’utilisateur destinataire est actuellement en ligne, en parcourant la liste des utilisateurs connectés (\code{ConnectedUsers}) contenue dans la classe \code{Server}, afin de déterminer le traitement à effectuer :  
 Si l’utilisateur est en ligne, le message lui est directement envoyé via la méthode \code{Receive} de la classe \code{User}.  
 Sinon, s’il n’apparaît pas dans la liste des utilisateurs connectés, le message est ajouté à la liste \code{Inbox} de son compte, afin qu’il lui soit transmis lors de sa prochaine reconnexion.
+
+	\chapter{Sources et bibliographie}
+
+Pour mener à bien le développement de Messagyre, je me suis appuyé sur diverses ressources disponibles en ligne. Voici les principales :
+
+\printbibliography[heading=none]
+
+\section{Documentations officielles consultées}
+
+\begin{itemize}
+	\item \textit{Flutter} — \url{https://docs.flutter.dev}
+	\item \textit{Flutter API} — \url{https://api.flutter.dev}
+	\item \textit{Dart} — \url{https://dart.dev/guides}
+	\item \textit{ASP.NET Core} — \url{https://learn.microsoft.com/fr-fr/aspnet/core}
+	\item \textit{C\#} (syntaxe et curiosités) — \url{https://learn.microsoft.com/en-us/dotnet/csharp/}
+	\item \textit{MySQL} — \url{https://dev.mysql.com/doc/}
+	\item \textit{JWT (JSON Web Tokens)} — \url{https://jwt.io/introduction}
+	\item \textit{Railway} — \url{https://docs.railway.app}
+	\item \textit{Fly.io} — \url{https://fly.io/docs/} : plateforme utilisée pour déployer le serveur ASP.NET.
+	\item \textit{pub.dev} — \url{https://pub.dev} : plateforme utilisée pour trouver et installer des paquets et extensions Flutter.
+	\item \textit{Gmail API} — \url{https://developers.google.com/gmail/api} : utilisée pour l’envoi d’emails de vérification.
+	\item \textit{Bcrypt} — \url{https://github.com/BCryptNet/bcrypt.net} : utilisée pour le hachage sécurisé des mots de passe.
+	\item \textit{UUID} — \url{https://www.uuidgenerator.net/} : utilisée pour générer des identifiants uniques.
+\end{itemize}
+
+\section{Tutoriels, articles et forums}
+
+\begin{itemize}
+	\item Stack Overflow — \url{https://stackoverflow.com}
+	\item GitHub Discussions — \url{https://github.com}
+	\item Flutter Community — \url{https://fluttercommunity.dev}
+	\item Railway Community Forum — \url{https://community.railway.app}
+	\item TeX Stack Exchange — \url{https://tex.stackexchange.com}
+	\item Reddit (r/FlutterDev, r/dotnet, r/webdev) — \url{https://www.reddit.com}
+	\item Wikipédia — pages sur \textit{Base64} et \textit{JSON Web Token} pour la compréhension des concepts fondamentaux.
+	\item Chaine YouTube officielle de Flutter \url{https://www.youtube.com/@flutterdev}
+	\item Installation des drivers Android et utilisation d’ADB — \url{https://androidmtk.com}
+\end{itemize}
+
+\section{Outils d’assistance}
+
+\begin{itemize}
+	\item \textbf{ChatGPT (OpenAI)} — pour générer du code, trouver des solutions optimisées et explorer des alternatives techniques.
+	\item \textbf{Google Gemini} — pour la recherche de documentation complémentaire et l’exploration d’approches différentes.
+	\item \textbf{Claude (Anthropic)} — pour obtenir des résumés techniques et des explications de concepts complexes.
+	\item \textbf{GitHub Copilot} — utilisé via Visual Studio Code pour l’auto-complétion de code, facilitant et accélérant le développement.
+\end{itemize}
+
+
+\section{Outils de développement}
+
+\begin{itemize}
+	\item \textbf{Visual Studio 2022} — environnement de développement principal pour ASP.NET Core et le serveur.
+	\item \textbf{Visual Studio Code} — utilisé pour éditer des fichiers Dart, JSON, SQL et pour les tests rapides côté client.
+	\item \textbf{Android Studio} — utilisé pour installer les SDK Android et tester l’application Flutter via son émulateur intégré.
+	\item \textbf{Apple XCode} — utilisé pour construire l'application pour les dispositifs Apple (iOS).
+\end{itemize}
+
+\section{Autres inspirations et connaissances utiles}
+
+\begin{itemize}
+	\item Cours de mathématiques sur la cryptographie (Gymnase de Renens) — a contribué à mieux comprendre les principes de sécurité appliqués à l’application (notamment l’utilisation des tokens, des mots de passe hachés et de la confidentialité des échanges).
+	\item \textbf{Patternico} — utilisé pour générer les motifs de fond dans les fenêtres de discussion.
+	\item \textbf{Google Maps} — utilisé pour dessiner l’icône de l’application à partir de la vue aérienne du bâtiment du gymnase.
+\end{itemize}
 
 \end{document}
